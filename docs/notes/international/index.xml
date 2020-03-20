@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>International on Lex&#39; blog&amp;notes</title>
+    <link>http://example.org/docs/notes/international/</link>
+    <description>Recent content in International on Lex&#39; blog&amp;notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2020 14:56:38 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/docs/notes/international/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Africa</title>
+      <link>http://example.org/docs/notes/international/africa/</link>
+      <pubDate>Fri, 20 Mar 2020 14:56:38 +0100</pubDate>
+      
+      <guid>http://example.org/docs/notes/international/africa/</guid>
+      <description>MacOS MacOS This is tab MacOS content.
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes. Miseratus fonte Ditis conubia.
+Linux Linux This is tab Linux content.
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa protulit, sed sed aere valvis inhaesuro Pallas animam: qui quid, ignes.</description>
+    </item>
+    
+    <item>
+      <title>Asia</title>
+      <link>http://example.org/docs/notes/international/asia/</link>
+      <pubDate>Fri, 20 Mar 2020 14:56:38 +0100</pubDate>
+      
+      <guid>http://example.org/docs/notes/international/asia/</guid>
+      <description>Another continent to describe.</description>
+    </item>
+    
+  </channel>
+</rss>
