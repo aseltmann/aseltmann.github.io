@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>crit_sci / crit_med on Lex&#39; blog&amp;notes</title>
+    <title>Science &amp; Medicine on Lex&#39; blog&amp;notes</title>
     <link>http://example.org/docs/notes/kritmed/</link>
-    <description>Recent content in crit_sci / crit_med on Lex&#39; blog&amp;notes</description>
+    <description>Recent content in Science &amp; Medicine on Lex&#39; blog&amp;notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Mar 2020 14:56:37 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 14:32:37 +0100</lastBuildDate>
     
 	<atom:link href="http://example.org/docs/notes/kritmed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Absichtlich Daten verfälschen [German]</title>
+      <title>Critical test section</title>
       <link>http://example.org/docs/notes/kritmed/falsche-daten/</link>
-      <pubDate>Fri, 20 Mar 2020 14:56:37 +0100</pubDate>
+      <pubDate>Mon, 23 Mar 2020 14:32:37 +0100</pubDate>
       
       <guid>http://example.org/docs/notes/kritmed/falsche-daten/</guid>
-      <description>Absichtlich Daten verfälschen Im Fachmagazin Nature schlagen zwei Autoren vor, Daten absichtlich zu verfälschen. Das ist eine bemerkenswerte Idee.
-Im Ernst. Der Psychologe Robert McCaun und der Physiker Saul Perlmutter haben im Fachmagazin Nature die breite Anwendung von &amp;ldquo;blinder Analyse&amp;rdquo; propagiert, um &amp;ldquo;wissenschaftliche Vorurteile&amp;rdquo; gezielt zu minimieren. Denn all zu oft, argumentieren die Autoren, versuchen Wissenschaftler nur das zu bestätigen, was sie ohnehin schon glauben. Alle Messergebnisse, die ihre Hypothese bestätigen, werden sofort akzeptiert.</description>
+      <description>test section Test section text.</description>
     </item>
     
     <item>
       <title>Other critical stuff</title>
       <link>http://example.org/docs/notes/kritmed/other-critical/</link>
-      <pubDate>Fri, 20 Mar 2020 14:56:37 +0100</pubDate>
+      <pubDate>Mon, 23 Mar 2020 14:32:37 +0100</pubDate>
       
       <guid>http://example.org/docs/notes/kritmed/other-critical/</guid>
       <description>Here is other critical stuff.</description>

@@ -6,7 +6,7 @@
     <description>Recent content in Projects on Lex&#39; blog&amp;notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Mar 2020 14:56:37 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 14:32:37 +0100</lastBuildDate>
     
 	<atom:link href="http://example.org/docs/projects/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Artifact correction in Fluorescence Correlation Spectroscopy measurements</title>
       <link>http://example.org/docs/projects/fcs-trace-artifact-correction/</link>
-      <pubDate>Fri, 20 Mar 2020 14:56:37 +0100</pubDate>
+      <pubDate>Mon, 23 Mar 2020 14:32:37 +0100</pubDate>
       
       <guid>http://example.org/docs/projects/fcs-trace-artifact-correction/</guid>
       <description>In a current project, we apply Deep Learning techniques on Fluorescence Correlation Spectroscopy (FCS) data to correct a variety of hardware- and sample-related artifacts, such as photobleaching, contamination from additional slow moving particles, or sudden drops in intensity because of detector anomalies.</description>
