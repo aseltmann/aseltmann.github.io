@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docs on Lex&#39; blog&amp;notes</title>
-    <link>http://example.org/docs/</link>
-    <description>Recent content in Docs on Lex&#39; blog&amp;notes</description>
+    <title>Docs on Blog &amp; Notes</title>
+    <link>https://aseltmann.github.io/docs/</link>
+    <description>Recent content in Docs on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 14:32:37 +0100</lastBuildDate>
-    
-	<atom:link href="http://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 14 Jan 2021 20:34:08 +0100</lastBuildDate><atom:link href="https://aseltmann.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
