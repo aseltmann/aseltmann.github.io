@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://aseltmann.github.io/docs/</loc>
-    <lastmod>2021-01-14T20:34:08+01:00</lastmod>
+    <lastmod>2021-01-17T00:10:37+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -18,8 +18,13 @@
   </url>
   
   <url>
+    <loc>https://aseltmann.github.io/docs/notes/test/test-page/</loc>
+    <lastmod>2021-01-17T00:10:37+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://aseltmann.github.io/docs/notes/</loc>
-    <lastmod>2021-01-14T20:34:08+01:00</lastmod>
+    <lastmod>2021-01-17T00:10:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -33,28 +38,8 @@
   </url>
   
   <url>
-    <loc>https://aseltmann.github.io/docs/notes/test/test-page/</loc>
-    <lastmod>2021-01-14T20:34:08+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aseltmann.github.io/</loc>
-    <lastmod>2021-01-14T20:34:07+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://aseltmann.github.io/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://aseltmann.github.io/"
-                />
-  </url>
-  
-  <url>
     <loc>https://aseltmann.github.io/docs/projects/</loc>
-    <lastmod>2021-01-14T20:34:07+01:00</lastmod>
+    <lastmod>2021-01-17T00:10:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -68,8 +53,23 @@
   </url>
   
   <url>
+    <loc>https://aseltmann.github.io/</loc>
+    <lastmod>2021-01-17T00:10:35+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://aseltmann.github.io/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aseltmann.github.io/"
+                />
+  </url>
+  
+  <url>
     <loc>https://aseltmann.github.io/posts/</loc>
-    <lastmod>2021-01-14T20:34:10+01:00</lastmod>
+    <lastmod>2021-01-17T00:10:42+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -84,7 +84,7 @@
   
   <url>
     <loc>https://aseltmann.github.io/posts/test-post/</loc>
-    <lastmod>2021-01-14T20:34:10+01:00</lastmod>
+    <lastmod>2021-01-17T00:10:42+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
