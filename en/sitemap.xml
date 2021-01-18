@@ -33,26 +33,6 @@
   </url>
   
   <url>
-    <loc>https://aseltmann.github.io/docs/notes/</loc>
-    <lastmod>2021-01-18T01:21:16+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://aseltmann.github.io/de/docs/notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://aseltmann.github.io/docs/notes/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://aseltmann.github.io/docs/notes/test/test-page/</loc>
-    <lastmod>2021-01-18T01:21:16+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://aseltmann.github.io/</loc>
     <lastmod>2021-01-18T01:21:16+01:00</lastmod>
     <xhtml:link
@@ -64,6 +44,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://aseltmann.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://aseltmann.github.io/docs/notes/</loc>
+    <lastmod>2021-01-18T01:21:16+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://aseltmann.github.io/de/docs/notes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aseltmann.github.io/docs/notes/"
                 />
   </url>
   
@@ -80,6 +75,11 @@
                 hreflang="en"
                 href="https://aseltmann.github.io/docs/projects/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://aseltmann.github.io/docs/notes/test/test-page/</loc>
+    <lastmod>2021-01-18T01:21:16+01:00</lastmod>
   </url>
   
   <url>
