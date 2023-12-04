@@ -5,16 +5,15 @@
     <link>https://aseltmann.github.io/posts/</link>
     <description>Recent content in Posts on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 14:31:00 +0100</lastBuildDate><atom:link href="https://aseltmann.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Mar 2020 14:31:00 +0100</lastBuildDate>
+    <atom:link href="https://aseltmann.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test post</title>
       <link>https://aseltmann.github.io/posts/test-post/</link>
       <pubDate>Mon, 23 Mar 2020 14:31:00 +0100</pubDate>
-      
       <guid>https://aseltmann.github.io/posts/test-post/</guid>
       <description>Test post text.</description>
     </item>
-    
   </channel>
 </rss>

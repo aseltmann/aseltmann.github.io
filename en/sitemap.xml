@@ -15,17 +15,17 @@
                 href="https://aseltmann.github.io/docs/"
                 />
   </url><url>
-    <loc>https://aseltmann.github.io/docs/notes/poetry/</loc>
+    <loc>https://aseltmann.github.io/docs/notes/</loc>
     <lastmod>2021-01-18T01:21:16+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://aseltmann.github.io/de/docs/notes/poetry/"
+                href="https://aseltmann.github.io/de/docs/notes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aseltmann.github.io/docs/notes/poetry/"
+                href="https://aseltmann.github.io/docs/notes/"
                 />
   </url><url>
     <loc>https://aseltmann.github.io/</loc>
@@ -41,19 +41,6 @@
                 href="https://aseltmann.github.io/"
                 />
   </url><url>
-    <loc>https://aseltmann.github.io/docs/notes/</loc>
-    <lastmod>2021-01-18T01:21:16+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://aseltmann.github.io/de/docs/notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://aseltmann.github.io/docs/notes/"
-                />
-  </url><url>
     <loc>https://aseltmann.github.io/docs/projects/</loc>
     <lastmod>2021-01-18T01:21:16+01:00</lastmod>
     <xhtml:link
@@ -67,8 +54,18 @@
                 href="https://aseltmann.github.io/docs/projects/"
                 />
   </url><url>
-    <loc>https://aseltmann.github.io/docs/notes/test/test-page/</loc>
+    <loc>https://aseltmann.github.io/docs/notes/poetry/</loc>
     <lastmod>2021-01-18T01:21:16+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://aseltmann.github.io/de/docs/notes/poetry/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aseltmann.github.io/docs/notes/poetry/"
+                />
   </url><url>
     <loc>https://aseltmann.github.io/posts/</loc>
     <lastmod>2021-01-18T01:21:16+01:00</lastmod>
