@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aseltmann.github.io/docs/</loc>
-    <lastmod>2023-12-10T03:07:20+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://aseltmann.github.io/docs/notes/poetry/</loc>
-    <lastmod>2023-12-10T03:07:20+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -28,21 +28,8 @@
                 href="https://aseltmann.github.io/docs/notes/poetry/"
                 />
   </url><url>
-    <loc>https://aseltmann.github.io/docs/notes/</loc>
-    <lastmod>2023-12-10T03:07:20+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://aseltmann.github.io/de/docs/notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://aseltmann.github.io/docs/notes/"
-                />
-  </url><url>
     <loc>https://aseltmann.github.io/</loc>
-    <lastmod>2023-12-10T03:07:20+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -54,8 +41,21 @@
                 href="https://aseltmann.github.io/"
                 />
   </url><url>
+    <loc>https://aseltmann.github.io/docs/notes/</loc>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://aseltmann.github.io/de/docs/notes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aseltmann.github.io/docs/notes/"
+                />
+  </url><url>
     <loc>https://aseltmann.github.io/docs/projects/</loc>
-    <lastmod>2023-12-10T03:07:20+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://aseltmann.github.io/posts/aoc2023-day02/</loc>
-    <lastmod>2023-12-11T23:42:10+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -81,7 +81,7 @@
                 />
   </url><url>
     <loc>https://aseltmann.github.io/posts/</loc>
-    <lastmod>2023-12-11T23:42:10+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -94,7 +94,7 @@
                 />
   </url><url>
     <loc>https://aseltmann.github.io/tags/python/</loc>
-    <lastmod>2023-12-11T23:42:10+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -107,7 +107,7 @@
                 />
   </url><url>
     <loc>https://aseltmann.github.io/tags/</loc>
-    <lastmod>2023-12-11T23:42:10+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -120,7 +120,7 @@
                 />
   </url><url>
     <loc>https://aseltmann.github.io/posts/aoc2023-day01/</loc>
-    <lastmod>2023-12-10T03:07:20+01:00</lastmod>
+    <lastmod>2023-12-11T23:43:59+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"

@@ -6,12 +6,12 @@
     <description>Recent content in Homepage_de on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Mon, 11 Dec 2023 23:42:05 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2023 00:26:47 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gedichte</title>
       <link>https://aseltmann.github.io/de/docs/notes/poetry/</link>
-      <pubDate>Mon, 11 Dec 2023 23:42:07 +0100</pubDate>
+      <pubDate>Tue, 12 Dec 2023 00:26:49 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/docs/notes/poetry/</guid>
       <description>Erich Fried # Kleines Beispiel (1982) Auch ungelebtes Leben
 geht zu Ende
@@ -37,13 +37,6 @@ schon ganz zerfressen</description>
       <link>https://aseltmann.github.io/de/posts/aoc2023-day01/</link>
       <pubDate>Mon, 11 Dec 2023 23:38:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/posts/aoc2023-day01/</guid>
-      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 1 - siehe https:adventofcode.com/2023/day/1</description>
-    </item>
-    <item>
-      <title>Advent of code 2023 - Tag 1: Trebuchet?!</title>
-      <link>https://aseltmann.github.io/de/posts/aoc2023-day1/</link>
-      <pubDate>Mon, 11 Dec 2023 23:38:00 +0100</pubDate>
-      <guid>https://aseltmann.github.io/de/posts/aoc2023-day1/</guid>
       <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 1 - siehe https:adventofcode.com/2023/day/1</description>
     </item>
     <item>
