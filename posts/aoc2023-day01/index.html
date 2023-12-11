@@ -4,23 +4,25 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Part 1 # Our first task is the following: The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.
-For example:
-1abc2 pqr3stu8vwx a1b2c3d4e5f treb7uchet In this example, the calibration values of these four lines are 12, 38, 15, and 77.">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="AOC 2023 - Day 1: Trebuchet?!" />
-<meta property="og:description" content="Part 1 # Our first task is the following: The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.
-For example:
-1abc2 pqr3stu8vwx a1b2c3d4e5f treb7uchet In this example, the calibration values of these four lines are 12, 38, 15, and 77." />
+<meta name="description" content="This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 1 - see https:adventofcode.com/2023/day/1
+Part 1 # Our first task is the following:
+The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Advent of code 2023 - Day 1: Trebuchet?!" />
+<meta property="og:description" content="This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 1 - see https:adventofcode.com/2023/day/1
+Part 1 # Our first task is the following:
+The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aseltmann.github.io/posts/aoc2023-day01/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-12-10T03:05:00+01:00" />
-<meta property="article:modified_time" content="2023-12-10T03:05:47+01:00" />
+<meta property="article:modified_time" content="2023-12-10T03:07:20+01:00" />
 
-<title>AOC 2023 - Day 1: Trebuchet?! | Blog &amp; Notes</title>
+<title>Advent of code 2023 - Day 1: Trebuchet?! | Blog &amp; Notes</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day01/" title="Advent of code 2023 - Tag 1: Trebuchet?!">
+
 <link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
-<script defer src="/en.search.min.aeee6eea5c607601c701aa8b6d29c0c793b1a35597c3cd0228607104c2f84d36.js" integrity="sha256-ru5u6lxgdgHHAaqLbSnAx5Oxo1WXw80CKGBxBML4TTY="></script>
+<script defer src="/en.search.min.6ecc48bd4e1996fa61c1cef9a3f7faa92637cd73df92a52641e560e938dda429.js" integrity="sha256-bsxIvU4Zlvphwc75o/f6qSY3zXPfkqUmQeVg6TjdpCk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -153,7 +155,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>AOC 2023 - Day 1: Trebuchet?!</strong>
+  <strong>Advent of code 2023 - Day 1: Trebuchet?!</strong>
 
   <label for="toc-control">
     
@@ -184,7 +186,7 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
   <h1>
-    <a href="/posts/aoc2023-day01/">AOC 2023 - Day 1: Trebuchet?!</a>
+    <a href="/posts/aoc2023-day01/">Advent of code 2023 - Day 1: Trebuchet?!</a>
   </h1>
   
   <h5>2023-12-10</h5>
@@ -194,26 +196,37 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+  <div>
+    
+      <a href="/tags/python/">python</a>
+  </div>
+  
 
 
-  <p><h2 id="part-1">
+  <p><p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
+riddles. This is Day 1 - see <a href="https:adventofcode.com/2023/day/1">https:adventofcode.com/2023/day/1</a></p>
+<h2 id="part-1">
   Part 1
   <a class="anchor" href="#part-1">#</a>
 </h2>
-<p>Our first task is the following:
-The newly-improved calibration document consists of lines of text; each line
+<p>Our first task is the following:</p>
+<blockquote>
+<p>The newly-improved calibration document consists of lines of text; each line
 originally contained a specific calibration value that the Elves now need to
 recover. On each line, the calibration value can be found by combining the first
 digit and the last digit (in that order) to form a single two-digit number.</p>
 <p>For example:</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>1abc2
 </span></span><span style="display:flex;"><span>pqr3stu8vwx
 </span></span><span style="display:flex;"><span>a1b2c3d4e5f
 </span></span><span style="display:flex;"><span>treb7uchet
-</span></span></code></pre></div><p>In this example, the calibration values of these four lines are 12, 38, 15,
+</span></span></code></pre></div><blockquote>
+<p>In this example, the calibration values of these four lines are 12, 38, 15,
 and 77. Adding these together produces 142.</p>
 <p>Consider your entire calibration document. What is the sum of all of the
 calibration values?</p>
+</blockquote>
 <p>Lets start jupyter in our shell to start coding!</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  conda activate tf
 </span></span><span style="display:flex;"><span>  jupyter lab --no-browser --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8888</span>
@@ -223,20 +236,71 @@ calibration values?</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-01-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;code&#39;</span>])
 </span></span><span style="display:flex;"><span>  txt
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code
-</span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1
-</span></span><span style="display:flex;"><span>1                        6fourfour
-</span></span><span style="display:flex;"><span>2                    ninevbmltwo69
-</span></span><span style="display:flex;"><span>3         pcg91vqrfpxxzzzoneightzt
-</span></span><span style="display:flex;"><span>4    jpprthxgjfive3one1qckhrptpqdc
-</span></span><span style="display:flex;"><span>..                             ...
-</span></span><span style="display:flex;"><span>995       583sevenhjxlqzjgbzxhkcl5
-</span></span><span style="display:flex;"><span>996                            81s
-</span></span><span style="display:flex;"><span>997        2four3threesxxvlfqfive4
-</span></span><span style="display:flex;"><span>998        nine6eightsevenzx9twoxc
-</span></span><span style="display:flex;"><span>999    hmbfjdfnp989mfivefiverpzrjs
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>FileNotFoundError                         Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>/tmp/ipykernel_33969/1324215899.py in &lt;module&gt;
+</span></span><span style="display:flex;"><span>      2 import re
+</span></span><span style="display:flex;"><span>      3
+</span></span><span style="display:flex;"><span>----&gt; 4 txt = pd.read_table(&#39;data/2023-12-01-1-aoc.txt&#39;, names=[&#39;code&#39;])
+</span></span><span style="display:flex;"><span>      5 txt
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[1000 rows x 1 columns]
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/util/_decorators.py in wrapper(*args, **kwargs)
+</span></span><span style="display:flex;"><span>    309                     stacklevel=stacklevel,
+</span></span><span style="display:flex;"><span>    310                 )
+</span></span><span style="display:flex;"><span>--&gt; 311             return func(*args, **kwargs)
+</span></span><span style="display:flex;"><span>    312
+</span></span><span style="display:flex;"><span>    313         return wrapper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/io/parsers/readers.py in read_table(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, encoding_errors, delim_whitespace, low_memory, memory_map, float_precision)
+</span></span><span style="display:flex;"><span>    681     kwds.update(kwds_defaults)
+</span></span><span style="display:flex;"><span>    682
+</span></span><span style="display:flex;"><span>--&gt; 683     return _read(filepath_or_buffer, kwds)
+</span></span><span style="display:flex;"><span>    684
+</span></span><span style="display:flex;"><span>    685
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/io/parsers/readers.py in _read(filepath_or_buffer, kwds)
+</span></span><span style="display:flex;"><span>    480
+</span></span><span style="display:flex;"><span>    481     # Create the parser.
+</span></span><span style="display:flex;"><span>--&gt; 482     parser = TextFileReader(filepath_or_buffer, **kwds)
+</span></span><span style="display:flex;"><span>    483
+</span></span><span style="display:flex;"><span>    484     if chunksize or iterator:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/io/parsers/readers.py in __init__(self, f, engine, **kwds)
+</span></span><span style="display:flex;"><span>    809             self.options[&#34;has_index_names&#34;] = kwds[&#34;has_index_names&#34;]
+</span></span><span style="display:flex;"><span>    810
+</span></span><span style="display:flex;"><span>--&gt; 811         self._engine = self._make_engine(self.engine)
+</span></span><span style="display:flex;"><span>    812
+</span></span><span style="display:flex;"><span>    813     def close(self):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/io/parsers/readers.py in _make_engine(self, engine)
+</span></span><span style="display:flex;"><span>   1038             )
+</span></span><span style="display:flex;"><span>   1039         # error: Too many arguments for &#34;ParserBase&#34;
+</span></span><span style="display:flex;"><span>-&gt; 1040         return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+</span></span><span style="display:flex;"><span>   1041
+</span></span><span style="display:flex;"><span>   1042     def _failover_to_python(self):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py in __init__(self, src, **kwds)
+</span></span><span style="display:flex;"><span>     49
+</span></span><span style="display:flex;"><span>     50         # open handles
+</span></span><span style="display:flex;"><span>---&gt; 51         self._open_handles(src, kwds)
+</span></span><span style="display:flex;"><span>     52         assert self.handles is not None
+</span></span><span style="display:flex;"><span>     53
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/io/parsers/base_parser.py in _open_handles(self, src, kwds)
+</span></span><span style="display:flex;"><span>    220         Let the readers open IOHandles after they are done with their potential raises.
+</span></span><span style="display:flex;"><span>    221         &#34;&#34;&#34;
+</span></span><span style="display:flex;"><span>--&gt; 222         self.handles = get_handle(
+</span></span><span style="display:flex;"><span>    223             src,
+</span></span><span style="display:flex;"><span>    224             &#34;r&#34;,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~/Programme/miniconda3/envs/tf/lib/python3.9/site-packages/pandas/io/common.py in get_handle(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)
+</span></span><span style="display:flex;"><span>    700         if ioargs.encoding and &#34;b&#34; not in ioargs.mode:
+</span></span><span style="display:flex;"><span>    701             # Encoding
+</span></span><span style="display:flex;"><span>--&gt; 702             handle = open(
+</span></span><span style="display:flex;"><span>    703                 handle,
+</span></span><span style="display:flex;"><span>    704                 ioargs.mode,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>FileNotFoundError: [Errno 2] No such file or directory: &#39;data/2023-12-01-1-aoc.txt&#39;
 </span></span></code></pre></div><p>Second, extract the digits. I had to wrap my head around regex matching in
 python first, because I first tried <code>pandas.extract</code> (which only extracts the
 first match), then <code>pandas.extractall</code> (which extracts all matches but puts them
@@ -246,51 +310,46 @@ in the list, we take use the <code>join</code> function.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;digits&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d+)&#39;</span>, x)))
 </span></span><span style="display:flex;"><span>  txt
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits
-</span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1
-</span></span><span style="display:flex;"><span>1                        6fourfour      6
-</span></span><span style="display:flex;"><span>2                    ninevbmltwo69     69
-</span></span><span style="display:flex;"><span>3         pcg91vqrfpxxzzzoneightzt     91
-</span></span><span style="display:flex;"><span>4    jpprthxgjfive3one1qckhrptpqdc     31
-</span></span><span style="display:flex;"><span>..                             ...    ...
-</span></span><span style="display:flex;"><span>995       583sevenhjxlqzjgbzxhkcl5   5835
-</span></span><span style="display:flex;"><span>996                            81s     81
-</span></span><span style="display:flex;"><span>997        2four3threesxxvlfqfive4    234
-</span></span><span style="display:flex;"><span>998        nine6eightsevenzx9twoxc     69
-</span></span><span style="display:flex;"><span>999    hmbfjdfnp989mfivefiverpzrjs    989
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>NameError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>/tmp/ipykernel_33969/1268720339.py in &lt;module&gt;
+</span></span><span style="display:flex;"><span>----&gt; 1 txt[&#39;digits&#39;] = txt.loc[:, &#39;code&#39;].apply(
+</span></span><span style="display:flex;"><span>      2     lambda x: &#39;&#39;.join(re.findall(r&#39;(\d+)&#39;, x)))
+</span></span><span style="display:flex;"><span>      3 txt
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[1000 rows x 2 columns]
+</span></span><span style="display:flex;"><span>NameError: name &#39;txt&#39; is not defined
 </span></span></code></pre></div><p>Next, combine the first and the last digit and convert the result from string to integer</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;calibration&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;digits&#39;</span>]<span style="color:#f92672">.</span>apply(
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]))
 </span></span><span style="display:flex;"><span>  txt
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits  calibration
-</span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1           11
-</span></span><span style="display:flex;"><span>1                        6fourfour      6           66
-</span></span><span style="display:flex;"><span>2                    ninevbmltwo69     69           69
-</span></span><span style="display:flex;"><span>3         pcg91vqrfpxxzzzoneightzt     91           91
-</span></span><span style="display:flex;"><span>4    jpprthxgjfive3one1qckhrptpqdc     31           31
-</span></span><span style="display:flex;"><span>..                             ...    ...          ...
-</span></span><span style="display:flex;"><span>995       583sevenhjxlqzjgbzxhkcl5   5835           55
-</span></span><span style="display:flex;"><span>996                            81s     81           81
-</span></span><span style="display:flex;"><span>997        2four3threesxxvlfqfive4    234           24
-</span></span><span style="display:flex;"><span>998        nine6eightsevenzx9twoxc     69           69
-</span></span><span style="display:flex;"><span>999    hmbfjdfnp989mfivefiverpzrjs    989           99
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>NameError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>/tmp/ipykernel_33969/3867935527.py in &lt;module&gt;
+</span></span><span style="display:flex;"><span>----&gt; 1 txt[&#39;calibration&#39;] = txt.loc[:, &#39;digits&#39;].apply(
+</span></span><span style="display:flex;"><span>      2     lambda x: int(x[0] + x[-1]))
+</span></span><span style="display:flex;"><span>      3 txt
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[1000 rows x 3 columns]
+</span></span><span style="display:flex;"><span>NameError: name &#39;txt&#39; is not defined
 </span></span></code></pre></div><p>Lastly, get the sum of our calibration numbers</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;calibration&#39;</span>]<span style="color:#f92672">.</span>sum()
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>56465
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>NameError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>/tmp/ipykernel_33969/2632495052.py in &lt;module&gt;
+</span></span><span style="display:flex;"><span>----&gt; 1 txt.loc[:, &#39;calibration&#39;].sum()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NameError: name &#39;txt&#39; is not defined
 </span></span></code></pre></div><h2 id="part-2">
   Part 2
   <a class="anchor" href="#part-2">#</a>
 </h2>
-<p>Now follows part two:
-Your calculation isn&rsquo;t quite right. It looks like some of the digits are
+<p>Now follows part two:</p>
+<blockquote>
+<p>Your calculation isn&rsquo;t quite right. It looks like some of the digits are
 actually spelled out with letters: one, two, three, four, five, six, seven,
 eight, and nine also count as valid &ldquo;digits&rdquo;.</p>
 <p>Equipped with this new information, you now need to find the real first and last
 digit on each line. For example:</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>two1nine
 </span></span><span style="display:flex;"><span>eightwothree
 </span></span><span style="display:flex;"><span>abcone2threexyz
@@ -298,9 +357,11 @@ digit on each line. For example:</p>
 </span></span><span style="display:flex;"><span>4nineeightseven2
 </span></span><span style="display:flex;"><span>zoneight234
 </span></span><span style="display:flex;"><span>7pqrstsixteen
-</span></span></code></pre></div><p>In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76.
+</span></span></code></pre></div><blockquote>
+<p>In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76.
 Adding these together produces 281.</p>
 <p>What is the sum of all of the calibration values?</p>
+</blockquote>
 <p>Okay, let&rsquo;s see if we can update the pattern matching. To deal with potential
 overlapping values like <code>oneight</code> which contains <code>one</code> as well as <code>eight</code>, I
 used the regex positive lookahead <code>?=</code> as described <a href="https://stackoverflow.com/a/5616910">here</a>. Because this enables
@@ -317,40 +378,34 @@ spelled out digits with their numerical value.</p>
 </span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#39;nine&#39;</span>, <span style="color:#e6db74">&#39;9&#39;</span>)
 </span></span><span style="display:flex;"><span>      txt<span style="color:#f92672">.</span>loc[i, <span style="color:#e6db74">&#39;digits2&#39;</span>] <span style="color:#f92672">=</span> result
 </span></span><span style="display:flex;"><span>  txt
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits  calibration digits2
-</span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1           11      51
-</span></span><span style="display:flex;"><span>1                        6fourfour      6           66     644
-</span></span><span style="display:flex;"><span>2                    ninevbmltwo69     69           69    9269
-</span></span><span style="display:flex;"><span>3         pcg91vqrfpxxzzzoneightzt     91           91    9118
-</span></span><span style="display:flex;"><span>4    jpprthxgjfive3one1qckhrptpqdc     31           31    5311
-</span></span><span style="display:flex;"><span>..                             ...    ...          ...     ...
-</span></span><span style="display:flex;"><span>995       583sevenhjxlqzjgbzxhkcl5   5835           55   58375
-</span></span><span style="display:flex;"><span>996                            81s     81           81      81
-</span></span><span style="display:flex;"><span>997        2four3threesxxvlfqfive4    234           24  243354
-</span></span><span style="display:flex;"><span>998        nine6eightsevenzx9twoxc     69           69  968792
-</span></span><span style="display:flex;"><span>999    hmbfjdfnp989mfivefiverpzrjs    989           99   98955
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>NameError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>/tmp/ipykernel_33969/313059938.py in &lt;module&gt;
+</span></span><span style="display:flex;"><span>----&gt; 1 for i, r in enumerate(txt.loc[:, &#39;code&#39;]):
+</span></span><span style="display:flex;"><span>      2     matches = re.findall(
+</span></span><span style="display:flex;"><span>      3         r&#39;(?=(\d|one|two|three|four|five|six|seven|eight|nine))&#39;, r)
+</span></span><span style="display:flex;"><span>      4     result = &#39;&#39;.join([match for match in matches])
+</span></span><span style="display:flex;"><span>      5     result = result.replace(&#39;one&#39;, &#39;1&#39;).replace(&#39;two&#39;, &#39;2&#39;).replace(
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[1000 rows x 4 columns]
+</span></span><span style="display:flex;"><span>NameError: name &#39;txt&#39; is not defined
 </span></span></code></pre></div><p>Now, construct the calibration value as before&hellip;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;calibration2&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;digits2&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]))
 </span></span><span style="display:flex;"><span>  txt
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits  calibration digits2  calibration2
-</span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1           11      51            51
-</span></span><span style="display:flex;"><span>1                        6fourfour      6           66     644            64
-</span></span><span style="display:flex;"><span>2                    ninevbmltwo69     69           69    9269            99
-</span></span><span style="display:flex;"><span>3         pcg91vqrfpxxzzzoneightzt     91           91    9118            98
-</span></span><span style="display:flex;"><span>4    jpprthxgjfive3one1qckhrptpqdc     31           31    5311            51
-</span></span><span style="display:flex;"><span>..                             ...    ...          ...     ...           ...
-</span></span><span style="display:flex;"><span>995       583sevenhjxlqzjgbzxhkcl5   5835           55   58375            55
-</span></span><span style="display:flex;"><span>996                            81s     81           81      81            81
-</span></span><span style="display:flex;"><span>997        2four3threesxxvlfqfive4    234           24  243354            24
-</span></span><span style="display:flex;"><span>998        nine6eightsevenzx9twoxc     69           69  968792            92
-</span></span><span style="display:flex;"><span>999    hmbfjdfnp989mfivefiverpzrjs    989           99   98955            95
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>NameError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>/tmp/ipykernel_33969/3025969514.py in &lt;module&gt;
+</span></span><span style="display:flex;"><span>----&gt; 1 txt[&#39;calibration2&#39;] = txt.loc[:, &#39;digits2&#39;].apply(lambda x: int(x[0] + x[-1]))
+</span></span><span style="display:flex;"><span>      2 txt
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[1000 rows x 5 columns]
+</span></span><span style="display:flex;"><span>NameError: name &#39;txt&#39; is not defined
 </span></span></code></pre></div><p>&hellip; and get the correct sum!</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;calibration2&#39;</span>]<span style="color:#f92672">.</span>sum()
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>55902
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>NameError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>/tmp/ipykernel_33969/429421036.py in &lt;module&gt;
+</span></span><span style="display:flex;"><span>----&gt; 1 txt.loc[:, &#39;calibration2&#39;].sum()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NameError: name &#39;txt&#39; is not defined
 </span></span></code></pre></div></p>
 </article>
  
@@ -367,6 +422,8 @@ spelled out digits with their numerical value.</p>
 
   
 
+
+  
 
 
 <div class="book-languages" tabindex="0" aria-haspopup="true">
@@ -387,7 +444,7 @@ spelled out digits with their numerical value.</p>
     </li>
     
     <li class="">
-      <a href="https://aseltmann.github.io/de/" class="flex align-center">
+      <a href="https://aseltmann.github.io/de/posts/aoc2023-day01/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         Deutsch
       </a>
@@ -398,6 +455,12 @@ spelled out digits with their numerical value.</p>
 
 
 
+
+  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/148cc44432c0169b757e7acc86b5f9608b1d8ded" title='Last modified by Alex Seltmann | 2023-12-10' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2023-12-10</span>
+    </a>
+  </div>
 
 
 

@@ -1,33 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Science &amp; Medicine on Lex&#39; blog&amp;notes</title>
-    <link>http://example.org/docs/notes/kritmed/</link>
-    <description>Recent content in Science &amp; Medicine on Lex&#39; blog&amp;notes</description>
+    <title>Science &amp; Medicine on Blog &amp; Notes</title>
+    <link>https://aseltmann.github.io/docs/notes/kritmed/</link>
+    <description>Recent content in Science &amp; Medicine on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2020 14:32:37 +0100</lastBuildDate>
-    
-	<atom:link href="http://example.org/docs/notes/kritmed/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Dec 2023 23:34:37 +0100</lastBuildDate>
+    <atom:link href="https://aseltmann.github.io/docs/notes/kritmed/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Critical test section</title>
-      <link>http://example.org/docs/notes/kritmed/falsche-daten/</link>
-      <pubDate>Mon, 23 Mar 2020 14:32:37 +0100</pubDate>
-      
-      <guid>http://example.org/docs/notes/kritmed/falsche-daten/</guid>
-      <description>test section Test section text.</description>
+      <link>https://aseltmann.github.io/docs/notes/kritmed/falsche-daten/</link>
+      <pubDate>Mon, 11 Dec 2023 23:34:37 +0100</pubDate>
+      <guid>https://aseltmann.github.io/docs/notes/kritmed/falsche-daten/</guid>
+      <description>TODO test section # Test section text.
+test foo1
+bar&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
-    
     <item>
       <title>Other critical stuff</title>
-      <link>http://example.org/docs/notes/kritmed/other-critical/</link>
-      <pubDate>Mon, 23 Mar 2020 14:32:37 +0100</pubDate>
-      
-      <guid>http://example.org/docs/notes/kritmed/other-critical/</guid>
+      <link>https://aseltmann.github.io/docs/notes/kritmed/other-critical/</link>
+      <pubDate>Mon, 11 Dec 2023 23:34:37 +0100</pubDate>
+      <guid>https://aseltmann.github.io/docs/notes/kritmed/other-critical/</guid>
       <description>Here is other critical stuff.</description>
     </item>
-    
   </channel>
 </rss>

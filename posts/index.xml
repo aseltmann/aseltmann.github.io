@@ -6,16 +6,25 @@
     <description>Recent content in Posts on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Dec 2023 03:05:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 11 Dec 2023 23:38:00 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AOC 2023 - Day 1: Trebuchet?!</title>
+      <title>Advent of code 2023 - Day 2: Cube Conundrum</title>
+      <link>https://aseltmann.github.io/posts/aoc2023-day02/</link>
+      <pubDate>Mon, 11 Dec 2023 23:38:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/posts/aoc2023-day02/</guid>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 2 - see https:adventofcode.com/2023/day/2
+Part 1 # Lets first read the task:
+As you walk, the Elf shows you a small bag and some cubes which are either red, green, or blue. Each time you play this game, he will hide a secret number of cubes of each color in the bag, and your goal is to figure out information about the number of cubes.</description>
+    </item>
+    <item>
+      <title>Advent of code 2023 - Day 1: Trebuchet?!</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day01/</link>
       <pubDate>Sun, 10 Dec 2023 03:05:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2023-day01/</guid>
-      <description>Part 1 # Our first task is the following: The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.
-For example:
-1abc2 pqr3stu8vwx a1b2c3d4e5f treb7uchet In this example, the calibration values of these four lines are 12, 38, 15, and 77.</description>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 1 - see https:adventofcode.com/2023/day/1
+Part 1 # Our first task is the following:
+The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.</description>
     </item>
   </channel>
 </rss>
