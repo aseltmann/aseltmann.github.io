@@ -6,8 +6,17 @@
     <description>Recent content in Posts on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Dec 2023 01:01:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 19 Dec 2023 00:25:00 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of code 2023 - Day 4: Scratchcards</title>
+      <link>https://aseltmann.github.io/posts/aoc2023-day04/</link>
+      <pubDate>Tue, 19 Dec 2023 00:25:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/posts/aoc2023-day04/</guid>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 4 - see https:adventofcode.com/2023/day/4
+Part 1 # Lets first read the task:
+The Elf leads you over to the pile of colorful cards. There, you discover dozens of scratchcards, all with their opaque covering already scratched off. Picking one up, it looks like each card has two lists of numbers separated by a vertical bar (|): a list of winning numbers and then a list of numbers you have.</description>
+    </item>
     <item>
       <title>Advent of code 2023 - Day 3: Gear Ratios</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day03/</link>

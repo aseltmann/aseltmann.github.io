@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Current projects # I am a believer in the principles of Open Science, Open Data and Open Source. Thus, I am currently working on a reproducible way of conducting my research on simulation of Fluorescence Correlation Spectroscopy (FCS) measurements and correcting artifacts using neural networks, such as Convolutional Neural Nets (CNNs). I do not have my workflow fixed yet, but to have an insight in my current approach - and with the principles of Open-notebook science in mind:">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Projects" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://aseltmann.github.io/docs/projects/" />
+<meta name="description" content="Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 4 - siehe https:adventofcode.com/2023/day/4
+Für die Lösungen siehe die englische Version dieses Blogbeitrages.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Advent of code 2023 - Tag 4: Scratchcards" />
+<meta property="og:description" content="Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 4 - siehe https:adventofcode.com/2023/day/4
+Für die Lösungen siehe die englische Version dieses Blogbeitrages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aseltmann.github.io/de/posts/aoc2023-day04/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-19T00:25:00+01:00" />
+<meta property="article:modified_time" content="2023-12-19T00:26:27+01:00" />
 
-<title>Projects | Blog &amp; Notes</title>
+<title>Advent of code 2023 - Tag 4: Scratchcards | Blog &amp; Notes</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/docs/projects/" title="Projekte">
+<link rel="alternate" hreflang="en" href="https://aseltmann.github.io/posts/aoc2023-day04/" title="Advent of code 2023 - Day 4: Scratchcards">
 
 <link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
-<script defer src="/en.search.min.199ef9bd0fe08c7dacd1e4fdff4eef2f5a322ca9d344d9fd504c89d11e01d64e.js" integrity="sha256-GZ75vQ/gjH2s0eT9/07vL1oyLKnTRNn9UEyJ0R4B1k4="></script>
-<link rel="alternate" type="application/rss+xml" href="https://aseltmann.github.io/docs/projects/index.xml" title="Blog & Notes" />
+<script defer src="/de.search.min.4bef65035ed69e4cbea9d7378854d67390e5766a4d164f6754b44ad4d0b6944d.js" integrity="sha256-S&#43;9lA17Wnky&#43;qdc3iFTWc5DldmpNFk9nVLRK1NC2lE0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -33,19 +36,19 @@ https://github.com/alex-shpak/hugo-book
       
   <nav>
     <h2 class="book-brand">
-    <a href="/">
+    <a href="/de">
         <span>Blog &amp; Notes</span>
     </a>
 </h2>
 
-    <a href="/">
+    <a href="/de">
         
         <img src="/book_logo.png" alt="Logo" width="100%"/>
         
     </a>
     
 <div class="book-search">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <input type="text" id="book-search-input" placeholder="Suche" aria-label="Suche" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
@@ -53,7 +56,7 @@ https://github.com/alex-shpak/hugo-book
 
     <ul>
     <li>
-        <a href="/posts/">Blog</a>
+        <a href="/de/posts/">Blog</a>
     </li>
 </ul>
 
@@ -73,7 +76,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <span>Notes</span>
+    <span>Notizen</span>
   
 
           
@@ -86,7 +89,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://aseltmann.github.io/docs/notes/poetry/" class="">Poetry</a>
+    <a href="https://aseltmann.github.io/de/docs/notes/poetry/" class="">Gedichte</a>
   
 
         </li>
@@ -104,7 +107,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://aseltmann.github.io/docs/projects/" class=" active">Projects</a>
+    <a href="https://aseltmann.github.io/de/docs/projects/" class="">Projekte</a>
   
 
           
@@ -150,7 +153,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Projects</strong>
+  <strong>Advent of code 2023 - Tag 4: Scratchcards</strong>
 
   <label for="toc-control">
     
@@ -164,12 +167,7 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#current-projects">Current projects</a></li>
-    <li><a href="#conference-talks">Conference talks</a></li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
 
     </aside>
@@ -179,33 +177,29 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h2 id="current-projects">
-  Current projects
-  <a class="anchor" href="#current-projects">#</a>
-</h2>
-<p>I am a believer in the principles of Open Science, Open Data and Open
-Source. Thus, I am currently working on a reproducible way of conducting my
-research on simulation of Fluorescence Correlation Spectroscopy (FCS)
-measurements and correcting artifacts using neural networks, such as
-Convolutional Neural Nets (CNNs). I do not have my workflow fixed yet, but
-to have an insight in my current approach - and with the principles of
-<a href="https://en.wikipedia.org/wiki/Open-notebook_science">Open-notebook science</a> in mind:</p>
-<p><a href="https://aseltmann.github.io/fluotracify/">Fluotracify - doctoral research project done in a reproducible way</a></p>
-<p>Description: In a current project, we apply Deep Learning techniques on Fluorescence
-Correlation Spectroscopy (FCS) data to correct a variety of hardware- and
-sample-related artifacts, such as photobleaching, contamination from additional
-slow moving particles, or sudden drops in intensity because of detector
-anomalies.</p>
-<h2 id="conference-talks">
-  Conference talks
-  <a class="anchor" href="#conference-talks">#</a>
-</h2>
-<ul>
-<li><strong>Seltmann A</strong>, Eggeling C, Waithe D. Automated, User-independent Correction of
-Artifacts in Fluorescence Correlation Spectroscopy Measurements using
-Convolutional Neural Networks. <a href="https://www.quantitativebioimaging.com/qbi2020/">Quantitative BioImaging Conference (QBI)</a>; 2020
-Jan 6-9; Oxford, UK</li>
-</ul>
+<article class="markdown">
+  <h1>
+    <a href="/de/posts/aoc2023-day04/">Advent of code 2023 - Tag 4: Scratchcards</a>
+  </h1>
+  
+  <h5>2023-12-19</h5>
+
+
+
+  
+
+  
+  <div>
+    
+      <a href="/de/tags/python/">python</a>
+  </div>
+  
+
+
+  <p><p>Dieses Jahr versuche ich mich an den Herausforderungen des <strong>Advent of Code
+2023</strong>. Dies ist Tag 4 - siehe <a href="https:adventofcode.com/2023/day/4">https:adventofcode.com/2023/day/4</a></p>
+<p>Für die Lösungen siehe die englische Version dieses Blogbeitrages.</p>
+</p>
 </article>
  
       
@@ -229,21 +223,21 @@ Jan 6-9; Oxford, UK</li>
   <ul>
     <li class="flex align-center">
       <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-      English
+      Deutsch
     </li> 
   </ul>
 
   <ul class="book-languages-list">
     
-    <li class="active">
-      <a href="https://aseltmann.github.io/" class="flex align-center">
+    <li class="">
+      <a href="https://aseltmann.github.io/posts/aoc2023-day04/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         English
       </a>
     </li>
     
-    <li class="">
-      <a href="https://aseltmann.github.io/de/docs/projects/" class="flex align-center">
+    <li class="active">
+      <a href="https://aseltmann.github.io/de/" class="flex align-center">
         <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
         Deutsch
       </a>
@@ -255,18 +249,18 @@ Jan 6-9; Oxford, UK</li>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/4b7dc9e7dc173152747a067083244d06520633bc" title='Last modified by Alex Seltmann | 2023-12-12' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/ed39d877bc880e12809665f64952164b65684e48" title='Zuletzt geändert von Alex Seltmann | 2023-12-19' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2023-12-12</span>
+      <span>2023-12-19</span>
     </a>
   </div>
 
 
 
   <div>
-    <a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/edit/main/content//docs/projects/_index.en.md" target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/edit/main/content//posts/aoc2023-day04.de.md" target="_blank" rel="noopener">
       <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
-      <span>Edit this page</span>
+      <span>Seite bearbeiten</span>
     </a>
   </div>
 
@@ -335,12 +329,7 @@ Jan 6-9; Oxford, UK</li>
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#current-projects">Current projects</a></li>
-    <li><a href="#conference-talks">Conference talks</a></li>
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
  
     </aside>
