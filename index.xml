@@ -9,6 +9,15 @@
     <lastBuildDate>Tue, 12 Dec 2023 00:26:47 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Advent of code 2023 - Day 3: Gear Ratios</title>
+      <link>https://aseltmann.github.io/posts/aoc2023-day03/</link>
+      <pubDate>Mon, 18 Dec 2023 01:01:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/posts/aoc2023-day03/</guid>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 3 - see https:adventofcode.com/2023/day/3
+Part 1 # Lets first read the task:
+The engine schematic (your puzzle input) consists of a visual representation of the engine. There are lots of numbers and symbols you don&amp;rsquo;t really understand, but apparently any number adjacent to a symbol, even diagonally, is a &amp;ldquo;part number&amp;rdquo; and should be included in your sum.</description>
+    </item>
+    <item>
       <title>Poetry</title>
       <link>https://aseltmann.github.io/docs/notes/poetry/</link>
       <pubDate>Tue, 12 Dec 2023 00:26:49 +0100</pubDate>
