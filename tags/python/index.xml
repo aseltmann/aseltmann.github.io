@@ -6,8 +6,15 @@
     <description>Recent content in python on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Dec 2023 00:25:00 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2023 01:10:00 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of code 2023 - Day 5: If You Give A Seed A Fertilizer</title>
+      <link>https://aseltmann.github.io/posts/aoc2023-day05/</link>
+      <pubDate>Sat, 30 Dec 2023 01:10:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/posts/aoc2023-day05/</guid>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 5 - see https:adventofcode.com/2023/day/5&#xA;Part 1 # Lets first read the task:&#xA;The almanac (your puzzle input) lists all of the seeds that need to be planted. It also lists what type of soil to use with each kind of seed, what type of fertilizer to use with each kind of soil, what type of water to use with each kind of fertilizer, and so on.</description>
+    </item>
     <item>
       <title>Advent of code 2023 - Day 4: Scratchcards</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day04/</link>
