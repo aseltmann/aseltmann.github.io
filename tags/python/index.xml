@@ -13,36 +13,28 @@
       <link>https://aseltmann.github.io/posts/aoc2023-day04/</link>
       <pubDate>Tue, 19 Dec 2023 00:25:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2023-day04/</guid>
-      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 4 - see https:adventofcode.com/2023/day/4
-Part 1 # Lets first read the task:
-The Elf leads you over to the pile of colorful cards. There, you discover dozens of scratchcards, all with their opaque covering already scratched off. Picking one up, it looks like each card has two lists of numbers separated by a vertical bar (|): a list of winning numbers and then a list of numbers you have.</description>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 4 - see https:adventofcode.com/2023/day/4&#xA;Part 1 # Lets first read the task:&#xA;The Elf leads you over to the pile of colorful cards. There, you discover dozens of scratchcards, all with their opaque covering already scratched off. Picking one up, it looks like each card has two lists of numbers separated by a vertical bar (|): a list of winning numbers and then a list of numbers you have.</description>
     </item>
     <item>
       <title>Advent of code 2023 - Day 3: Gear Ratios</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day03/</link>
       <pubDate>Mon, 18 Dec 2023 01:01:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2023-day03/</guid>
-      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 3 - see https:adventofcode.com/2023/day/3
-Part 1 # Lets first read the task:
-The engine schematic (your puzzle input) consists of a visual representation of the engine. There are lots of numbers and symbols you don&amp;rsquo;t really understand, but apparently any number adjacent to a symbol, even diagonally, is a &amp;ldquo;part number&amp;rdquo; and should be included in your sum.</description>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 3 - see https:adventofcode.com/2023/day/3&#xA;Part 1 # Lets first read the task:&#xA;The engine schematic (your puzzle input) consists of a visual representation of the engine. There are lots of numbers and symbols you don&amp;rsquo;t really understand, but apparently any number adjacent to a symbol, even diagonally, is a &amp;ldquo;part number&amp;rdquo; and should be included in your sum.</description>
     </item>
     <item>
       <title>Advent of code 2023 - Day 2: Cube Conundrum</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day02/</link>
       <pubDate>Mon, 11 Dec 2023 23:38:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2023-day02/</guid>
-      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 2 - see https:adventofcode.com/2023/day/2
-Part 1 # Lets first read the task:
-As you walk, the Elf shows you a small bag and some cubes which are either red, green, or blue. Each time you play this game, he will hide a secret number of cubes of each color in the bag, and your goal is to figure out information about the number of cubes.</description>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 2 - see https:adventofcode.com/2023/day/2&#xA;Part 1 # Lets first read the task:&#xA;As you walk, the Elf shows you a small bag and some cubes which are either red, green, or blue. Each time you play this game, he will hide a secret number of cubes of each color in the bag, and your goal is to figure out information about the number of cubes.</description>
     </item>
     <item>
       <title>Advent of code 2023 - Day 1: Trebuchet?!</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day01/</link>
       <pubDate>Sun, 10 Dec 2023 03:05:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2023-day01/</guid>
-      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 1 - see https:adventofcode.com/2023/day/1
-Part 1 # Our first task is the following:
-The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.</description>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 1 - see https:adventofcode.com/2023/day/1&#xA;Part 1 # Our first task is the following:&#xA;The newly-improved calibration document consists of lines of text; each line originally contained a specific calibration value that the Elves now need to recover. On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.</description>
     </item>
   </channel>
 </rss>

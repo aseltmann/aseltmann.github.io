@@ -6,47 +6,28 @@
     <description>Recent content in Homepage_de on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Tue, 12 Dec 2023 00:26:47 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2023 00:48:21 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/de/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Advent of code 2023 - Tag 4: Scratchcards</title>
-      <link>https://aseltmann.github.io/de/posts/aoc2023-day04/</link>
-      <pubDate>Tue, 19 Dec 2023 00:25:00 +0100</pubDate>
-      <guid>https://aseltmann.github.io/de/posts/aoc2023-day04/</guid>
-      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 4 - siehe https:adventofcode.com/2023/day/4
-Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
-    </item>
-    <item>
-      <title>Advent of code 2023 - Tag 3: Gear Ratios</title>
-      <link>https://aseltmann.github.io/de/posts/aoc2023-day03/</link>
-      <pubDate>Mon, 18 Dec 2023 01:01:00 +0100</pubDate>
-      <guid>https://aseltmann.github.io/de/posts/aoc2023-day03/</guid>
-      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 3 - siehe https:adventofcode.com/2023/day/3
-Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
-    </item>
     <item>
       <title>Gedichte</title>
       <link>https://aseltmann.github.io/de/docs/notes/poetry/</link>
-      <pubDate>Tue, 12 Dec 2023 00:26:49 +0100</pubDate>
+      <pubDate>Sat, 30 Dec 2023 00:48:23 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/docs/notes/poetry/</guid>
-      <description>Erich Fried # Kleines Beispiel (1982) Auch ungelebtes Leben
-geht zu Ende
-zwar vielleicht langsamer
-wie eine Batterie
-in einer Taschenlampe
-die keiner benutzt
-Aber das hilft nicht viel:
-Wenn man
-(sagen wir einmal)
-diese Taschenlampe
-nach so- und sovielen Jahren
-anknipsen will
-kommt kein Atemzug Licht mehr heraus
-und wenn du sie aufmachst
-findest du nur deine Knochen
-und falls du Pech hast
-auch diese
-schon ganz zerfressen</description>
+      <description>Erich Fried # Kleines Beispiel (1982) Auch ungelebtes Leben&#xA;geht zu Ende&#xA;zwar vielleicht langsamer&#xA;wie eine Batterie&#xA;in einer Taschenlampe&#xA;die keiner benutzt&#xA;Aber das hilft nicht viel:&#xA;Wenn man&#xA;(sagen wir einmal)&#xA;diese Taschenlampe&#xA;nach so- und sovielen Jahren&#xA;anknipsen will&#xA;kommt kein Atemzug Licht mehr heraus&#xA;und wenn du sie aufmachst&#xA;findest du nur deine Knochen&#xA;und falls du Pech hast&#xA;auch diese&#xA;schon ganz zerfressen</description>
+    </item>
+    <item>
+      <title>Advent of code 2023 - Tag 4: Rubbelkarten</title>
+      <link>https://aseltmann.github.io/de/posts/aoc2023-day04/</link>
+      <pubDate>Tue, 19 Dec 2023 00:25:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/de/posts/aoc2023-day04/</guid>
+      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 4 - siehe https:adventofcode.com/2023/day/4&#xA;Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
+    </item>
+    <item>
+      <title>Advent of code 2023 - Tag 3: Getriebeübersetzungen</title>
+      <link>https://aseltmann.github.io/de/posts/aoc2023-day03/</link>
+      <pubDate>Mon, 18 Dec 2023 01:01:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/de/posts/aoc2023-day03/</guid>
+      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 3 - siehe https:adventofcode.com/2023/day/3&#xA;Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
     </item>
     <item>
       <title>Advent of code 2023 - Tag 1: Trebuchet?!</title>
@@ -56,12 +37,11 @@ schon ganz zerfressen</description>
       <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 1 - siehe https:adventofcode.com/2023/day/1</description>
     </item>
     <item>
-      <title>Advent of code 2023 - Tag 2: Cube Conundrum</title>
+      <title>Advent of code 2023 - Tag 2: Würfelrätsel</title>
       <link>https://aseltmann.github.io/de/posts/aoc2023-day02/</link>
       <pubDate>Mon, 11 Dec 2023 23:38:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/posts/aoc2023-day02/</guid>
-      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 2 - siehe https:adventofcode.com/2023/day/2
-Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
+      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 2 - siehe https:adventofcode.com/2023/day/2&#xA;Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
     </item>
   </channel>
 </rss>

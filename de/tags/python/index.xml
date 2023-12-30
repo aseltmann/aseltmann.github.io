@@ -9,20 +9,18 @@
     <lastBuildDate>Tue, 19 Dec 2023 00:25:00 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/de/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Advent of code 2023 - Tag 4: Scratchcards</title>
+      <title>Advent of code 2023 - Tag 4: Rubbelkarten</title>
       <link>https://aseltmann.github.io/de/posts/aoc2023-day04/</link>
       <pubDate>Tue, 19 Dec 2023 00:25:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/posts/aoc2023-day04/</guid>
-      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 4 - siehe https:adventofcode.com/2023/day/4
-Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
+      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 4 - siehe https:adventofcode.com/2023/day/4&#xA;Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
     </item>
     <item>
-      <title>Advent of code 2023 - Tag 3: Gear Ratios</title>
+      <title>Advent of code 2023 - Tag 3: Getriebeübersetzungen</title>
       <link>https://aseltmann.github.io/de/posts/aoc2023-day03/</link>
       <pubDate>Mon, 18 Dec 2023 01:01:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/posts/aoc2023-day03/</guid>
-      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 3 - siehe https:adventofcode.com/2023/day/3
-Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
+      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 3 - siehe https:adventofcode.com/2023/day/3&#xA;Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
     </item>
     <item>
       <title>Advent of code 2023 - Tag 1: Trebuchet?!</title>
@@ -32,12 +30,11 @@ Für die Lösungen siehe die englische Version dieses Blogbeitrages.</descriptio
       <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 1 - siehe https:adventofcode.com/2023/day/1</description>
     </item>
     <item>
-      <title>Advent of code 2023 - Tag 2: Cube Conundrum</title>
+      <title>Advent of code 2023 - Tag 2: Würfelrätsel</title>
       <link>https://aseltmann.github.io/de/posts/aoc2023-day02/</link>
       <pubDate>Mon, 11 Dec 2023 23:38:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/posts/aoc2023-day02/</guid>
-      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 2 - siehe https:adventofcode.com/2023/day/2
-Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
+      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 2 - siehe https:adventofcode.com/2023/day/2&#xA;Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
     </item>
   </channel>
 </rss>
