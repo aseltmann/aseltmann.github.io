@@ -22,7 +22,7 @@ The engine schematic (your puzzle input) consists of a visual representation of 
 <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day03/" title="Advent of code 2023 - Tag 3: Getriebeübersetzungen">
 
 <link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
-<script defer src="/en.search.min.801945165126216fbbda85147b8d293a542bfd453eeadac57d83d11a3040ee81.js" integrity="sha256-gBlFFlEmIW&#43;72oUUe40pOlQr/UU&#43;6trFfYPRGjBA7oE="></script>
+<script defer src="/en.search.min.7ed4661a12b8f1ad2cbf8244d8a0bf11e469ec6e2577a36945e6ba3b5701c4bd.js" integrity="sha256-ftRmGhK48a0sv4JE2KC/EeRp7G4ld6NpRea6O1cBxL0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -236,22 +236,22 @@ number is adjacent to a symbol and so is a part number; their sum is <code>4361<
 the part numbers in the engine schematic</strong>?</p>
 </blockquote>
 <p>Okay, let&rsquo;s first get the input as a <code>numpy</code> character array</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> sys
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> ndimage <span style="color:#66d9ef">as</span> ndi
-</span></span><span style="display:flex;"><span>  np<span style="color:#f92672">.</span>set_printoptions(threshold<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>maxsize)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> ndimage <span style="color:#66d9ef">as</span> ndi
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>set_printoptions(threshold<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>maxsize)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-03-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;code&#39;</span>])
-</span></span><span style="display:flex;"><span>  arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>chararray((txt<span style="color:#f92672">.</span>size, txt<span style="color:#f92672">.</span>size), unicode<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-03-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;code&#39;</span>])
+</span></span><span style="display:flex;"><span>arr <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>chararray((txt<span style="color:#f92672">.</span>size, txt<span style="color:#f92672">.</span>size), unicode<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;code&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> x])
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;code&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: [i <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> x])
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> i, code <span style="color:#f92672">in</span> enumerate(txt[<span style="color:#e6db74">&#39;code&#39;</span>]):
-</span></span><span style="display:flex;"><span>      arr[i, :] <span style="color:#f92672">=</span> code
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, code <span style="color:#f92672">in</span> enumerate(txt[<span style="color:#e6db74">&#39;code&#39;</span>]):
+</span></span><span style="display:flex;"><span>    arr[i, :] <span style="color:#f92672">=</span> code
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  print((arr[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>]))
+</span></span><span style="display:flex;"><span>print((arr[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>]))
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>[[&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
 </span></span><span style="display:flex;"><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;5&#39; &#39;3&#39; &#39;.&#39; &#39;4&#39;]
 </span></span><span style="display:flex;"><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;*&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
@@ -271,28 +271,28 @@ the part numbers in the engine schematic</strong>?</p>
 methods for that. This way, we create a binary mask for all <strong>digits</strong> and a
 binary mask for all <strong>empty</strong> space (<code>.</code>). The <strong>symbols</strong> are then every character
 which is neither.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  digits <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>char<span style="color:#f92672">.</span>isdigit(arr)
-</span></span><span style="display:flex;"><span>  empty <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>char<span style="color:#f92672">.</span>endswith(arr, <span style="color:#e6db74">&#39;.&#39;</span>)
-</span></span><span style="display:flex;"><span>  symbols <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>(digits <span style="color:#f92672">|</span> empty)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>digits <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>char<span style="color:#f92672">.</span>isdigit(arr)
+</span></span><span style="display:flex;"><span>empty <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>char<span style="color:#f92672">.</span>endswith(arr, <span style="color:#e6db74">&#39;.&#39;</span>)
+</span></span><span style="display:flex;"><span>symbols <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>(digits <span style="color:#f92672">|</span> empty)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># just for visualization</span>
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">5</span>))
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">131</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;symbols&#39;</span>)<span style="color:#f92672">.</span>matshow(symbols)
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">132</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;digits&#39;</span>)<span style="color:#f92672">.</span>matshow(digits)
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">133</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;empty&#39;</span>)<span style="color:#f92672">.</span>matshow(empty)
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># just for visualization</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">5</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">131</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;symbols&#39;</span>)<span style="color:#f92672">.</span>matshow(symbols)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">132</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;digits&#39;</span>)<span style="color:#f92672">.</span>matshow(digits)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">133</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;empty&#39;</span>)<span style="color:#f92672">.</span>matshow(empty)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><figure><img src="/ox-hugo/3d955c265fa5dde20c0ed8a3ea7e6d7fdbf1dbc4.png"/>
 </figure>
 
 <p>Now we use the image processing technique of dilation on the <code>symbols</code> mask. So
 that we get a new mask which covers the surroundings of all symbols. We use this
 afterwards to check if the digits are near a symbol.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  struct <span style="color:#f92672">=</span> ((<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
-</span></span><span style="display:flex;"><span>  dilate <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>binary_dilation(symbols, structure<span style="color:#f92672">=</span>struct)
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">121</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;symbols&#39;</span>)<span style="color:#f92672">.</span>matshow(symbols[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">122</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;symbols dilated&#39;</span>)<span style="color:#f92672">.</span>matshow(dilate[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>show()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>struct <span style="color:#f92672">=</span> ((<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>dilate <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>binary_dilation(symbols, structure<span style="color:#f92672">=</span>struct)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">121</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;symbols&#39;</span>)<span style="color:#f92672">.</span>matshow(symbols[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">122</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;symbols dilated&#39;</span>)<span style="color:#f92672">.</span>matshow(dilate[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><figure><img src="/ox-hugo/f5bfe295be6eef74628a5ed108e6b01a774596ae.png"/>
 </figure>
 
@@ -300,21 +300,21 @@ afterwards to check if the digits are near a symbol.</p>
 each element in our mask is either <code>True</code> or <code>False</code>. To extract the single
 digits, we&rsquo;ll convert the binary digits segmentation into a <strong>instance
 segmentation</strong>, where each connected segment has an own index.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  markers, num_features <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>label(digits)
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">121</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary segmentation&#39;</span>)<span style="color:#f92672">.</span>matshow(
-</span></span><span style="display:flex;"><span>      digits[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">122</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;instance segmentation&#39;</span>)<span style="color:#f92672">.</span>matshow(
-</span></span><span style="display:flex;"><span>      markers[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>], cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gnuplot&#39;</span>)
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>show()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>markers, num_features <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>label(digits)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">121</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;binary segmentation&#39;</span>)<span style="color:#f92672">.</span>matshow(
+</span></span><span style="display:flex;"><span>    digits[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">122</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;instance segmentation&#39;</span>)<span style="color:#f92672">.</span>matshow(
+</span></span><span style="display:flex;"><span>    markers[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>], cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gnuplot&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><figure><img src="/ox-hugo/c33933d74a831f06e8076b8b7e3ca700cc608d34.png"/>
 </figure>
 
 <p>Now, for each instance, we check if the dilated binary mask overlaps with the
 instance and if yes, we extract the number.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  numbers <span style="color:#f92672">=</span> [int(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(arr[markers <span style="color:#f92672">==</span> i]))
-</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, num_features<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">if</span> np<span style="color:#f92672">.</span>any((markers <span style="color:#f92672">==</span> i) <span style="color:#f92672">&amp;</span> dilate)]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>numbers <span style="color:#f92672">=</span> [int(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(arr[markers <span style="color:#f92672">==</span> i]))
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, num_features<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">if</span> np<span style="color:#f92672">.</span>any((markers <span style="color:#f92672">==</span> i) <span style="color:#f92672">&amp;</span> dilate)]
 </span></span></code></pre></div><p>Then, we just sum up:</p>
 <details>
 <summary>Reveal solution!</summary>
@@ -362,17 +362,17 @@ ratios produces <code>467835</code>.</p>
 <p>We&rsquo;ll use the same method as before, but this time only extract <code>*</code> and create
 the instance segmentation <strong>before</strong> the dilation. Why? Because when we dilate
 first, we could merge two independent gears into one instance.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  gear <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>char<span style="color:#f92672">.</span>endswith(arr, <span style="color:#e6db74">&#39;*&#39;</span>)
-</span></span><span style="display:flex;"><span>  gear_markers, gear_num <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>label(gear)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gear <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>char<span style="color:#f92672">.</span>endswith(arr, <span style="color:#e6db74">&#39;*&#39;</span>)
+</span></span><span style="display:flex;"><span>gear_markers, gear_num <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>label(gear)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">131</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all symbols dilated&#39;</span>)<span style="color:#f92672">.</span>matshow(
-</span></span><span style="display:flex;"><span>      symbols[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">132</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gears&#39;</span>)<span style="color:#f92672">.</span>matshow(
-</span></span><span style="display:flex;"><span>      gear[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">133</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gears instances&#39;</span>)<span style="color:#f92672">.</span>matshow(
-</span></span><span style="display:flex;"><span>      gear_markers[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>], cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gnuplot&#39;</span>)
-</span></span><span style="display:flex;"><span>  plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">131</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all symbols dilated&#39;</span>)<span style="color:#f92672">.</span>matshow(
+</span></span><span style="display:flex;"><span>    symbols[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">132</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gears&#39;</span>)<span style="color:#f92672">.</span>matshow(
+</span></span><span style="display:flex;"><span>    gear[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>])
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">133</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gears instances&#39;</span>)<span style="color:#f92672">.</span>matshow(
+</span></span><span style="display:flex;"><span>    gear_markers[:<span style="color:#ae81ff">15</span>, :<span style="color:#ae81ff">15</span>], cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gnuplot&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
 </span></span></code></pre></div><figure><img src="/ox-hugo/13636bfd783c453b1f8ded972f302c1aeaad44b2.png"/>
 </figure>
 
@@ -380,22 +380,31 @@ first, we could merge two independent gears into one instance.</p>
 and then step through all digits and check if they are in the gear mask. If we
 get two digits in the end, we multiply them to get the dear ratio and save the
 ratios to a list.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  gear_ratios <span style="color:#f92672">=</span> []
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, gear_num<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
-</span></span><span style="display:flex;"><span>      gear_binary <span style="color:#f92672">=</span> gear_markers <span style="color:#f92672">==</span> i
-</span></span><span style="display:flex;"><span>      gear_dil <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>binary_dilation(gear_binary, structure<span style="color:#f92672">=</span>struct)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gear_ratios <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, gear_num<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>    gear_binary <span style="color:#f92672">=</span> gear_markers <span style="color:#f92672">==</span> i
+</span></span><span style="display:flex;"><span>    gear_dil <span style="color:#f92672">=</span> ndi<span style="color:#f92672">.</span>binary_dilation(gear_binary, structure<span style="color:#f92672">=</span>struct)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      part_numbers <span style="color:#f92672">=</span> [int(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(arr[markers <span style="color:#f92672">==</span> j]))
-</span></span><span style="display:flex;"><span>                      <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, num_features<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>                      <span style="color:#66d9ef">if</span> np<span style="color:#f92672">.</span>any((markers <span style="color:#f92672">==</span> j) <span style="color:#f92672">&amp;</span> gear_dil)]
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> len(part_numbers) <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
-</span></span><span style="display:flex;"><span>          gear_ratios<span style="color:#f92672">.</span>append(part_numbers[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> part_numbers[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, num_features<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> np<span style="color:#f92672">.</span>any((markers <span style="color:#f92672">==</span> j) <span style="color:#f92672">&amp;</span> gear_dil)]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(part_numbers) <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>        gear_ratios<span style="color:#f92672">.</span>append(part_numbers[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> part_numbers[<span style="color:#ae81ff">1</span>])
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>  Cell In[21], line 7
+</span></span><span style="display:flex;"><span>    for j in range(1, num_features+1)
+</span></span><span style="display:flex;"><span>    ^
+</span></span><span style="display:flex;"><span>IndentationError: unexpected indent
 </span></span></code></pre></div><p>Now, we just sum the output again:</p>
 <details>
 <summary>Reveal solution!</summary>
 <div class="details">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  sum(gear_ratios)
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>79026871
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>---------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>NameError                                 Traceback (most recent call last)
+</span></span><span style="display:flex;"><span>Cell In[22], line 1
+</span></span><span style="display:flex;"><span>----&gt; 1 sum(gear_ratios)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NameError: name &#39;gear_ratios&#39; is not defined
 </span></span></code></pre></div></div>
 </details>
 </p>

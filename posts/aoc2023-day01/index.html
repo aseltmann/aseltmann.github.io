@@ -22,7 +22,7 @@ The newly-improved calibration document consists of lines of text; each line ori
 <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day01/" title="Advent of code 2023 - Tag 1: Trebuchet?!">
 
 <link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
-<script defer src="/en.search.min.801945165126216fbbda85147b8d293a542bfd453eeadac57d83d11a3040ee81.js" integrity="sha256-gBlFFlEmIW&#43;72oUUe40pOlQr/UU&#43;6trFfYPRGjBA7oE="></script>
+<script defer src="/en.search.min.7ed4661a12b8f1ad2cbf8244d8a0bf11e469ec6e2577a36945e6ba3b5701c4bd.js" integrity="sha256-ftRmGhK48a0sv4JE2KC/EeRp7G4ld6NpRea6O1cBxL0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -228,14 +228,14 @@ and 77. Adding these together produces 142.</p>
 calibration values?</p>
 </blockquote>
 <p>Lets start jupyter in our shell to start coding!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  conda activate tf
-</span></span><span style="display:flex;"><span>  jupyter lab --no-browser --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8888</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>conda activate tf
+</span></span><span style="display:flex;"><span>jupyter lab --no-browser --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8888</span>
 </span></span></code></pre></div><p>First, load the test document</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-01-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;code&#39;</span>])
-</span></span><span style="display:flex;"><span>  txt
+</span></span><span style="display:flex;"><span>txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-01-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;code&#39;</span>])
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code
 </span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1
 </span></span><span style="display:flex;"><span>1                        6fourfour
@@ -256,9 +256,9 @@ first match), then <code>pandas.extractall</code> (which extracts all matches bu
 into a multiindex which makes things more difficult in this case). So I settled
 for the <code>re.findall</code> version, which returns a list. To concatenate the elements
 in the list, we take use the <code>join</code> function.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;digits&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d+)&#39;</span>, x)))
-</span></span><span style="display:flex;"><span>  txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;digits&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d+)&#39;</span>, x)))
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits
 </span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1
 </span></span><span style="display:flex;"><span>1                        6fourfour      6
@@ -274,9 +274,9 @@ in the list, we take use the <code>join</code> function.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[1000 rows x 2 columns]
 </span></span></code></pre></div><p>Next, combine the first and the last digit and convert the result from string to integer</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;calibration&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;digits&#39;</span>]<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]))
-</span></span><span style="display:flex;"><span>  txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;calibration&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;digits&#39;</span>]<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]))
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits  calibration
 </span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1           11
 </span></span><span style="display:flex;"><span>1                        6fourfour      6           66
@@ -292,7 +292,7 @@ in the list, we take use the <code>join</code> function.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[1000 rows x 3 columns]
 </span></span></code></pre></div><p>Lastly, get the sum of our calibration numbers</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;calibration&#39;</span>]<span style="color:#f92672">.</span>sum()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;calibration&#39;</span>]<span style="color:#f92672">.</span>sum()
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>56465
 </span></span></code></pre></div><h2 id="part-2">
   Part 2
@@ -324,26 +324,26 @@ used the regex positive lookahead <code>?=</code> as described <a href="https://
 capturing overlapping values, I used <code>\d</code> (one digit) instead of <code>\d+</code> (one or
 more digits), otherwise digits might double. Afterwards, just replace the
 spelled out digits with their numerical value.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#75715e"># for i, r in enumerate(txt.loc[:, &#39;code&#39;]):</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#     matches = re.findall(</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#         r&#39;(?=(\d|one|two|three|four|five|six|seven|eight|nine))&#39;, r)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#     result = &#39;&#39;.join([match for match in matches])</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#     result = result.replace(&#39;one&#39;, &#39;1&#39;).replace(&#39;two&#39;, &#39;2&#39;).replace(</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#         &#39;three&#39;, &#39;3&#39;).replace(&#39;four&#39;, &#39;4&#39;).replace(&#39;five&#39;, &#39;5&#39;).replace(</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#         &#39;six&#39;, &#39;6&#39;).replace(&#39;seven&#39;, &#39;7&#39;).replace(&#39;eight&#39;, &#39;8&#39;).replace(</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#         &#39;nine&#39;, &#39;9&#39;)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#     txt.loc[i, &#39;digits2&#39;] = result</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># txt</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># for i, r in enumerate(txt.loc[:, &#39;code&#39;]):</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     matches = re.findall(</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#         r&#39;(?=(\d|one|two|three|four|five|six|seven|eight|nine))&#39;, r)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     result = &#39;&#39;.join([match for match in matches])</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     result = result.replace(&#39;one&#39;, &#39;1&#39;).replace(&#39;two&#39;, &#39;2&#39;).replace(</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#         &#39;three&#39;, &#39;3&#39;).replace(&#39;four&#39;, &#39;4&#39;).replace(&#39;five&#39;, &#39;5&#39;).replace(</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#         &#39;six&#39;, &#39;6&#39;).replace(&#39;seven&#39;, &#39;7&#39;).replace(&#39;eight&#39;, &#39;8&#39;).replace(</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#         &#39;nine&#39;, &#39;9&#39;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     txt.loc[i, &#39;digits2&#39;] = result</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># txt</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># a very nice alternative suggested by Tomalak:</span>
-</span></span><span style="display:flex;"><span>  digits <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\d one two three four five six seven eight nine&#39;</span><span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># a very nice alternative suggested by Tomalak:</span>
+</span></span><span style="display:flex;"><span>digits <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\d one two three four five six seven eight nine&#39;</span><span style="color:#f92672">.</span>split()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;digits2&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> v: <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(
-</span></span><span style="display:flex;"><span>      str(digits<span style="color:#f92672">.</span>index(m)) <span style="color:#66d9ef">if</span> m <span style="color:#f92672">in</span> digits <span style="color:#66d9ef">else</span> m
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">rf</span><span style="color:#e6db74">&#39;(?=(</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#34;|&#34;</span><span style="color:#f92672">.</span>join(digits)<span style="color:#e6db74">}</span><span style="color:#e6db74">))&#39;</span>, v)
-</span></span><span style="display:flex;"><span>  ))
-</span></span><span style="display:flex;"><span>  txt
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;digits2&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> v: <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>    str(digits<span style="color:#f92672">.</span>index(m)) <span style="color:#66d9ef">if</span> m <span style="color:#f92672">in</span> digits <span style="color:#66d9ef">else</span> m
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> m <span style="color:#f92672">in</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">rf</span><span style="color:#e6db74">&#39;(?=(</span><span style="color:#e6db74">{</span><span style="color:#e6db74">&#34;|&#34;</span><span style="color:#f92672">.</span>join(digits)<span style="color:#e6db74">}</span><span style="color:#e6db74">))&#39;</span>, v)
+</span></span><span style="display:flex;"><span>))
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits  calibration digits2
 </span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1           11      51
 </span></span><span style="display:flex;"><span>1                        6fourfour      6           66     644
@@ -359,8 +359,8 @@ spelled out digits with their numerical value.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[1000 rows x 4 columns]
 </span></span></code></pre></div><p>Now, construct the calibration value as before&hellip;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;calibration2&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;digits2&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]))
-</span></span><span style="display:flex;"><span>  txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;calibration2&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;digits2&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> x[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]))
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                              code digits  calibration digits2  calibration2
 </span></span><span style="display:flex;"><span>0                   jjfvnnlfivejj1      1           11      51            51
 </span></span><span style="display:flex;"><span>1                        6fourfour      6           66     644            64
@@ -376,7 +376,7 @@ spelled out digits with their numerical value.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[1000 rows x 5 columns]
 </span></span></code></pre></div><p>&hellip; and get the correct sum!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;calibration2&#39;</span>]<span style="color:#f92672">.</span>sum()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;calibration2&#39;</span>]<span style="color:#f92672">.</span>sum()
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>55902
 </span></span></code></pre></div></p>
 </article>

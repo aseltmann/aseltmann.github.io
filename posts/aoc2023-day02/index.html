@@ -22,7 +22,7 @@ As you walk, the Elf shows you a small bag and some cubes which are either red, 
 <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day02/" title="Advent of code 2023 - Tag 2: Würfelrätsel">
 
 <link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
-<script defer src="/en.search.min.801945165126216fbbda85147b8d293a542bfd453eeadac57d83d11a3040ee81.js" integrity="sha256-gBlFFlEmIW&#43;72oUUe40pOlQr/UU&#43;6trFfYPRGjBA7oE="></script>
+<script defer src="/en.search.min.7ed4661a12b8f1ad2cbf8244d8a0bf11e469ec6e2577a36945e6ba3b5701c4bd.js" integrity="sha256-ftRmGhK48a0sv4JE2KC/EeRp7G4ld6NpRea6O1cBxL0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -249,16 +249,16 @@ of those games</strong>?</p>
 all, let&rsquo;s load the input and split the riddle code by colon <code>:</code> to extract the
 game id and the rest of the code by semicolon <code>;</code> to get the number of sets
 played in each game.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-02-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;code&#39;</span>])
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;Game &#39;</span>)))
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;code&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>])
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># txt[&#39;code&#39;] = txt.loc[:, &#39;code&#39;].str.split(&#39;;&#39;)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># txt[&#39;nsets&#39;] = txt.loc[:, &#39;code&#39;].apply(lambda x: len(x))</span>
-</span></span><span style="display:flex;"><span>  txt
+</span></span><span style="display:flex;"><span>txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-02-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;code&#39;</span>])
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;Game &#39;</span>)))
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;code&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># txt[&#39;code&#39;] = txt.loc[:, &#39;code&#39;].str.split(&#39;;&#39;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># txt[&#39;nsets&#39;] = txt.loc[:, &#39;code&#39;].apply(lambda x: len(x))</span>
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                                                 code   id
 </span></span><span style="display:flex;"><span>0    1 green, 1 blue, 1 red; 1 green, 8 red, 7 blu...    1
 </span></span><span style="display:flex;"><span>1    9 red, 7 green, 3 blue; 15 green, 2 blue, 5 r...    2
@@ -277,16 +277,16 @@ played in each game.</p>
 lookahead assertion <code>?=</code> to find the respective colours and only exctract the
 digits <code>\d+</code> coming before. Then we just keep the <code>max</code> imum drawn number of cubes
 per color, since this is the only information that matters at the moment.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;green&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> code: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+(?=.green)&#39;</span>, code))<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">lambda</span> list: max([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list]))
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;red&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> code: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+(?=.red)&#39;</span>, code))<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">lambda</span> list: max([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list]))
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;blue&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> code: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+(?=.blue)&#39;</span>, code))<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">lambda</span> list: max([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list]))
-</span></span><span style="display:flex;"><span>  txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;green&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> code: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+(?=.green)&#39;</span>, code))<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">lambda</span> list: max([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list]))
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;red&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> code: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+(?=.red)&#39;</span>, code))<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">lambda</span> list: max([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list]))
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;blue&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;code&#39;</span>]<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> code: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+(?=.blue)&#39;</span>, code))<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">lambda</span> list: max([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list]))
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                                                 code   id  green  red  blue
 </span></span><span style="display:flex;"><span>0    1 green, 1 blue, 1 red; 1 green, 8 red, 7 blu...    1      2   10    10
 </span></span><span style="display:flex;"><span>1    9 red, 7 green, 3 blue; 15 green, 2 blue, 5 r...    2     15   10     3
@@ -303,7 +303,7 @@ per color, since this is the only information that matters at the moment.</p>
 </span></span><span style="display:flex;"><span>[100 rows x 5 columns]
 </span></span></code></pre></div><p>Lastly, we just filter the DataFrame to only include games where all drawn cubes
 were below or equal the number of cubes in the game and sum the result!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;id&#39;</span>][(txt[<span style="color:#e6db74">&#39;green&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">14</span>) <span style="color:#f92672">&amp;</span> (txt[<span style="color:#e6db74">&#39;red&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>) <span style="color:#f92672">&amp;</span> (txt[<span style="color:#e6db74">&#39;blue&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">15</span>)]<span style="color:#f92672">.</span>sum()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;id&#39;</span>][(txt[<span style="color:#e6db74">&#39;green&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">14</span>) <span style="color:#f92672">&amp;</span> (txt[<span style="color:#e6db74">&#39;red&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">13</span>) <span style="color:#f92672">&amp;</span> (txt[<span style="color:#e6db74">&#39;blue&#39;</span>] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">15</span>)]<span style="color:#f92672">.</span>sum()
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>3035
 </span></span></code></pre></div><h2 id="part-2">
   Part 2
@@ -341,8 +341,8 @@ is the sum of the power of these sets?</strong></p>
 </blockquote>
 <p>Luckily, this task is made trivial by the approach we have taken before. We just
 have to multiply the <code>green</code>, <code>red</code> and <code>blue</code> columns:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;power&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;green&#39;</span>] <span style="color:#f92672">*</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;blue&#39;</span>] <span style="color:#f92672">*</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;red&#39;</span>]
-</span></span><span style="display:flex;"><span>  txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;power&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;green&#39;</span>] <span style="color:#f92672">*</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;blue&#39;</span>] <span style="color:#f92672">*</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;red&#39;</span>]
+</span></span><span style="display:flex;"><span>txt
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                                                 code   id  green  red  blue  \
 </span></span><span style="display:flex;"><span>0    1 green, 1 blue, 1 red; 1 green, 8 red, 7 blu...    1      2   10    10
 </span></span><span style="display:flex;"><span>1    9 red, 7 green, 3 blue; 15 green, 2 blue, 5 r...    2     15   10     3
@@ -371,7 +371,7 @@ have to multiply the <code>green</code>, <code>red</code> and <code>blue</code> 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[100 rows x 6 columns]
 </span></span></code></pre></div><p>And for this one, the sum is:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;power&#39;</span>]<span style="color:#f92672">.</span>sum()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;power&#39;</span>]<span style="color:#f92672">.</span>sum()
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>66027
 </span></span></code></pre></div></p>
 </article>

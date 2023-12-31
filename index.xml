@@ -6,21 +6,21 @@
     <description>Recent content in Homepage on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Dec 2023 00:48:20 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 31 Dec 2023 01:15:10 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Poetry</title>
+      <link>https://aseltmann.github.io/docs/notes/poetry/</link>
+      <pubDate>Sun, 31 Dec 2023 01:15:13 +0100</pubDate>
+      <guid>https://aseltmann.github.io/docs/notes/poetry/</guid>
+      <description>Lǎozǐ # I am partial to the translation of Derek Lin&#xA;Dàodéjīng - Chapter 11 (The use of what has no substantive existence) [&amp;hellip;]&#xA;Mix clay&#xA;to create a container&#xA;In its emptiness, there is&#xA;the function of a container&#xA;[&amp;hellip;]&#xA;Therefore,&#xA;that which exists is used to create benefit&#xA;That which is empty is used to create functionality&#xA;Dàodéjīng - Chapter 15 (The exhibition of the qualities of the Dao) The Tao masters of antiquity</description>
+    </item>
     <item>
       <title>Advent of code 2023 - Day 5: If You Give A Seed A Fertilizer</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day05/</link>
       <pubDate>Sat, 30 Dec 2023 01:10:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2023-day05/</guid>
-      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 5 - see https:adventofcode.com/2023/day/5&#xA;Part 1 # Lets first read the task:&#xA;The almanac (your puzzle input) lists all of the seeds that need to be planted. It also lists what type of soil to use with each kind of seed, what type of fertilizer to use with each kind of soil, what type of water to use with each kind of fertilizer, and so on.</description>
-    </item>
-    <item>
-      <title>Poetry</title>
-      <link>https://aseltmann.github.io/docs/notes/poetry/</link>
-      <pubDate>Sat, 30 Dec 2023 00:48:23 +0100</pubDate>
-      <guid>https://aseltmann.github.io/docs/notes/poetry/</guid>
-      <description>Lǎozǐ # I am partial to the translation of Derek Lin&#xA;Dàodéjīng - Chapter 11 (The use of what has no substantive existence) [&amp;hellip;]&#xA;Mix clay&#xA;to create a container&#xA;In its emptiness, there is&#xA;the function of a container&#xA;[&amp;hellip;]&#xA;Therefore,&#xA;that which exists is used to create benefit&#xA;That which is empty is used to create functionality&#xA;Dàodéjīng - Chapter 15 (The exhibition of the qualities of the Dao) The Tao masters of antiquity</description>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 5 - see https:adventofcode.com/2023/day/5&#xA;Update [2023-12-31 So]:&#xA;subsitute get_generator() (own implementation) with range() (Python inbuilt) improve grid search so that it goes through all location ranges, still starting with the lowest range Part 1 # Lets first read the task:&#xA;The almanac (your puzzle input) lists all of the seeds that need to be planted.</description>
     </item>
     <item>
       <title>Advent of code 2023 - Day 4: Scratchcards</title>

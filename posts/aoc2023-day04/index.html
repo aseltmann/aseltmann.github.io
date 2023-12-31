@@ -22,7 +22,7 @@ The Elf leads you over to the pile of colorful cards. There, you discover dozens
 <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day04/" title="Advent of code 2023 - Tag 4: Rubbelkarten">
 
 <link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
-<script defer src="/en.search.min.801945165126216fbbda85147b8d293a542bfd453eeadac57d83d11a3040ee81.js" integrity="sha256-gBlFFlEmIW&#43;72oUUe40pOlQr/UU&#43;6trFfYPRGjBA7oE="></script>
+<script defer src="/en.search.min.7ed4661a12b8f1ad2cbf8244d8a0bf11e469ec6e2577a36945e6ba3b5701c4bd.js" integrity="sha256-ftRmGhK48a0sv4JE2KC/EeRp7G4ld6NpRea6O1cBxL0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -250,196 +250,38 @@ there. Our goal is to get <code>win</code> and <code>yours</code> columns holdin
 digits which we want to compare. We find the numbers with one or more digits
 using the regex <code>\d+</code>. And we want them to be in <strong>sets</strong> (not lists), as we can
 logically compare sets in Python.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-04-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;win&#39;</span>])
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;Card &#39;</span>)))
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;win&#39;</span>] <span style="color:#f92672">=</span> (txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>]))
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;yours&#39;</span>] <span style="color:#f92672">=</span> (txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]
-</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;|&#39;</span>)
-</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>])
-</span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># get a list of only the numbers / digits</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, x))
-</span></span><span style="display:flex;"><span>                  <span style="color:#75715e"># convert the list of strings to a set of integers</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: set([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> x])))
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;win&#39;</span>] <span style="color:#f92672">=</span> (txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]
+</span></span><span style="display:flex;"><span>txt <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-04-1-aoc.txt&#39;</span>, names<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;win&#39;</span>])
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: int(x[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>strip(<span style="color:#e6db74">&#39;Card &#39;</span>)))
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;win&#39;</span>] <span style="color:#f92672">=</span> (txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;:&#39;</span>)<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>]))
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;yours&#39;</span>] <span style="color:#f92672">=</span> (txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]
 </span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;|&#39;</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># get a list of only the numbers / digits</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, x))
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># convert the list of strings to a set of integers</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: set([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> x])))
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;win&#39;</span>] <span style="color:#f92672">=</span> (txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;win&#39;</span>]
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;|&#39;</span>)
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\d+&#39;</span>, x))
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: set([int(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> x])))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt
-</span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>win</th>
-<th>id</th>
-<th>yours</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>{32, 36, 7, 9, 10, 12, 82, 85, 95, 31}</td>
-<td>1</td>
-<td>{2, 7, 9, 10, 12, 14, 21, 22, 23, 24, 31, 32, &hellip;</td>
-</tr>
-<tr>
-<td>1</td>
-<td>{35, 76, 16, 82, 19, 22, 88, 59, 60, 95}</td>
-<td>2</td>
-<td>{7, 8, 12, 16, 19, 22, 26, 28, 35, 38, 44, 51,&hellip;</td>
-</tr>
-<tr>
-<td>2</td>
-<td>{1, 70, 11, 78, 48, 19, 52, 88, 28, 94}</td>
-<td>3</td>
-<td>{3, 4, 8, 17, 18, 19, 24, 31, 34, 45, 52, 54, &hellip;</td>
-</tr>
-<tr>
-<td>3</td>
-<td>{65, 2, 72, 28, 14, 16, 55, 91, 92, 62}</td>
-<td>4</td>
-<td>{3, 4, 6, 7, 8, 9, 15, 30, 33, 35, 47, 49, 51,&hellip;</td>
-</tr>
-<tr>
-<td>4</td>
-<td>{38, 41, 75, 77, 50, 24, 94, 60, 61, 30}</td>
-<td>5</td>
-<td>{1, 2, 4, 5, 6, 7, 9, 10, 14, 17, 21, 29, 47, &hellip;</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>213</td>
-<td>{97, 98, 39, 41, 43, 12, 13, 19, 93, 95}</td>
-<td>214</td>
-<td>{5, 10, 17, 20, 28, 29, 33, 34, 36, 50, 51, 52&hellip;</td>
-</tr>
-<tr>
-<td>214</td>
-<td>{97, 35, 69, 40, 74, 45, 20, 21, 62, 31}</td>
-<td>215</td>
-<td>{1, 8, 15, 17, 18, 25, 30, 33, 42, 44, 47, 52,&hellip;</td>
-</tr>
-<tr>
-<td>215</td>
-<td>{33, 70, 71, 12, 78, 17, 51, 86, 60, 94}</td>
-<td>216</td>
-<td>{7, 8, 9, 10, 22, 29, 37, 39, 41, 43, 46, 47, &hellip;</td>
-</tr>
-<tr>
-<td>216</td>
-<td>{98, 67, 68, 38, 70, 39, 72, 77, 45, 21}</td>
-<td>217</td>
-<td>{8, 21, 22, 25, 26, 31, 37, 41, 42, 48, 54, 57&hellip;</td>
-</tr>
-<tr>
-<td>217</td>
-<td>{34, 9, 44, 78, 79, 16, 17, 19, 55, 92}</td>
-<td>218</td>
-<td>{1, 4, 20, 21, 27, 38, 39, 40, 41, 45, 46, 52,&hellip;</td>
-</tr>
-</tbody>
-</table>
-<p>218 rows × 3 columns</p>
-<p>Now, we get the <a href="https://en.wikipedia.org/wiki/Logical_conjunction">logical conjunction</a> of <code>win</code> and <code>yours</code>, these are our winning
+</span></span><span style="display:flex;"><span>txt
+</span></span></code></pre></div><p>Now, we get the <a href="https://en.wikipedia.org/wiki/Logical_conjunction">logical conjunction</a> of <code>win</code> and <code>yours</code>, these are our winning
 numbers. Then, the number of wins is converted to points - for all number of
 wins bigger than 1, we can get the points by <code>2**(n_wins-1)</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;n_wins&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> row: len(row<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;win&#39;</span>] <span style="color:#f92672">&amp;</span> row<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;yours&#39;</span>]), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;points&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;n_wins&#39;</span>]<span style="color:#f92672">.</span>apply(
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">lambda</span> x: <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>(x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">else</span> x)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;n_wins&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> row: len(row<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;win&#39;</span>] <span style="color:#f92672">&amp;</span> row<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;yours&#39;</span>]), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;points&#39;</span>] <span style="color:#f92672">=</span> txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;n_wins&#39;</span>]<span style="color:#f92672">.</span>apply(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">lambda</span> x: <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>(x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">else</span> x)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt<span style="color:#f92672">.</span>loc[:, [<span style="color:#e6db74">&#39;win&#39;</span>, <span style="color:#e6db74">&#39;n_wins&#39;</span>, <span style="color:#e6db74">&#39;points&#39;</span>]]
-</span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>win</th>
-<th>n_wins</th>
-<th>points</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>{32, 36, 7, 9, 10, 12, 82, 85, 95, 31}</td>
-<td>10</td>
-<td>512</td>
-</tr>
-<tr>
-<td>1</td>
-<td>{35, 76, 16, 82, 19, 22, 88, 59, 60, 95}</td>
-<td>10</td>
-<td>512</td>
-</tr>
-<tr>
-<td>2</td>
-<td>{1, 70, 11, 78, 48, 19, 52, 88, 28, 94}</td>
-<td>5</td>
-<td>16</td>
-</tr>
-<tr>
-<td>3</td>
-<td>{65, 2, 72, 28, 14, 16, 55, 91, 92, 62}</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>4</td>
-<td>{38, 41, 75, 77, 50, 24, 94, 60, 61, 30}</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>213</td>
-<td>{97, 98, 39, 41, 43, 12, 13, 19, 93, 95}</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>214</td>
-<td>{97, 35, 69, 40, 74, 45, 20, 21, 62, 31}</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>215</td>
-<td>{33, 70, 71, 12, 78, 17, 51, 86, 60, 94}</td>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>216</td>
-<td>{98, 67, 68, 38, 70, 39, 72, 77, 45, 21}</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>217</td>
-<td>{34, 9, 44, 78, 79, 16, 17, 19, 55, 92}</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>218 rows × 3 columns</p>
-<p>Then, we just sum up:</p>
+</span></span><span style="display:flex;"><span>txt<span style="color:#f92672">.</span>loc[:, [<span style="color:#e6db74">&#39;win&#39;</span>, <span style="color:#e6db74">&#39;n_wins&#39;</span>, <span style="color:#e6db74">&#39;points&#39;</span>]]
+</span></span></code></pre></div><p>Then, we just sum up:</p>
 <details>
 <summary>Reveal solution!</summary>
 <div class="details">
@@ -498,82 +340,15 @@ do you end up with?</strong></p>
 through each Game. Each <strong>current game</strong> gets +1 card. Then, we step through the
 number of <strong>next games</strong> depending on our <code>n_wins</code>. Each of these gets added the
 card number of the <strong>current game</strong>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  txt[<span style="color:#e6db74">&#39;cards&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>txt[<span style="color:#e6db74">&#39;cards&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> i, nwin <span style="color:#f92672">in</span> enumerate(txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;n_wins&#39;</span>]):
-</span></span><span style="display:flex;"><span>      txt<span style="color:#f92672">.</span>loc[i, <span style="color:#e6db74">&#39;cards&#39;</span>] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, nwin<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
-</span></span><span style="display:flex;"><span>          txt<span style="color:#f92672">.</span>loc[i<span style="color:#f92672">+</span>j, <span style="color:#e6db74">&#39;cards&#39;</span>] <span style="color:#f92672">+=</span> txt<span style="color:#f92672">.</span>loc[i, <span style="color:#e6db74">&#39;cards&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, nwin <span style="color:#f92672">in</span> enumerate(txt<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;n_wins&#39;</span>]):
+</span></span><span style="display:flex;"><span>    txt<span style="color:#f92672">.</span>loc[i, <span style="color:#e6db74">&#39;cards&#39;</span>] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, nwin<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        txt<span style="color:#f92672">.</span>loc[i<span style="color:#f92672">+</span>j, <span style="color:#e6db74">&#39;cards&#39;</span>] <span style="color:#f92672">+=</span> txt<span style="color:#f92672">.</span>loc[i, <span style="color:#e6db74">&#39;cards&#39;</span>]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  txt<span style="color:#f92672">.</span>loc[:, [<span style="color:#e6db74">&#39;n_wins&#39;</span>, <span style="color:#e6db74">&#39;cards&#39;</span>]]
-</span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>n_wins</th>
-<th>cards</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>10</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>10</td>
-<td>2</td>
-</tr>
-<tr>
-<td>2</td>
-<td>5</td>
-<td>4</td>
-</tr>
-<tr>
-<td>3</td>
-<td>0</td>
-<td>8</td>
-</tr>
-<tr>
-<td>4</td>
-<td>0</td>
-<td>8</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>213</td>
-<td>0</td>
-<td>9608</td>
-</tr>
-<tr>
-<td>214</td>
-<td>0</td>
-<td>8927</td>
-</tr>
-<tr>
-<td>215</td>
-<td>2</td>
-<td>8927</td>
-</tr>
-<tr>
-<td>216</td>
-<td>1</td>
-<td>12636</td>
-</tr>
-<tr>
-<td>217</td>
-<td>0</td>
-<td>21564</td>
-</tr>
-</tbody>
-</table>
-<p>218 rows × 2 columns</p>
-<p>Now, we just sum the output again:</p>
+</span></span><span style="display:flex;"><span>txt<span style="color:#f92672">.</span>loc[:, [<span style="color:#e6db74">&#39;n_wins&#39;</span>, <span style="color:#e6db74">&#39;cards&#39;</span>]]
+</span></span></code></pre></div><p>Now, we just sum the output again:</p>
 <details>
 <summary>Reveal solution!</summary>
 <div class="details">
