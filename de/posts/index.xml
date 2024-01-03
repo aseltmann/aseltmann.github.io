@@ -6,10 +6,17 @@
     <description>Recent content in Posts on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
-    <lastBuildDate>Sat, 30 Dec 2023 01:10:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jan 2024 00:45:00 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/de/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Advent of code 2023 - Tag 5: Wenn du einem Samen Dünger gibst</title>
+      <title>Advent of code 2023 - Tag 6: Warte Darauf</title>
+      <link>https://aseltmann.github.io/de/posts/aoc2023-day06/</link>
+      <pubDate>Thu, 04 Jan 2024 00:45:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/de/posts/aoc2023-day06/</guid>
+      <description>Dieses Jahr versuche ich mich an den Herausforderungen des Advent of Code 2023. Dies ist Tag 6 - siehe https:adventofcode.com/2023/day/6&#xA;Für die Lösungen siehe die englische Version dieses Blogbeitrages.</description>
+    </item>
+    <item>
+      <title>Advent of code 2023 - Tag 5: Wenn Du Einem Samen Dünger Gibst</title>
       <link>https://aseltmann.github.io/de/posts/aoc2023-day05/</link>
       <pubDate>Sat, 30 Dec 2023 01:10:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/posts/aoc2023-day05/</guid>

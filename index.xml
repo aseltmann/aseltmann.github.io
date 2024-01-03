@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 31 Dec 2023 01:15:10 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Advent of code 2023 - Day 6: Wait For It</title>
+      <link>https://aseltmann.github.io/posts/aoc2023-day06/</link>
+      <pubDate>Thu, 04 Jan 2024 00:44:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/posts/aoc2023-day06/</guid>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 6 - see https:adventofcode.com/2023/day/6&#xA;Part 1 # Lets first read the task: You manage to sign up as a competitor in the boat races just in time. The organizer explains that it&amp;rsquo;s not really a traditional race - instead, you will get a fixed amount of time during which your boat has to travel as far as it can, and you win if your boat goes the farthest.</description>
+    </item>
+    <item>
       <title>Poetry</title>
       <link>https://aseltmann.github.io/docs/notes/poetry/</link>
       <pubDate>Sun, 31 Dec 2023 01:15:13 +0100</pubDate>

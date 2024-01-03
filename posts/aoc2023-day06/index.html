@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 6 - see https:adventofcode.com/2023/day/6
+Part 1 # Lets first read the task: You manage to sign up as a competitor in the boat races just in time. The organizer explains that it&rsquo;s not really a traditional race - instead, you will get a fixed amount of time during which your boat has to travel as far as it can, and you win if your boat goes the farthest.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Advent of code 2023 - Day 6: Wait For It" />
+<meta property="og:description" content="This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 6 - see https:adventofcode.com/2023/day/6
+Part 1 # Lets first read the task: You manage to sign up as a competitor in the boat races just in time. The organizer explains that it&rsquo;s not really a traditional race - instead, you will get a fixed amount of time during which your boat has to travel as far as it can, and you win if your boat goes the farthest." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aseltmann.github.io/posts/aoc2023-day06/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-04T00:44:00+01:00" />
+<meta property="article:modified_time" content="2024-01-04T00:49:12+01:00" />
+
+<title>Advent of code 2023 - Day 6: Wait For It | Blog &amp; Notes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day06/" title="Advent of code 2023 - Tag 6: Warte Darauf">
+
+<link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
+<script defer src="/en.search.min.862847e1704312038d7264b61b8fbd061a750eddaca50a7f50b83bb76c7c23ce.js" integrity="sha256-hihH4XBDEgONcmS2G4&#43;9Bhp1Dt2spQp/ULg7t2x8I84="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+    <h2 class="book-brand">
+    <a href="/">
+        <span>Blog &amp; Notes</span>
+    </a>
+</h2>
+
+    <a href="/">
+        
+        <img src="/book_logo.png" alt="Logo" width="100%"/>
+        
+    </a>
+    
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+    <ul>
+    <li>
+        <a href="/posts/">Blog</a>
+    </li>
+</ul>
+
+
+    
+    
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://aseltmann.github.io/docs/notes/poetry/" class="">Poetry</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://aseltmann.github.io/docs/projects/" class="">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+    
+</nav>
+
+
+
+
+<script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Advent of code 2023 - Day 6: Wait For It</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#part-1">Part 1</a></li>
+    <li><a href="#part-2">Part 2</a></li>
+  </ul>
+</nav>
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/aoc2023-day06/">Advent of code 2023 - Day 6: Wait For It</a>
+  </h1>
+  
+  <h5>2024-01-04</h5>
+
+
+
+  
+
+  
+  <div>
+    
+      <a href="/tags/python/">python</a>
+  </div>
+  
+
+
+  <p><p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
+riddles. This is Day 6 - see <a href="https:adventofcode.com/2023/day/6">https:adventofcode.com/2023/day/6</a></p>
+<h2 id="part-1">
+  Part 1
+  <a class="anchor" href="#part-1">#</a>
+</h2>
+<details>
+<summary>Lets first read the task:</summary>
+<div class="details">
+<blockquote>
+<p>You manage to sign up as a competitor in the boat races just in time. The
+organizer explains that it&rsquo;s not really a traditional race - instead, you will
+get a fixed amount of time during which your boat has to travel as far as it
+can, and you win if your boat goes the farthest.</p>
+<p>As part of signing up, you get a sheet of paper (your puzzle input) that lists
+the <strong>time</strong> allowed for each race and also the best <strong>distance</strong> ever recorded in that
+race. To guarantee you win the grand prize, you need to make sure you <strong>go farther
+in each race</strong> than the current record holder.</p>
+<p>The organizer brings you over to the area where the boat races are held. The
+boats are much smaller than you expected - they&rsquo;re actually toy boats, each with
+a big button on top. Holding down the button charges the boat, and releasing the
+button <strong>allows the boat to move</strong>. Boats move faster if their button was held
+longer, but time spent holding the button counts against the total race time.
+You can only hold the button at the start of the race, and boats don&rsquo;t move
+until the button is released.</p>
+<p>For example:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Time:      7  15   30
+</span></span><span style="display:flex;"><span>Distance:  9  40  200
+</span></span></code></pre></div><blockquote>
+<p>This document describes three races:</p>
+<ul>
+<li>The first race lasts 7 milliseconds. The record distance in this race is 9
+millimeters.</li>
+<li>The second race lasts 15 milliseconds. The record distance in this race is 40
+millimeters.</li>
+<li>The third race lasts 30 milliseconds. The record distance in this race is 200
+millimeters.</li>
+</ul>
+<p>Your toy boat has a starting speed of <strong>zero millimeters per millisecond</strong>. For
+each whole millisecond you spend at the beginning of the race holding down the
+button, the boat&rsquo;s speed increases by <strong>one millimeter per millisecond</strong>.</p>
+<p>So, because the first race lasts 7 milliseconds, you only have a few options:</p>
+<ul>
+<li>Don&rsquo;t hold the button at all (that is, hold it for <strong><code>0</code> milliseconds</strong>) at the
+start of the race. The boat won&rsquo;t move; it will have traveled <strong><code>0</code>
+millimeters</strong> by the end of the race.</li>
+<li>Hold the button for <strong><code>1</code> millisecond</strong> at the start of the race. Then, the boat
+will travel at a speed of 1 millimeter per millisecond for 6 milliseconds,
+reaching a total distance traveled of <strong><code>6</code> millimeters</strong>.</li>
+<li>Hold the button for <strong><code>2</code> milliseconds</strong>, giving the boat a speed of 2
+millimeters per millisecond. It will then get 5 milliseconds to move,
+reaching a total distance of <strong><code>10</code> millimeters</strong>.</li>
+<li>Hold the button for <strong><code>3</code> milliseconds</strong>. After its remaining 4 milliseconds of
+travel time, the boat will have gone <strong><code>12</code> millimeters</strong>.</li>
+<li>Hold the button for <strong><code>4</code> milliseconds</strong>. After its remaining 3 milliseconds of
+travel time, the boat will have gone <strong><code>12</code> millimeters</strong>.</li>
+<li>Hold the button for <strong><code>5</code> milliseconds</strong>, causing the boat to travel a total of
+<strong><code>10</code> millimeters</strong>.</li>
+<li>Hold the button for <strong><code>6</code> milliseconds</strong>, causing the boat to travel a total of
+<strong><code>6</code> millimeters</strong>.</li>
+<li>Hold the button for <strong><code>7</code> milliseconds</strong>. That&rsquo;s the entire duration of the
+race. You never let go of the button. The boat can&rsquo;t move until you let go of
+the button. Please make sure you let go of the button so the boat gets to
+move. <strong><code>0</code> millimeters</strong>.</li>
+</ul>
+<p>Since the current record for this race is <code>9</code> millimeters, there are actually
+<strong><code>4</code></strong> different ways you could win: you could hold the button for <code>2</code>, <code>3</code>, <code>4</code>,
+or <code>5</code> milliseconds at the start of the race.</p>
+<p>In the second race, you could hold the button for at least <code>4</code> milliseconds and
+at most <code>11</code> milliseconds and beat the record, a total of <strong><code>8</code></strong> different ways
+to win.</p>
+<p>In the third race, you could hold the button for at least <code>11</code> milliseconds and
+no more than <code>19</code> milliseconds and still beat the record, a total of <strong><code>9</code></strong> ways
+you could win.</p>
+<p>To see how much margin of error you have, determine the <strong>number of ways you can
+beat the record</strong> in each race; in this example, if you multiply these values
+together, you get <strong><code>288</code></strong> (<code>4</code> * <code>8</code> * <code>9</code>).</p>
+<p>Determine the number of ways you could beat the record in each race. <strong>What do
+you get if you multiply these numbers together?</strong></p>
+</blockquote>
+</div>
+</details>
+<p>The solution for this problem is shorter than the task description!</p>
+<p>As always - let&rsquo;s load the data. Note: we use the <code>delim_whitesspace</code> argument
+instead of <code>sep=' '</code> to separate values by spaces of any length.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>race <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_table(<span style="color:#e6db74">&#39;data/2023-12-06-1-aoc.txt&#39;</span>, delim_whitespace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>                     header<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, index_col<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>race<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;time&#39;</span>, <span style="color:#e6db74">&#39;distance&#39;</span>]
+</span></span><span style="display:flex;"><span>race
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time</td>
+<td>51</td>
+<td>92</td>
+<td>68</td>
+<td>90</td>
+</tr>
+<tr>
+<td>distance</td>
+<td>222</td>
+<td>2031</td>
+<td>1126</td>
+<td>1225</td>
+</tr>
+</tbody>
+</table>
+<p>The we use Python list comprehensions to quickly calculate all distances for the
+range of the <code>time</code> value (and keep only the winning distances). Then we get the
+respective lengths and compute the product.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_distance</span>(time, distance):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [t <span style="color:#f92672">*</span> (time <span style="color:#f92672">-</span> t) <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, time <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (t <span style="color:#f92672">*</span> (time <span style="color:#f92672">-</span> t)) <span style="color:#f92672">&gt;</span> distance]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>race<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;nwins&#39;</span>, :] <span style="color:#f92672">=</span> [len(get_distance(int(r<span style="color:#f92672">.</span>time), int(r<span style="color:#f92672">.</span>distance)))
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">for</span> c, r <span style="color:#f92672">in</span> race<span style="color:#f92672">.</span>items()]
+</span></span><span style="display:flex;"><span>nwins_prod <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>prod(race<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;nwins&#39;</span>, :]<span style="color:#f92672">.</span>values, dtype<span style="color:#f92672">=</span>int)
+</span></span><span style="display:flex;"><span>display(race)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;The product of our nwins is </span><span style="color:#e6db74">{</span>nwins_prod<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>)
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time</td>
+<td>51.0</td>
+<td>92.0</td>
+<td>68.0</td>
+<td>90.0</td>
+</tr>
+<tr>
+<td>distance</td>
+<td>222.0</td>
+<td>2031.0</td>
+<td>1126.0</td>
+<td>1225.0</td>
+</tr>
+<tr>
+<td>nwins</td>
+<td>42.0</td>
+<td>19.0</td>
+<td>11.0</td>
+<td>57.0</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>The product of our nwins is 500346
+</span></span></code></pre></div><h2 id="part-2">
+  Part 2
+  <a class="anchor" href="#part-2">#</a>
+</h2>
+<details>
+<summary>Lets first read the task:</summary>
+<div class="details">
+<blockquote>
+<p>As the race is about to start, you realize the piece of paper with race times
+and record distances you got earlier actually just has very bad <a href="https:en.wikipedia.org/wiki/Kerning">kerning</a>. There&rsquo;s
+really <strong>only one race</strong> - ignore the spaces between the numbers on each line.</p>
+<p>So, the example from before:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Time:      7  15   30
+</span></span><span style="display:flex;"><span>Distance:  9  40  200
+</span></span></code></pre></div><blockquote>
+<p>&hellip;now instead means this:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Time:      71530
+</span></span><span style="display:flex;"><span>Distance:  940200
+</span></span></code></pre></div><blockquote>
+<p>Now, you have to figure out how many ways there are to win this single race. In
+this example, the race lasts for <strong><code>71530</code> milliseconds</strong> and the record distance
+you need to beat is <strong><code>940200</code> millimeters</strong>. You could hold the button anywhere
+from <code>14</code> to <code>71516</code> milliseconds and beat the record, a total of <strong><code>71503</code></strong>
+ways!</p>
+<p><strong>How many ways can you beat the record in this one much longer race?</strong></p>
+</blockquote>
+</div>
+</details>
+<p>For this riddle we can take the same approach as for <em>Part 1</em>. The cell took 18s
+to evaluate on a consumer laptop from 2015 - no fancy workarounds needed :)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>racetime <span style="color:#f92672">=</span> int(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(str(r) <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> race<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;time&#39;</span>, :<span style="color:#ae81ff">4</span>]<span style="color:#f92672">.</span>astype(int)))
+</span></span><span style="display:flex;"><span>racedist <span style="color:#f92672">=</span> int(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(str(r) <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> race<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;distance&#39;</span>, :<span style="color:#ae81ff">4</span>]<span style="color:#f92672">.</span>astype(int)))
+</span></span><span style="display:flex;"><span>racewins <span style="color:#f92672">=</span> len(get_distance(racetime, racedist))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>race[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> [racetime, racedist, racewins]
+</span></span><span style="display:flex;"><span>race
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time</td>
+<td>51.0</td>
+<td>92.0</td>
+<td>68.0</td>
+<td>90.0</td>
+<td>51926890</td>
+</tr>
+<tr>
+<td>distance</td>
+<td>222.0</td>
+<td>2031.0</td>
+<td>1126.0</td>
+<td>1225.0</td>
+<td>222203111261225</td>
+</tr>
+<tr>
+<td>nwins</td>
+<td>42.0</td>
+<td>19.0</td>
+<td>11.0</td>
+<td>57.0</td>
+<td>42515755</td>
+</tr>
+</tbody>
+</table>
+</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+          
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+  
+
+  
+
+
+  
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://aseltmann.github.io/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://aseltmann.github.io/de/posts/aoc2023-day06/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Deutsch
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/106551b1d4daba65f1337c7b9373183e52fb3a21" title='Last modified by Alex Seltmann | 2024-01-04' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2024-01-04</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/edit/main/content//posts/aoc2023-day06.en.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lexbn" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+
+      <footer class="book-footer">
+          <div class="footer">
+    
+    
+    Exported
+    
+    from <a href="https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/lexbn-source.org"> <code>lexbn-source.org</code></a>
+    
+    using
+    
+    <a href="https://www.gnu.org/software/emacs/">Emacs 29.1 </a> &plus;
+    <a href="https://orgmode.org/">Org mode 9.7 </a> &plus;
+    
+    <a href="https://github.com/kaushalmodi/ox-hugo"><code>ox-hugo</code></a>
+    and published using
+    
+    <a href="https://gohugo.io/">Hugo 0.121.1</a>
+	  &plus; <a href="https://github.com/alex-shpak/hugo-book">Book</a>
+    
+</div>
+
+
+
+ 
+      </footer>
+
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#part-1">Part 1</a></li>
+    <li><a href="#part-2">Part 2</a></li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
