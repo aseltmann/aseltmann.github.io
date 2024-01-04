@@ -6,8 +6,15 @@
     <description>Recent content in python on Blog &amp; Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jan 2024 00:44:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jan 2024 16:32:00 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advent of code 2023 - Day 7: Camel Cards</title>
+      <link>https://aseltmann.github.io/posts/aoc2023-day07/</link>
+      <pubDate>Thu, 04 Jan 2024 16:32:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/posts/aoc2023-day07/</guid>
+      <description>This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 7 - see https:adventofcode.com/2023/day/7&#xA;Part 1 # Lets first read the task: In Camel Cards, you get a list of hands, and your goal is to order them based on the strength of each hand. A hand consists of five cards labeled one of A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, or 2.</description>
+    </item>
     <item>
       <title>Advent of code 2023 - Day 6: Wait For It</title>
       <link>https://aseltmann.github.io/posts/aoc2023-day06/</link>
