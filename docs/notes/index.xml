@@ -1,51 +1,19 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Blog &amp; Notes</title>
     <link>https://aseltmann.github.io/docs/notes/</link>
     <description>Recent content in Notes on Blog &amp; Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 Dec 2023 01:15:10 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2024 03:12:06 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/docs/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Poetry</title>
       <link>https://aseltmann.github.io/docs/notes/poetry/</link>
-      <pubDate>Sun, 31 Dec 2023 01:15:13 +0100</pubDate>
+      <pubDate>Sun, 22 Dec 2024 04:01:32 +0100</pubDate>
       <guid>https://aseltmann.github.io/docs/notes/poetry/</guid>
-      <description>Lǎozǐ # I am partial to the translation of Derek Lin&#xA;Dàodéjīng - Chapter 11 (The use of what has no substantive existence) [&amp;hellip;]&#xA;Mix clay&#xA;to create a container&#xA;In its emptiness, there is&#xA;the function of a container&#xA;[&amp;hellip;]&#xA;Therefore,&#xA;that which exists is used to create benefit&#xA;That which is empty is used to create functionality&#xA;Dàodéjīng - Chapter 15 (The exhibition of the qualities of the Dao) The Tao masters of antiquity</description>
+      <description>&lt;div class=&#34;ox-hugo-toc toc&#34;&gt;&#xA;&lt;div class=&#34;heading&#34;&gt;Table of Contents&lt;/div&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;  &lt;a href=&#34;https://aseltmann.github.io/#l%c7%8eoz%c7%90&#34;&gt;Lǎozǐ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;!--endtoc--&gt;&#xA;&lt;h2 id=&#34;lǎozǐ&#34;&gt;&#xA;  Lǎozǐ&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#l%c7%8eoz%c7%90&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I am partial to the &#xA;  &lt;a href=&#34;https://terebess.hu/english/tao/DerekLin.html#Kap20&#34;&gt;translation of Derek Lin&lt;/a&gt;&lt;/p&gt;&#xA;&lt;details&gt;&#xA;&lt;summary&gt;Dàodéjīng - Chapter 11 (The use of what has no substantive existence)&lt;/summary&gt;&#xA;&lt;div class=&#34;details&#34;&gt;&#xA;&lt;div class=&#34;verse&#34;&gt;&#xA;&lt;p&gt;[&amp;hellip;]&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;Mix clay&lt;br /&gt;&#xA;to create a container&lt;br /&gt;&#xA;In its emptiness, there is&lt;br /&gt;&#xA;the function of a container&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;[&amp;hellip;]&lt;br /&gt;&#xA;Therefore,&lt;br /&gt;&#xA;that which exists is used to create benefit&lt;br /&gt;&#xA;That which is empty is used to create functionality&lt;br /&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
-=======
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on Blog &amp; Notes</title><link>http://localhost:1313/docs/notes/</link><description>Recent content in Notes on Blog &amp; Notes</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 22 Dec 2024 01:44:35 +0100</lastBuildDate><atom:link href="http://localhost:1313/docs/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Poetry</title><link>http://localhost:1313/docs/notes/poetry/</link><pubDate>Sun, 22 Dec 2024 01:44:35 +0100</pubDate><guid>http://localhost:1313/docs/notes/poetry/</guid><description>&lt;div class="ox-hugo-toc toc">
-&lt;div class="heading">Table of Contents&lt;/div>
-&lt;ul>
-&lt;li>
- &lt;a href="http://localhost:1313/#l%c7%8eoz%c7%90">Lǎozǐ&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;!--endtoc-->
-&lt;h2 id="lǎozǐ">
- Lǎozǐ
- &lt;a class="anchor" href="#l%c7%8eoz%c7%90">#&lt;/a>
-&lt;/h2>
-&lt;p>I am partial to the 
- &lt;a href="https://terebess.hu/english/tao/DerekLin.html#Kap20">translation of Derek Lin&lt;/a>&lt;/p>
-&lt;details>
-&lt;summary>Dàodéjīng - Chapter 11 (The use of what has no substantive existence)&lt;/summary>
-&lt;div class="details">
-&lt;div class="verse">
-&lt;p>[&amp;hellip;]&lt;br />
-&lt;br />
-Mix clay&lt;br />
-to create a container&lt;br />
-In its emptiness, there is&lt;br />
-the function of a container&lt;br />
-&lt;br />
-[&amp;hellip;]&lt;br />
-Therefore,&lt;br />
-that which exists is used to create benefit&lt;br />
-That which is empty is used to create functionality&lt;br />&lt;/p></description></item></channel></rss>
->>>>>>> 99c0415 (add all files)

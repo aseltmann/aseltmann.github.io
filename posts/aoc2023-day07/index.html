@@ -1,69 +1,137 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 7 - see https:adventofcode.com/2023/day/7
-Part 1 # Lets first read the task: In Camel Cards, you get a list of hands, and your goal is to order them based on the strength of each hand. A hand consists of five cards labeled one of A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, or 2.">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Advent of code 2023 - Day 7: Camel Cards" />
-<meta property="og:description" content="This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 7 - see https:adventofcode.com/2023/day/7
-Part 1 # Lets first read the task: In Camel Cards, you get a list of hands, and your goal is to order them based on the strength of each hand. A hand consists of five cards labeled one of A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, or 2." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://aseltmann.github.io/posts/aoc2023-day07/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-04T16:32:00+01:00" />
-<meta property="article:modified_time" content="2024-01-04T16:35:57+01:00" />
+<meta name="description" content="
+Table of Contents
 
+
+  Part 1
+
+  Part 2
+
+
+
+This year I try to record my attempt at solving the Advent of Code 2023
+riddles. This is Day 7 - see 
+  https:adventofcode.com/2023/day/7
+
+  Part 1
+  #
+
+
+Lets first read the task:
+
+
+In Camel Cards, you get a list of hands, and your goal is to order them based
+on the strength of each hand. A hand consists of five cards labeled one of
+A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, or 2. The relative
+strength of each card follows this order, where A is the highest and 2 is
+the lowest.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://aseltmann.github.io/posts/aoc2023-day07/">
+  <meta property="og:site_name" content="Blog & Notes">
+  <meta property="og:title" content="Advent of code 2023 - Day 7: Camel Cards">
+  <meta property="og:description" content="Table of Contents Part 1 Part 2 This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 7 - see https:adventofcode.com/2023/day/7
+Part 1 # Lets first read the task: In Camel Cards, you get a list of hands, and your goal is to order them based on the strength of each hand. A hand consists of five cards labeled one of A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, or 2. The relative strength of each card follows this order, where A is the highest and 2 is the lowest.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-04T16:32:00+01:00">
+    <meta property="article:modified_time" content="2024-12-22T03:12:06+01:00">
+    <meta property="article:tag" content="Python">
 <title>Advent of code 2023 - Day 7: Camel Cards | Blog &amp; Notes</title>
+<link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day07/" title="Advent of code 2023 - Tag 7: Kamelkarten">
+<link rel="canonical" href="https://aseltmann.github.io/posts/aoc2023-day07/">
+  <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day07/" title="Advent of code 2023 - Tag 7: Kamelkarten">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.6fec898e842115aadb23a2ea809d20ff7dc530c9a256a15bf8a53d76edb08c69.js" integrity="sha256-b&#43;yJjoQhFarbI6LqgJ0g/33FMMmiVqFb&#43;KU9du2wjGk=" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="/book.min.d7627a3c5cf990a6cefa3a3ba897fad0150917026ac2f51e3d7b8a903c5b31a0.css" integrity="sha256-12J6PFz5kKbO&#43;jo7qJf60BUJFwJqwvUePXuKkDxbMaA=">
-<script defer src="/en.search.min.2250f51f1c0025f2b8c778d257a706de3dba9562e27a0a43b16f895e09f94adf.js" integrity="sha256-IlD1HxwAJfK4x3jSV6cG3j26lWLiegpDsW&#43;JXgn5St8="></script>
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
-
   
 </head>
-
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
-      
+      <div class="book-menu-content">
+        
   <nav>
-    <h2 class="book-brand">
-    <a href="/">
-        <span>Blog &amp; Notes</span>
-    </a>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/book_logo.png" alt="Logo" class="book-icon" /><span>Blog &amp; Notes</span>
+  </a>
 </h2>
 
-    <a href="/">
-        
-        <img src="/book_logo.png" alt="Logo" width="100%"/>
-        
-    </a>
-    
-<div class="book-search">
+  <a href="/"><img src="/book_logo.png" alt="Logo" width="100%"/></a>
+
+  
+<div class="book-search hidden">
   <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
   <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
+
+
+  
+
+
+
+  
+    
+  
+
+
+  
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </label>
 
     <ul>
+      
+      <li>
+        <a href="/de/posts/aoc2023-day07/">
+          Deutsch
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+<ul>
     <li>
         <a href="/posts/">Blog</a>
     </li>
 </ul>
 
 
-    
-    
+
+
+
+
+
+
 
 
 
@@ -90,7 +158,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://aseltmann.github.io/docs/notes/poetry/" class="">Poetry</a>
+    <a href="/docs/notes/poetry/" class="">Poetry</a>
   
 
         </li>
@@ -108,7 +176,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://aseltmann.github.io/docs/projects/" class="">Projects</a>
+    <a href="/docs/projects/" class="">Projects</a>
   
 
           
@@ -127,23 +195,35 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    
-
-    
 
 
 
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/aseltmann"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
 
-    
+
+
+
+
+
 </nav>
 
 
 
 
-<script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
+      </div>
     </aside>
 
     <div class="book-page">
@@ -154,7 +234,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Advent of code 2023 - Day 7: Camel Cards</strong>
+  <h3>Advent of code 2023 - Day 7: Camel Cards</h3>
 
   <label for="toc-control">
     
@@ -165,10 +245,10 @@ https://github.com/alex-shpak/hugo-book
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
-  <nav id="TableOfContents">
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
   <ul>
     <li><a href="#part-1">Part 1</a></li>
     <li><a href="#part-2">Part 2</a></li>
@@ -176,34 +256,49 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 
 
-    </aside>
+
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown">
-  <h1>
-    <a href="/posts/aoc2023-day07/">Advent of code 2023 - Day 7: Camel Cards</a>
-  </h1>
+<article class="markdown book-post">
+  <h2>
+    Advent of code 2023 - Day 7: Camel Cards
+  </h2>
   
-  <h5>2024-01-04</h5>
+  <div class="flex align-center text-small book-post-date">
+    <img src="/svg/calendar.svg" class="book-icon " alt="" />
+    <span>2024-01-04</span>
+  </div>
 
 
 
   
 
   
-  <div>
+  <div class="text-small">
     
-      <a href="/tags/python/">python</a>
+      <a href="/tags/python/">Python</a>
   </div>
   
 
 
-  <p><p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
-riddles. This is Day 7 - see <a href="https:adventofcode.com/2023/day/7">https:adventofcode.com/2023/day/7</a></p>
+  <div class="book-post-content"><div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li>
+  <a href="/#part-1">Part 1</a></li>
+<li>
+  <a href="/#part-2">Part 2</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
+riddles. This is Day 7 - see 
+  <a href="https:adventofcode.com/2023/day/7">https:adventofcode.com/2023/day/7</a></p>
 <h2 id="part-1">
   Part 1
   <a class="anchor" href="#part-1">#</a>
@@ -235,59 +330,11 @@ different label from the pair and each other: <code>A23A4</code></li>
 <p>Hands are primarily ordered based on type; for example, every <strong>full house</strong> is
 stronger than any <strong>three of a kind</strong>.</p>
 <p>If two hands have the same type, a second ordering rule takes effect. Start by
-=======
-<!doctype html><html lang=en dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
-Table of Contents
-
-
-  Part 1
-
-  Part 2
-
-
-
-This year I try to record my attempt at solving the Advent of Code 2023
-riddles. This is Day 7 - see 
-  https:adventofcode.com/2023/day/7
-
-  Part 1
-  #
-
-
-Lets first read the task:
-
-
-In Camel Cards, you get a list of hands, and your goal is to order them based
-on the strength of each hand. A hand consists of five cards labeled one of
-A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, or 2. The relative
-strength of each card follows this order, where A is the highest and 2 is
-the lowest."><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/posts/aoc2023-day07/"><meta property="og:site_name" content="Blog & Notes"><meta property="og:title" content="Advent of code 2023 - Day 7: Camel Cards"><meta property="og:description" content="Table of Contents Part 1 Part 2 This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 7 - see https:adventofcode.com/2023/day/7
-Part 1 # Lets first read the task: In Camel Cards, you get a list of hands, and your goal is to order them based on the strength of each hand. A hand consists of five cards labeled one of A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, or 2. The relative strength of each card follows this order, where A is the highest and 2 is the lowest."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-01-04T16:32:00+01:00"><meta property="article:modified_time" content="2024-12-22T01:44:40+01:00"><meta property="article:tag" content="Python"><title>Advent of code 2023 - Day 7: Camel Cards | Blog & Notes</title>
-<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/posts/aoc2023-day07/><link rel=alternate hreflang=de href=http://localhost:1313/de/posts/aoc2023-day07/ title="Advent of code 2023 - Tag 7: Kamelkarten"><link rel=stylesheet href=/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.6fec898e842115aadb23a2ea809d20ff7dc530c9a256a15bf8a53d76edb08c69.js integrity="sha256-b+yJjoQhFarbI6LqgJ0g/33FMMmiVqFb+KU9du2wjGk=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><img src=/book_logo.png alt=Logo class=book-icon><span>Blog & Notes</span></a></h2><a href=/><img src=/book_logo.png alt=Logo width=100%></a><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
-<label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
-English</a></label><ul><li><a href=/de/posts/aoc2023-day07/>Deutsch</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul><ul><li><span>Notes</span><ul><li><a href=/docs/notes/poetry/>Poetry</a></li></ul></li><li><a href=/docs/projects/>Projects</a><ul></ul></li></ul><ul><li><a href=https://github.com/aseltmann target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Advent of code 2023 - Day 7: Camel Cards</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#part-1>Part 1</a></li><li><a href=#part-2>Part 2</a></li></ul></nav></aside></header><article class="markdown book-post"><h2>Advent of code 2023 - Day 7: Camel Cards</h2><div class="flex align-center text-small book-post-date"><img src=/svg/calendar.svg class=book-icon alt>
-<span>2024-01-04</span></div><div class=text-small><a href=/tags/python/>Python</a></div><div class=book-post-content><div class="ox-hugo-toc toc"><div class=heading>Table of Contents</div><ul><li><a href=/#part-1>Part 1</a></li><li><a href=/#part-2>Part 2</a></li></ul></div><p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
-riddles. This is Day 7 - see
-<a href=https:adventofcode.com/2023/day/7>https:adventofcode.com/2023/day/7</a></p><h2 id=part-1>Part 1
-<a class=anchor href=#part-1>#</a></h2><details><summary>Lets first read the task:</summary><div class=details><blockquote><p>In Camel Cards, you get a list of <strong>hands</strong>, and your goal is to order them based
-on the <strong>strength</strong> of each hand. A hand consists of <strong>five cards</strong> labeled one of
-<code>A</code>, <code>K</code>, <code>Q</code>, <code>J</code>, <code>T</code>, <code>9</code>, <code>8</code>, <code>7</code>, <code>6</code>, <code>5</code>, <code>4</code>, <code>3</code>, or <code>2</code>. The relative
-strength of each card follows this order, where <code>A</code> is the highest and <code>2</code> is
-the lowest.</p><p>Every hand is exactly one type. From strongest to weakest, they are:</p><ul><li><strong>Five of a kind</strong>, where all five cards have the same label: <code>AAAAA</code></li><li><strong>Four of a kind</strong>, where four cards have the same label and one card has a
-different label: <code>AA8AA</code></li><li><strong>Full house</strong>, where three cards have the same label, and the remaining two
-cards share a different label: <code>23332</code></li><li><strong>Three of a kind</strong>, where three cards have the same label, and the remaining
-two cards are each different from any other card in the hand: <code>TTT98</code></li><li><strong>Two pair</strong>, where two cards share one label, two other cards share a second
-label, and the remaining card has a third label: <code>23432</code></li><li><strong>One pair</strong>, where two cards share one label, and the other three cards have a
-different label from the pair and each other: <code>A23A4</code></li><li><strong>High card</strong>, where all cards&rsquo; labels are distinct: <code>23456</code></li></ul><p>Hands are primarily ordered based on type; for example, every <strong>full house</strong> is
-stronger than any <strong>three of a kind</strong>.</p><p>If two hands have the same type, a second ordering rule takes effect. Start by
->>>>>>> 99c0415 (add all files)
 comparing the <strong>first card in each hand</strong>. If these cards are different, the hand
 with the stronger first card is considered stronger. If the first card in each
 hand have the <strong>same label</strong>, however, then move on to considering the <strong>second card
 in each hand</strong>. If they differ, the hand with the higher second card wins;
 otherwise, continue with the third card in each hand, then the fourth, then the
-<<<<<<< HEAD
 fifth.</p>
 <p>So, <code>33332</code> and <code>2AAAA</code> are both <strong>four of a kind</strong> hands, but <code>33332</code> is stronger
 because its first card is stronger. Similarly, <code>77888</code> and <code>77788</code> are both a
@@ -325,6 +372,8 @@ result of multiplying each hand&rsquo;s bid with its rank (<code>765</code> * 1 
 </blockquote>
 </div>
 </details>
+<p>My input file: 
+  <a href="https://github.com/aseltmann/aseltmann.github.io-org-src/blob/main/data/2023-12-07-1-aoc.txt">2023-12-07-1-aoc.txt</a></p>
 <p>As always - let&rsquo;s read in the data.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
 </span></span><span style="display:flex;"><span>
@@ -333,70 +382,70 @@ result of multiplying each hand&rsquo;s bid with its rank (<code>765</code> * 1 
 </span></span><span style="display:flex;"><span>                      dtype<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;cards&#39;</span>: <span style="color:#e6db74">&#39;string&#39;</span>, <span style="color:#e6db74">&#39;bid&#39;</span>: <span style="color:#e6db74">&#39;Int64&#39;</span>})
 </span></span><span style="display:flex;"><span>camel
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>cards</th>
-<th>bid</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>A833A</td>
-<td>309</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Q33J3</td>
-<td>205</td>
-</tr>
-<tr>
-<td>2</td>
-<td>55KK5</td>
-<td>590</td>
-</tr>
-<tr>
-<td>3</td>
-<td>K4457</td>
-<td>924</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Q3QT3</td>
-<td>11</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>995</td>
-<td>KQJ53</td>
-<td>367</td>
-</tr>
-<tr>
-<td>996</td>
-<td>57866</td>
-<td>537</td>
-</tr>
-<tr>
-<td>997</td>
-<td>Q94A9</td>
-<td>210</td>
-</tr>
-<tr>
-<td>998</td>
-<td>J448A</td>
-<td>903</td>
-</tr>
-<tr>
-<td>999</td>
-<td>6J66J</td>
-<td>114</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th>cards</th>
+          <th>bid</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>A833A</td>
+          <td>309</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Q33J3</td>
+          <td>205</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>55KK5</td>
+          <td>590</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>K4457</td>
+          <td>924</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Q3QT3</td>
+          <td>11</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>995</td>
+          <td>KQJ53</td>
+          <td>367</td>
+      </tr>
+      <tr>
+          <td>996</td>
+          <td>57866</td>
+          <td>537</td>
+      </tr>
+      <tr>
+          <td>997</td>
+          <td>Q94A9</td>
+          <td>210</td>
+      </tr>
+      <tr>
+          <td>998</td>
+          <td>J448A</td>
+          <td>903</td>
+      </tr>
+      <tr>
+          <td>999</td>
+          <td>6J66J</td>
+          <td>114</td>
+      </tr>
+  </tbody>
 </table>
 <p>1000 rows × 2 columns</p>
 <p>For sorting, we need to compute a <code>type</code> column. The 7 types can be deduced
@@ -423,148 +472,148 @@ cards.</p>
 </span></span><span style="display:flex;"><span>    camel[<span style="color:#e6db74">f</span><span style="color:#e6db74">&#39;c</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span>] <span style="color:#f92672">=</span> camel<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;cards&#39;</span>]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: list(x)[i])
 </span></span><span style="display:flex;"><span>camel
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>cards</th>
-<th>bid</th>
-<th>type</th>
-<th>c0</th>
-<th>c1</th>
-<th>c2</th>
-<th>c3</th>
-<th>c4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>A833A</td>
-<td>309</td>
-<td>5</td>
-<td>A</td>
-<td>8</td>
-<td>3</td>
-<td>3</td>
-<td>A</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Q33J3</td>
-<td>205</td>
-<td>4</td>
-<td>Q</td>
-<td>3</td>
-<td>3</td>
-<td>J</td>
-<td>3</td>
-</tr>
-<tr>
-<td>2</td>
-<td>55KK5</td>
-<td>590</td>
-<td>3</td>
-<td>5</td>
-<td>5</td>
-<td>K</td>
-<td>K</td>
-<td>5</td>
-</tr>
-<tr>
-<td>3</td>
-<td>K4457</td>
-<td>924</td>
-<td>6</td>
-<td>K</td>
-<td>4</td>
-<td>4</td>
-<td>5</td>
-<td>7</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Q3QT3</td>
-<td>11</td>
-<td>5</td>
-<td>Q</td>
-<td>3</td>
-<td>Q</td>
-<td>T</td>
-<td>3</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>995</td>
-<td>KQJ53</td>
-<td>367</td>
-<td>7</td>
-<td>K</td>
-<td>Q</td>
-<td>J</td>
-<td>5</td>
-<td>3</td>
-</tr>
-<tr>
-<td>996</td>
-<td>57866</td>
-<td>537</td>
-<td>6</td>
-<td>5</td>
-<td>7</td>
-<td>8</td>
-<td>6</td>
-<td>6</td>
-</tr>
-<tr>
-<td>997</td>
-<td>Q94A9</td>
-<td>210</td>
-<td>6</td>
-<td>Q</td>
-<td>9</td>
-<td>4</td>
-<td>A</td>
-<td>9</td>
-</tr>
-<tr>
-<td>998</td>
-<td>J448A</td>
-<td>903</td>
-<td>6</td>
-<td>J</td>
-<td>4</td>
-<td>4</td>
-<td>8</td>
-<td>A</td>
-</tr>
-<tr>
-<td>999</td>
-<td>6J66J</td>
-<td>114</td>
-<td>3</td>
-<td>6</td>
-<td>J</td>
-<td>6</td>
-<td>6</td>
-<td>J</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th>cards</th>
+          <th>bid</th>
+          <th>type</th>
+          <th>c0</th>
+          <th>c1</th>
+          <th>c2</th>
+          <th>c3</th>
+          <th>c4</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>A833A</td>
+          <td>309</td>
+          <td>5</td>
+          <td>A</td>
+          <td>8</td>
+          <td>3</td>
+          <td>3</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>Q33J3</td>
+          <td>205</td>
+          <td>4</td>
+          <td>Q</td>
+          <td>3</td>
+          <td>3</td>
+          <td>J</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>55KK5</td>
+          <td>590</td>
+          <td>3</td>
+          <td>5</td>
+          <td>5</td>
+          <td>K</td>
+          <td>K</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>K4457</td>
+          <td>924</td>
+          <td>6</td>
+          <td>K</td>
+          <td>4</td>
+          <td>4</td>
+          <td>5</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Q3QT3</td>
+          <td>11</td>
+          <td>5</td>
+          <td>Q</td>
+          <td>3</td>
+          <td>Q</td>
+          <td>T</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>995</td>
+          <td>KQJ53</td>
+          <td>367</td>
+          <td>7</td>
+          <td>K</td>
+          <td>Q</td>
+          <td>J</td>
+          <td>5</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>996</td>
+          <td>57866</td>
+          <td>537</td>
+          <td>6</td>
+          <td>5</td>
+          <td>7</td>
+          <td>8</td>
+          <td>6</td>
+          <td>6</td>
+      </tr>
+      <tr>
+          <td>997</td>
+          <td>Q94A9</td>
+          <td>210</td>
+          <td>6</td>
+          <td>Q</td>
+          <td>9</td>
+          <td>4</td>
+          <td>A</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>998</td>
+          <td>J448A</td>
+          <td>903</td>
+          <td>6</td>
+          <td>J</td>
+          <td>4</td>
+          <td>4</td>
+          <td>8</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>999</td>
+          <td>6J66J</td>
+          <td>114</td>
+          <td>3</td>
+          <td>6</td>
+          <td>J</td>
+          <td>6</td>
+          <td>6</td>
+          <td>J</td>
+      </tr>
+  </tbody>
 </table>
 <p>1000 rows × 8 columns</p>
 <p>For sorting, <code>pandas</code> contributes the <code>sort_values</code> method, which supports
 sorting by multiple columns (here, we first sort according to <code>type</code>, then <code>c0</code>,
 <code>c1</code>, &hellip;). For easier sorting by numerical values, we convert the values using
-the <code>card_dict</code> dictionary, which implements our giving sorting order.</p>
+the <code>card_dict</code> dictionary, which implements the given sorting order.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>card_dict <span style="color:#f92672">=</span> {c: i <span style="color:#66d9ef">for</span> i, c <span style="color:#f92672">in</span> enumerate([<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;2&#39;</span>, <span style="color:#e6db74">&#39;3&#39;</span>,
 </span></span><span style="display:flex;"><span>                                         <span style="color:#e6db74">&#39;4&#39;</span>, <span style="color:#e6db74">&#39;5&#39;</span>, <span style="color:#e6db74">&#39;6&#39;</span>, <span style="color:#e6db74">&#39;7&#39;</span>, <span style="color:#e6db74">&#39;8&#39;</span>, <span style="color:#e6db74">&#39;9&#39;</span>,
 </span></span><span style="display:flex;"><span>                                         <span style="color:#e6db74">&#39;T&#39;</span>, <span style="color:#e6db74">&#39;J&#39;</span>, <span style="color:#e6db74">&#39;Q&#39;</span>, <span style="color:#e6db74">&#39;K&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>])}
@@ -575,142 +624,142 @@ the <code>card_dict</code> dictionary, which implements our giving sorting order
 </span></span><span style="display:flex;"><span>camel<span style="color:#f92672">.</span>index <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>camel
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>cards</th>
-<th>bid</th>
-<th>type</th>
-<th>c0</th>
-<th>c1</th>
-<th>c2</th>
-<th>c3</th>
-<th>c4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>237AQ</td>
-<td>157</td>
-<td>7</td>
-<td>2</td>
-<td>3</td>
-<td>7</td>
-<td>A</td>
-<td>Q</td>
-</tr>
-<tr>
-<td>2</td>
-<td>23K47</td>
-<td>759</td>
-<td>7</td>
-<td>2</td>
-<td>3</td>
-<td>K</td>
-<td>4</td>
-<td>7</td>
-</tr>
-<tr>
-<td>3</td>
-<td>249K8</td>
-<td>612</td>
-<td>7</td>
-<td>2</td>
-<td>4</td>
-<td>9</td>
-<td>K</td>
-<td>8</td>
-</tr>
-<tr>
-<td>4</td>
-<td>264A7</td>
-<td>341</td>
-<td>7</td>
-<td>2</td>
-<td>6</td>
-<td>4</td>
-<td>A</td>
-<td>7</td>
-</tr>
-<tr>
-<td>5</td>
-<td>26578</td>
-<td>10</td>
-<td>7</td>
-<td>2</td>
-<td>6</td>
-<td>5</td>
-<td>7</td>
-<td>8</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>996</td>
-<td>AA5AA</td>
-<td>565</td>
-<td>2</td>
-<td>A</td>
-<td>A</td>
-<td>5</td>
-<td>A</td>
-<td>A</td>
-</tr>
-<tr>
-<td>997</td>
-<td>AAATA</td>
-<td>704</td>
-<td>2</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>T</td>
-<td>A</td>
-</tr>
-<tr>
-<td>998</td>
-<td>AAAA3</td>
-<td>145</td>
-<td>2</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>3</td>
-</tr>
-<tr>
-<td>999</td>
-<td>AAAAJ</td>
-<td>594</td>
-<td>2</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>J</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>JJJJJ</td>
-<td>219</td>
-<td>1</td>
-<td>J</td>
-<td>J</td>
-<td>J</td>
-<td>J</td>
-<td>J</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th>cards</th>
+          <th>bid</th>
+          <th>type</th>
+          <th>c0</th>
+          <th>c1</th>
+          <th>c2</th>
+          <th>c3</th>
+          <th>c4</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>237AQ</td>
+          <td>157</td>
+          <td>7</td>
+          <td>2</td>
+          <td>3</td>
+          <td>7</td>
+          <td>A</td>
+          <td>Q</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>23K47</td>
+          <td>759</td>
+          <td>7</td>
+          <td>2</td>
+          <td>3</td>
+          <td>K</td>
+          <td>4</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>249K8</td>
+          <td>612</td>
+          <td>7</td>
+          <td>2</td>
+          <td>4</td>
+          <td>9</td>
+          <td>K</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>264A7</td>
+          <td>341</td>
+          <td>7</td>
+          <td>2</td>
+          <td>6</td>
+          <td>4</td>
+          <td>A</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>26578</td>
+          <td>10</td>
+          <td>7</td>
+          <td>2</td>
+          <td>6</td>
+          <td>5</td>
+          <td>7</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>996</td>
+          <td>AA5AA</td>
+          <td>565</td>
+          <td>2</td>
+          <td>A</td>
+          <td>A</td>
+          <td>5</td>
+          <td>A</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>997</td>
+          <td>AAATA</td>
+          <td>704</td>
+          <td>2</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>T</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>998</td>
+          <td>AAAA3</td>
+          <td>145</td>
+          <td>2</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>999</td>
+          <td>AAAAJ</td>
+          <td>594</td>
+          <td>2</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>J</td>
+      </tr>
+      <tr>
+          <td>1000</td>
+          <td>JJJJJ</td>
+          <td>219</td>
+          <td>1</td>
+          <td>J</td>
+          <td>J</td>
+          <td>J</td>
+          <td>J</td>
+          <td>J</td>
+      </tr>
+  </tbody>
 </table>
 <p>1000 rows × 8 columns</p>
 <p>Lastly, we multiply the bid with the index and sum the result.</p>
@@ -760,8 +809,8 @@ new total winnings?</strong></p>
 dictionary, otherwise the method stays the same!</p>
 <p>Let&rsquo;s first write <code>get_type_joker()</code>: if no joker is in the cards, we can just
 refer to <code>get_type()</code>. If we have 1, 2 or 5 different card faces, the answer is
-trivial. Only if we have 3 or 4 different faces, we have to check the number of
-jokers and the maximum number of other faces.</p>
+trivial. We only have to use the number of jokers and the maximum number of
+other faces if we have 3 or 4 different faces.</p>
 <p>Note: if a <code>J</code> is present, there can never be <strong>high card</strong> (<code>type = 7</code>), because
 we always can get <strong>one pair</strong>. Also we can never get <strong>two pair</strong> (<code>type = 5</code>),
 because we can always construct <strong>three of a kind</strong> or <strong>full house</strong>.</p>
@@ -791,142 +840,142 @@ because we can always construct <strong>three of a kind</strong> or <strong>full
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>camel
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>cards</th>
-<th>bid</th>
-<th>type</th>
-<th>c0</th>
-<th>c1</th>
-<th>c2</th>
-<th>c3</th>
-<th>c4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>237AQ</td>
-<td>157</td>
-<td>7</td>
-<td>2</td>
-<td>3</td>
-<td>7</td>
-<td>A</td>
-<td>Q</td>
-</tr>
-<tr>
-<td>2</td>
-<td>23K47</td>
-<td>759</td>
-<td>7</td>
-<td>2</td>
-<td>3</td>
-<td>K</td>
-<td>4</td>
-<td>7</td>
-</tr>
-<tr>
-<td>3</td>
-<td>249K8</td>
-<td>612</td>
-<td>7</td>
-<td>2</td>
-<td>4</td>
-<td>9</td>
-<td>K</td>
-<td>8</td>
-</tr>
-<tr>
-<td>4</td>
-<td>264A7</td>
-<td>341</td>
-<td>7</td>
-<td>2</td>
-<td>6</td>
-<td>4</td>
-<td>A</td>
-<td>7</td>
-</tr>
-<tr>
-<td>5</td>
-<td>26578</td>
-<td>10</td>
-<td>7</td>
-<td>2</td>
-<td>6</td>
-<td>5</td>
-<td>7</td>
-<td>8</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>996</td>
-<td>AA5AA</td>
-<td>565</td>
-<td>2</td>
-<td>A</td>
-<td>A</td>
-<td>5</td>
-<td>A</td>
-<td>A</td>
-</tr>
-<tr>
-<td>997</td>
-<td>AAATA</td>
-<td>704</td>
-<td>2</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>T</td>
-<td>A</td>
-</tr>
-<tr>
-<td>998</td>
-<td>AAAA3</td>
-<td>145</td>
-<td>2</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>3</td>
-</tr>
-<tr>
-<td>999</td>
-<td>AAAAJ</td>
-<td>594</td>
-<td>1</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>J</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>JJJJJ</td>
-<td>219</td>
-<td>1</td>
-<td>J</td>
-<td>J</td>
-<td>J</td>
-<td>J</td>
-<td>J</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th>cards</th>
+          <th>bid</th>
+          <th>type</th>
+          <th>c0</th>
+          <th>c1</th>
+          <th>c2</th>
+          <th>c3</th>
+          <th>c4</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>237AQ</td>
+          <td>157</td>
+          <td>7</td>
+          <td>2</td>
+          <td>3</td>
+          <td>7</td>
+          <td>A</td>
+          <td>Q</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>23K47</td>
+          <td>759</td>
+          <td>7</td>
+          <td>2</td>
+          <td>3</td>
+          <td>K</td>
+          <td>4</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>249K8</td>
+          <td>612</td>
+          <td>7</td>
+          <td>2</td>
+          <td>4</td>
+          <td>9</td>
+          <td>K</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>264A7</td>
+          <td>341</td>
+          <td>7</td>
+          <td>2</td>
+          <td>6</td>
+          <td>4</td>
+          <td>A</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>26578</td>
+          <td>10</td>
+          <td>7</td>
+          <td>2</td>
+          <td>6</td>
+          <td>5</td>
+          <td>7</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>996</td>
+          <td>AA5AA</td>
+          <td>565</td>
+          <td>2</td>
+          <td>A</td>
+          <td>A</td>
+          <td>5</td>
+          <td>A</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>997</td>
+          <td>AAATA</td>
+          <td>704</td>
+          <td>2</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>T</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>998</td>
+          <td>AAAA3</td>
+          <td>145</td>
+          <td>2</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>999</td>
+          <td>AAAAJ</td>
+          <td>594</td>
+          <td>1</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>J</td>
+      </tr>
+      <tr>
+          <td>1000</td>
+          <td>JJJJJ</td>
+          <td>219</td>
+          <td>1</td>
+          <td>J</td>
+          <td>J</td>
+          <td>J</td>
+          <td>J</td>
+          <td>J</td>
+      </tr>
+  </tbody>
 </table>
 <p>1000 rows × 8 columns</p>
 <p>Now, we just move <code>J</code> in our new <code>card_dict_joker</code> to where it belongs, the rest
@@ -942,213 +991,192 @@ of the solution is the same.</p>
 </span></span><span style="display:flex;"><span>display(camel)
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Our new solution: &#39;</span>, camel<span style="color:#f92672">.</span>loc[:, <span style="color:#e6db74">&#39;bid&#39;</span>]<span style="color:#f92672">.</span>mul(camel<span style="color:#f92672">.</span>index)<span style="color:#f92672">.</span>sum())
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th></th>
-<th>cards</th>
-<th>bid</th>
-<th>type</th>
-<th>c0</th>
-<th>c1</th>
-<th>c2</th>
-<th>c3</th>
-<th>c4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>237AQ</td>
-<td>157</td>
-<td>7</td>
-<td>2</td>
-<td>3</td>
-<td>7</td>
-<td>A</td>
-<td>Q</td>
-</tr>
-<tr>
-<td>2</td>
-<td>23K47</td>
-<td>759</td>
-<td>7</td>
-<td>2</td>
-<td>3</td>
-<td>K</td>
-<td>4</td>
-<td>7</td>
-</tr>
-<tr>
-<td>3</td>
-<td>249K8</td>
-<td>612</td>
-<td>7</td>
-<td>2</td>
-<td>4</td>
-<td>9</td>
-<td>K</td>
-<td>8</td>
-</tr>
-<tr>
-<td>4</td>
-<td>264A7</td>
-<td>341</td>
-<td>7</td>
-<td>2</td>
-<td>6</td>
-<td>4</td>
-<td>A</td>
-<td>7</td>
-</tr>
-<tr>
-<td>5</td>
-<td>26578</td>
-<td>10</td>
-<td>7</td>
-<td>2</td>
-<td>6</td>
-<td>5</td>
-<td>7</td>
-<td>8</td>
-</tr>
-<tr>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-<td>&hellip;</td>
-</tr>
-<tr>
-<td>996</td>
-<td>TJTTJ</td>
-<td>609</td>
-<td>1</td>
-<td>T</td>
-<td>J</td>
-<td>T</td>
-<td>T</td>
-<td>J</td>
-</tr>
-<tr>
-<td>997</td>
-<td>QQJQJ</td>
-<td>131</td>
-<td>1</td>
-<td>Q</td>
-<td>Q</td>
-<td>J</td>
-<td>Q</td>
-<td>J</td>
-</tr>
-<tr>
-<td>998</td>
-<td>QQQJQ</td>
-<td>831</td>
-<td>1</td>
-<td>Q</td>
-<td>Q</td>
-<td>Q</td>
-<td>J</td>
-<td>Q</td>
-</tr>
-<tr>
-<td>999</td>
-<td>KKKJK</td>
-<td>183</td>
-<td>1</td>
-<td>K</td>
-<td>K</td>
-<td>K</td>
-<td>J</td>
-<td>K</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>AAAAJ</td>
-<td>594</td>
-<td>1</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>A</td>
-<td>J</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th></th>
+          <th>cards</th>
+          <th>bid</th>
+          <th>type</th>
+          <th>c0</th>
+          <th>c1</th>
+          <th>c2</th>
+          <th>c3</th>
+          <th>c4</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>237AQ</td>
+          <td>157</td>
+          <td>7</td>
+          <td>2</td>
+          <td>3</td>
+          <td>7</td>
+          <td>A</td>
+          <td>Q</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>23K47</td>
+          <td>759</td>
+          <td>7</td>
+          <td>2</td>
+          <td>3</td>
+          <td>K</td>
+          <td>4</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>249K8</td>
+          <td>612</td>
+          <td>7</td>
+          <td>2</td>
+          <td>4</td>
+          <td>9</td>
+          <td>K</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>264A7</td>
+          <td>341</td>
+          <td>7</td>
+          <td>2</td>
+          <td>6</td>
+          <td>4</td>
+          <td>A</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>26578</td>
+          <td>10</td>
+          <td>7</td>
+          <td>2</td>
+          <td>6</td>
+          <td>5</td>
+          <td>7</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+          <td>&hellip;</td>
+      </tr>
+      <tr>
+          <td>996</td>
+          <td>TJTTJ</td>
+          <td>609</td>
+          <td>1</td>
+          <td>T</td>
+          <td>J</td>
+          <td>T</td>
+          <td>T</td>
+          <td>J</td>
+      </tr>
+      <tr>
+          <td>997</td>
+          <td>QQJQJ</td>
+          <td>131</td>
+          <td>1</td>
+          <td>Q</td>
+          <td>Q</td>
+          <td>J</td>
+          <td>Q</td>
+          <td>J</td>
+      </tr>
+      <tr>
+          <td>998</td>
+          <td>QQQJQ</td>
+          <td>831</td>
+          <td>1</td>
+          <td>Q</td>
+          <td>Q</td>
+          <td>Q</td>
+          <td>J</td>
+          <td>Q</td>
+      </tr>
+      <tr>
+          <td>999</td>
+          <td>KKKJK</td>
+          <td>183</td>
+          <td>1</td>
+          <td>K</td>
+          <td>K</td>
+          <td>K</td>
+          <td>J</td>
+          <td>K</td>
+      </tr>
+      <tr>
+          <td>1000</td>
+          <td>AAAAJ</td>
+          <td>594</td>
+          <td>1</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>A</td>
+          <td>J</td>
+      </tr>
+  </tbody>
 </table>
 <p>1000 rows × 8 columns</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Our new solution:  246894760
-</span></span></code></pre></div></p>
+</span></span></code></pre></div></div>
 </article>
  
       
 
       <footer class="book-footer">
-          
+        
   <div class="flex flex-wrap justify-between">
 
-  
 
-
-  
-
-  
-
-
-  
-
-
-<div class="book-languages" tabindex="0" aria-haspopup="true">
-  <ul>
-    <li class="flex align-center">
-      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-      English
-    </li> 
-  </ul>
-
-  <ul class="book-languages-list">
-    
-    <li class="active">
-      <a href="https://aseltmann.github.io/" class="flex align-center">
-        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-        English
-      </a>
-    </li>
-    
-    <li class="">
-      <a href="https://aseltmann.github.io/de/posts/aoc2023-day07/" class="flex align-center">
-        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
-        Deutsch
-      </a>
-    </li>
-    
-  </ul>
-</div>
-
-
-
-
-  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/8be3a927022b703473490c938f09a7e4e8f5d929" title='Last modified by Alex Seltmann | 2024-01-04' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2024-01-04</span>
+  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/38fe0acc7f126a949284fa3a84cd91e52ee88a4e" title='Last modified by A Seltmann | 2024-12-22' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="" />
+      <span>2024-12-22</span>
     </a>
   </div>
 
 
 
-  <div>
-    <a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/edit/main/content//posts/aoc2023-day07.en.md" target="_blank" rel="noopener">
-      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
-      <span>Edit this page</span>
-    </a>
-  </div>
 
 </div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
 
  
+        <div class="footer">
+    
+    
+    Exported
+    
+    from <a href="https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/source.org"> <code>source.org</code></a>
+    
+    using
+    
+    <a href="https://www.gnu.org/software/emacs/">Emacs 29.4 </a> &plus;
+    <a href="https://orgmode.org/">Org mode 9.7.11 </a> &plus;
+    
+    <a href="https://github.com/kaushalmodi/ox-hugo"><code>ox-hugo</code></a>
+    and published using
+    
+    <a href="https://gohugo.io/">Hugo 0.139.4</a>
+	  &plus; <a href="https://github.com/alex-shpak/hugo-book">Book</a>
+    
+</div>
+
       </footer>
 
       
@@ -1178,54 +1206,30 @@ of the solution is the same.</p>
   
  
 
-      <footer class="book-footer">
-          <div class="footer">
-    
-    
-    Exported
-    
-    from <a href="https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/lexbn-source.org"> <code>lexbn-source.org</code></a>
-    
-    using
-    
-    <a href="https://www.gnu.org/software/emacs/">Emacs 29.1 </a> &plus;
-    <a href="https://orgmode.org/">Org mode 9.7 </a> &plus;
-    
-    <a href="https://github.com/kaushalmodi/ox-hugo"><code>ox-hugo</code></a>
-    and published using
-    
-    <a href="https://gohugo.io/">Hugo 0.121.1</a>
-	  &plus; <a href="https://github.com/alex-shpak/hugo-book">Book</a>
-    
-</div>
-
-
-
- 
-      </footer>
-
-
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
     <aside class="book-toc">
-      
-  <nav id="TableOfContents">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
   <ul>
     <li><a href="#part-1">Part 1</a></li>
     <li><a href="#part-2">Part 2</a></li>
   </ul>
 </nav>
 
+
  
+      </div>
     </aside>
     
   </main>
 
   
 </body>
-
 </html>
 
 
@@ -1239,136 +1243,3 @@ of the solution is the same.</p>
 
 
 
-=======
-fifth.</p><p>So, <code>33332</code> and <code>2AAAA</code> are both <strong>four of a kind</strong> hands, but <code>33332</code> is stronger
-because its first card is stronger. Similarly, <code>77888</code> and <code>77788</code> are both a
-<strong>full house</strong>, but <code>77888</code> is stronger because its third card is stronger (and
-both hands have the same first and second card).</p><p>To play Camel Cards, you are given a list of hands and their corresponding <strong>bid</strong>
-(your puzzle input). For example:</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>32T3K 765
-</span></span><span style=display:flex><span>T55J5 684
-</span></span><span style=display:flex><span>KK677 28
-</span></span><span style=display:flex><span>KTJJT 220
-</span></span><span style=display:flex><span>QQQJA 483
-</span></span></code></pre></div><blockquote><p>This example shows five hands; each hand is followed by its <strong>bid</strong> amount. Each
-hand wins an amount equal to its bid multiplied by its <strong>rank</strong>, where the weakest
-hand gets rank 1, the second-weakest hand gets rank 2, and so on up to the
-strongest hand. Because there are five hands in this example, the strongest hand
-will have rank 5 and its bid will be multiplied by 5.</p><p>So, the first step is to put the hands in order of strength:</p><ul><li><code>32T3K</code> is the only <strong>one pair</strong> and the other hands are all a stronger type, so
-it gets rank <strong>1</strong>.</li><li><code>KK677</code> and <code>KTJJT</code> are both <strong>two pair</strong>. Their first cards both have the same
-label, but the second card of <code>KK677</code> is stronger (<code>K</code> vs <code>T</code>), so <code>KTJJT</code>
-gets rank <strong>2</strong> and <code>KK677</code> gets rank <strong>3</strong>.</li><li><code>T55J5</code> and <code>QQQJA</code> are both <strong>three of a kind</strong>. <code>QQQJA</code> has a stronger first
-card, so it gets rank <strong>5</strong> and <code>T55J5</code> gets rank <strong>4</strong>.</li></ul><p>Now, you can determine the total winnings of this set of hands by adding up the
-result of multiplying each hand&rsquo;s bid with its rank (<code>765</code> * 1 + <code>220</code> * 2 +
-<code>28</code> * 3 + <code>684</code> * 4 + <code>483</code> * 5). So the <strong>total winnings</strong> in this example are
-<strong><code>6440</code></strong>.</p><p>Find the rank of every hand in your set. What are the total winnings?</p></blockquote></div></details><p>My input file:
-<a href=https://github.com/aseltmann/aseltmann.github.io-org-src/blob/main/data/2023-12-07-1-aoc.txt>2023-12-07-1-aoc.txt</a></p><p>As always - let&rsquo;s read in the data.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>camel <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_table(<span style=color:#e6db74>&#39;data/2023-12-07-1-aoc.txt&#39;</span>, delim_whitespace<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
-</span></span><span style=display:flex><span>                      header<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>, names<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;cards&#39;</span>, <span style=color:#e6db74>&#39;bid&#39;</span>],
-</span></span><span style=display:flex><span>                      dtype<span style=color:#f92672>=</span>{<span style=color:#e6db74>&#39;cards&#39;</span>: <span style=color:#e6db74>&#39;string&#39;</span>, <span style=color:#e6db74>&#39;bid&#39;</span>: <span style=color:#e6db74>&#39;Int64&#39;</span>})
-</span></span><span style=display:flex><span>camel
-</span></span></code></pre></div><table><thead><tr><th></th><th>cards</th><th>bid</th></tr></thead><tbody><tr><td>0</td><td>A833A</td><td>309</td></tr><tr><td>1</td><td>Q33J3</td><td>205</td></tr><tr><td>2</td><td>55KK5</td><td>590</td></tr><tr><td>3</td><td>K4457</td><td>924</td></tr><tr><td>4</td><td>Q3QT3</td><td>11</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>995</td><td>KQJ53</td><td>367</td></tr><tr><td>996</td><td>57866</td><td>537</td></tr><tr><td>997</td><td>Q94A9</td><td>210</td></tr><tr><td>998</td><td>J448A</td><td>903</td></tr><tr><td>999</td><td>6J66J</td><td>114</td></tr></tbody></table><p>1000 rows × 2 columns</p><p>For sorting, we need to compute a <code>type</code> column. The 7 types can be deduced
-based on how many different cards are there (through <code>set()</code>) and the number of
-cards.</p><p>Also, for the next step we prepare one column per card string in the <code>cards</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_type</span>(cards):
-</span></span><span style=display:flex><span>    cardset <span style=color:#f92672>=</span> set(cards)
-</span></span><span style=display:flex><span>    cardlen <span style=color:#f92672>=</span> len(cardset)
-</span></span><span style=display:flex><span>    cardlist <span style=color:#f92672>=</span> list(cards)
-</span></span><span style=display:flex><span>    cardnum <span style=color:#f92672>=</span> [cardlist<span style=color:#f92672>.</span>count(i) <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> cardset]
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> cardlen <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
-</span></span><span style=display:flex><span>        ctype <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elif</span> cardlen <span style=color:#f92672>in</span> (<span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>):
-</span></span><span style=display:flex><span>        ctype <span style=color:#f92672>=</span> cardlen <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>elif</span> cardlen <span style=color:#f92672>==</span> <span style=color:#ae81ff>2</span>:
-</span></span><span style=display:flex><span>        ctype <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> <span style=color:#66d9ef>if</span> set(cardnum) <span style=color:#f92672>==</span> {<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>4</span>} <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>3</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
-</span></span><span style=display:flex><span>        ctype <span style=color:#f92672>=</span> <span style=color:#ae81ff>4</span> <span style=color:#66d9ef>if</span> <span style=color:#ae81ff>3</span> <span style=color:#f92672>in</span> cardnum <span style=color:#66d9ef>else</span> <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> ctype
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>camel[<span style=color:#e6db74>&#39;type&#39;</span>] <span style=color:#f92672>=</span> camel<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;cards&#39;</span>]<span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: get_type(x))
-</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>5</span>):
-</span></span><span style=display:flex><span>    camel[<span style=color:#e6db74>f</span><span style=color:#e6db74>&#39;c</span><span style=color:#e6db74>{</span>i<span style=color:#e6db74>}</span><span style=color:#e6db74>&#39;</span>] <span style=color:#f92672>=</span> camel<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;cards&#39;</span>]<span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: list(x)[i])
-</span></span><span style=display:flex><span>camel
-</span></span></code></pre></div><table><thead><tr><th></th><th>cards</th><th>bid</th><th>type</th><th>c0</th><th>c1</th><th>c2</th><th>c3</th><th>c4</th></tr></thead><tbody><tr><td>0</td><td>A833A</td><td>309</td><td>5</td><td>A</td><td>8</td><td>3</td><td>3</td><td>A</td></tr><tr><td>1</td><td>Q33J3</td><td>205</td><td>4</td><td>Q</td><td>3</td><td>3</td><td>J</td><td>3</td></tr><tr><td>2</td><td>55KK5</td><td>590</td><td>3</td><td>5</td><td>5</td><td>K</td><td>K</td><td>5</td></tr><tr><td>3</td><td>K4457</td><td>924</td><td>6</td><td>K</td><td>4</td><td>4</td><td>5</td><td>7</td></tr><tr><td>4</td><td>Q3QT3</td><td>11</td><td>5</td><td>Q</td><td>3</td><td>Q</td><td>T</td><td>3</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>995</td><td>KQJ53</td><td>367</td><td>7</td><td>K</td><td>Q</td><td>J</td><td>5</td><td>3</td></tr><tr><td>996</td><td>57866</td><td>537</td><td>6</td><td>5</td><td>7</td><td>8</td><td>6</td><td>6</td></tr><tr><td>997</td><td>Q94A9</td><td>210</td><td>6</td><td>Q</td><td>9</td><td>4</td><td>A</td><td>9</td></tr><tr><td>998</td><td>J448A</td><td>903</td><td>6</td><td>J</td><td>4</td><td>4</td><td>8</td><td>A</td></tr><tr><td>999</td><td>6J66J</td><td>114</td><td>3</td><td>6</td><td>J</td><td>6</td><td>6</td><td>J</td></tr></tbody></table><p>1000 rows × 8 columns</p><p>For sorting, <code>pandas</code> contributes the <code>sort_values</code> method, which supports
-sorting by multiple columns (here, we first sort according to <code>type</code>, then <code>c0</code>,
-<code>c1</code>, &mldr;). For easier sorting by numerical values, we convert the values using
-the <code>card_dict</code> dictionary, which implements the given sorting order.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>card_dict <span style=color:#f92672>=</span> {c: i <span style=color:#66d9ef>for</span> i, c <span style=color:#f92672>in</span> enumerate([<span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#39;2&#39;</span>, <span style=color:#e6db74>&#39;3&#39;</span>,
-</span></span><span style=display:flex><span>                                         <span style=color:#e6db74>&#39;4&#39;</span>, <span style=color:#e6db74>&#39;5&#39;</span>, <span style=color:#e6db74>&#39;6&#39;</span>, <span style=color:#e6db74>&#39;7&#39;</span>, <span style=color:#e6db74>&#39;8&#39;</span>, <span style=color:#e6db74>&#39;9&#39;</span>,
-</span></span><span style=display:flex><span>                                         <span style=color:#e6db74>&#39;T&#39;</span>, <span style=color:#e6db74>&#39;J&#39;</span>, <span style=color:#e6db74>&#39;Q&#39;</span>, <span style=color:#e6db74>&#39;K&#39;</span>, <span style=color:#e6db74>&#39;A&#39;</span>])}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>camel <span style=color:#f92672>=</span> camel<span style=color:#f92672>.</span>sort_values(by<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;type&#39;</span>, <span style=color:#e6db74>&#39;c0&#39;</span>, <span style=color:#e6db74>&#39;c1&#39;</span>, <span style=color:#e6db74>&#39;c2&#39;</span>, <span style=color:#e6db74>&#39;c3&#39;</span>, <span style=color:#e6db74>&#39;c4&#39;</span>],
-</span></span><span style=display:flex><span>                          ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
-</span></span><span style=display:flex><span>                          key<span style=color:#f92672>=</span><span style=color:#66d9ef>lambda</span> x: x<span style=color:#f92672>.</span>map(card_dict))
-</span></span><span style=display:flex><span>camel<span style=color:#f92672>.</span>index <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>camel
-</span></span></code></pre></div><table><thead><tr><th></th><th>cards</th><th>bid</th><th>type</th><th>c0</th><th>c1</th><th>c2</th><th>c3</th><th>c4</th></tr></thead><tbody><tr><td>1</td><td>237AQ</td><td>157</td><td>7</td><td>2</td><td>3</td><td>7</td><td>A</td><td>Q</td></tr><tr><td>2</td><td>23K47</td><td>759</td><td>7</td><td>2</td><td>3</td><td>K</td><td>4</td><td>7</td></tr><tr><td>3</td><td>249K8</td><td>612</td><td>7</td><td>2</td><td>4</td><td>9</td><td>K</td><td>8</td></tr><tr><td>4</td><td>264A7</td><td>341</td><td>7</td><td>2</td><td>6</td><td>4</td><td>A</td><td>7</td></tr><tr><td>5</td><td>26578</td><td>10</td><td>7</td><td>2</td><td>6</td><td>5</td><td>7</td><td>8</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>996</td><td>AA5AA</td><td>565</td><td>2</td><td>A</td><td>A</td><td>5</td><td>A</td><td>A</td></tr><tr><td>997</td><td>AAATA</td><td>704</td><td>2</td><td>A</td><td>A</td><td>A</td><td>T</td><td>A</td></tr><tr><td>998</td><td>AAAA3</td><td>145</td><td>2</td><td>A</td><td>A</td><td>A</td><td>A</td><td>3</td></tr><tr><td>999</td><td>AAAAJ</td><td>594</td><td>2</td><td>A</td><td>A</td><td>A</td><td>A</td><td>J</td></tr><tr><td>1000</td><td>JJJJJ</td><td>219</td><td>1</td><td>J</td><td>J</td><td>J</td><td>J</td><td>J</td></tr></tbody></table><p>1000 rows × 8 columns</p><p>Lastly, we multiply the bid with the index and sum the result.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>camel<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;bid&#39;</span>]<span style=color:#f92672>.</span>mul(camel<span style=color:#f92672>.</span>index)<span style=color:#f92672>.</span>sum()
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>246912307
-</span></span></code></pre></div><h2 id=part-2>Part 2
-<a class=anchor href=#part-2>#</a></h2><details><summary>Lets first read the task:</summary><div class=details><blockquote><p>To make things a little more interesting, the Elf introduces one additional
-rule. Now, <code>J</code> cards are jokers - wildcards that can act like whatever card
-would make the hand the strongest type possible.</p><p>To balance this, <strong><code>J</code> cards are now the weakest</strong> individual cards, weaker even
-than <code>2</code>. The other cards stay in the same order: <code>A</code>, <code>K</code>, <code>Q</code>, <code>T</code>, <code>9</code>, <code>8</code>,
-<code>7</code>, <code>6</code>, <code>5</code>, <code>4</code>, <code>3</code>, <code>2</code>, <code>J</code>.</p><p><code>J</code> cards can pretend to be whatever card is best for the purpose of determining
-hand type; for example, <code>QJJQ2</code> is now considered <strong>four of a kind</strong>. However, for
-the purpose of breaking ties between two hands of the same type, <code>J</code> is always
-treated as <code>J</code>, not the card it&rsquo;s pretending to be: <code>JKKK2</code> is weaker than
-<code>QQQQ2</code> because <code>J</code> is weaker than <code>Q</code>.</p><p>Now, the above example goes very differently:</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>32T3K 765
-</span></span><span style=display:flex><span>T55J5 684
-</span></span><span style=display:flex><span>KK677 28
-</span></span><span style=display:flex><span>KTJJT 220
-</span></span><span style=display:flex><span>QQQJA 483
-</span></span></code></pre></div><blockquote><ul><li><code>32T3K</code> is still the only <strong>one pair</strong>; it doesn&rsquo;t contain any jokers, so its
-strength doesn&rsquo;t increase.</li><li><code>KK677</code> is now the only <strong>two pair</strong>, making it the second-weakest hand.</li><li><code>T55J5</code>, <code>KTJJT</code>, and <code>QQQJA</code> are now all <strong>four of a kind</strong>! <code>T55J5</code> gets rank
-3, <code>QQQJA</code> gets rank 4, and <code>KTJJT</code> gets rank 5.</li></ul><p>With the new joker rule, the total winnings in this example are <strong><code>5905</code></strong>.</p><p>Using the new joker rule, find the rank of every hand in your set. <strong>What are the
-new total winnings?</strong></p></blockquote></div></details><p>What changes? We have to update our <code>get_type()</code> function and our <code>card_dict</code>
-dictionary, otherwise the method stays the same!</p><p>Let&rsquo;s first write <code>get_type_joker()</code>: if no joker is in the cards, we can just
-refer to <code>get_type()</code>. If we have 1, 2 or 5 different card faces, the answer is
-trivial. We only have to use the number of jokers and the maximum number of
-other faces if we have 3 or 4 different faces.</p><p>Note: if a <code>J</code> is present, there can never be <strong>high card</strong> (<code>type = 7</code>), because
-we always can get <strong>one pair</strong>. Also we can never get <strong>two pair</strong> (<code>type = 5</code>),
-because we can always construct <strong>three of a kind</strong> or <strong>full house</strong>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>get_type_joker</span>(cards):
-</span></span><span style=display:flex><span>    cardset <span style=color:#f92672>=</span> set(cards)
-</span></span><span style=display:flex><span>    cardlen <span style=color:#f92672>=</span> len(cardset)
-</span></span><span style=display:flex><span>    cardlist <span style=color:#f92672>=</span> list(cards)
-</span></span><span style=display:flex><span>    cardnum <span style=color:#f92672>=</span> [cardlist<span style=color:#f92672>.</span>count(i) <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> cardset]
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> <span style=color:#e6db74>&#39;J&#39;</span> <span style=color:#f92672>in</span> cardset:
-</span></span><span style=display:flex><span>        ctype <span style=color:#f92672>=</span> get_type(cards)
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span>:
-</span></span><span style=display:flex><span>        idxj <span style=color:#f92672>=</span> list(cardset)<span style=color:#f92672>.</span>index(<span style=color:#e6db74>&#39;J&#39;</span>)
-</span></span><span style=display:flex><span>        numj <span style=color:#f92672>=</span> cardnum[idxj]
-</span></span><span style=display:flex><span>        cardnum<span style=color:#f92672>.</span>pop(idxj)
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> cardlen <span style=color:#f92672>in</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>]:
-</span></span><span style=display:flex><span>            ctype <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> cardlen <span style=color:#f92672>==</span> <span style=color:#ae81ff>5</span>:
-</span></span><span style=display:flex><span>            ctype <span style=color:#f92672>=</span> <span style=color:#ae81ff>6</span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> (numj <span style=color:#f92672>in</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>]) <span style=color:#f92672>and</span> (cardlen <span style=color:#f92672>==</span> <span style=color:#ae81ff>4</span>):
-</span></span><span style=display:flex><span>                ctype <span style=color:#f92672>=</span> <span style=color:#ae81ff>4</span>
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
-</span></span><span style=display:flex><span>                ctype <span style=color:#f92672>=</span> <span style=color:#ae81ff>6</span> <span style=color:#f92672>-</span> max(cardnum) <span style=color:#f92672>-</span> numj
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> ctype
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>camel[<span style=color:#e6db74>&#39;type&#39;</span>] <span style=color:#f92672>=</span> camel<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;cards&#39;</span>]<span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: get_type_joker(x))
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>camel
-</span></span></code></pre></div><table><thead><tr><th></th><th>cards</th><th>bid</th><th>type</th><th>c0</th><th>c1</th><th>c2</th><th>c3</th><th>c4</th></tr></thead><tbody><tr><td>1</td><td>237AQ</td><td>157</td><td>7</td><td>2</td><td>3</td><td>7</td><td>A</td><td>Q</td></tr><tr><td>2</td><td>23K47</td><td>759</td><td>7</td><td>2</td><td>3</td><td>K</td><td>4</td><td>7</td></tr><tr><td>3</td><td>249K8</td><td>612</td><td>7</td><td>2</td><td>4</td><td>9</td><td>K</td><td>8</td></tr><tr><td>4</td><td>264A7</td><td>341</td><td>7</td><td>2</td><td>6</td><td>4</td><td>A</td><td>7</td></tr><tr><td>5</td><td>26578</td><td>10</td><td>7</td><td>2</td><td>6</td><td>5</td><td>7</td><td>8</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>996</td><td>AA5AA</td><td>565</td><td>2</td><td>A</td><td>A</td><td>5</td><td>A</td><td>A</td></tr><tr><td>997</td><td>AAATA</td><td>704</td><td>2</td><td>A</td><td>A</td><td>A</td><td>T</td><td>A</td></tr><tr><td>998</td><td>AAAA3</td><td>145</td><td>2</td><td>A</td><td>A</td><td>A</td><td>A</td><td>3</td></tr><tr><td>999</td><td>AAAAJ</td><td>594</td><td>1</td><td>A</td><td>A</td><td>A</td><td>A</td><td>J</td></tr><tr><td>1000</td><td>JJJJJ</td><td>219</td><td>1</td><td>J</td><td>J</td><td>J</td><td>J</td><td>J</td></tr></tbody></table><p>1000 rows × 8 columns</p><p>Now, we just move <code>J</code> in our new <code>card_dict_joker</code> to where it belongs, the rest
-of the solution is the same.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>card_dict_joker <span style=color:#f92672>=</span> {c: i <span style=color:#66d9ef>for</span> i, c <span style=color:#f92672>in</span> enumerate(
-</span></span><span style=display:flex><span>    [<span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#39;J&#39;</span>, <span style=color:#e6db74>&#39;2&#39;</span>, <span style=color:#e6db74>&#39;3&#39;</span>, <span style=color:#e6db74>&#39;4&#39;</span>, <span style=color:#e6db74>&#39;5&#39;</span>, <span style=color:#e6db74>&#39;6&#39;</span>, <span style=color:#e6db74>&#39;7&#39;</span>, <span style=color:#e6db74>&#39;8&#39;</span>, <span style=color:#e6db74>&#39;9&#39;</span>,
-</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#39;T&#39;</span>, <span style=color:#e6db74>&#39;Q&#39;</span>, <span style=color:#e6db74>&#39;K&#39;</span>, <span style=color:#e6db74>&#39;A&#39;</span>])}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>camel <span style=color:#f92672>=</span> camel<span style=color:#f92672>.</span>sort_values(by<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;type&#39;</span>, <span style=color:#e6db74>&#39;c0&#39;</span>, <span style=color:#e6db74>&#39;c1&#39;</span>, <span style=color:#e6db74>&#39;c2&#39;</span>, <span style=color:#e6db74>&#39;c3&#39;</span>, <span style=color:#e6db74>&#39;c4&#39;</span>],
-</span></span><span style=display:flex><span>                          ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>,
-</span></span><span style=display:flex><span>                          key<span style=color:#f92672>=</span><span style=color:#66d9ef>lambda</span> x: x<span style=color:#f92672>.</span>map(card_dict_joker))
-</span></span><span style=display:flex><span>camel<span style=color:#f92672>.</span>index <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>display(camel)
-</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#39;Our new solution: &#39;</span>, camel<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;bid&#39;</span>]<span style=color:#f92672>.</span>mul(camel<span style=color:#f92672>.</span>index)<span style=color:#f92672>.</span>sum())
-</span></span></code></pre></div><table><thead><tr><th></th><th>cards</th><th>bid</th><th>type</th><th>c0</th><th>c1</th><th>c2</th><th>c3</th><th>c4</th></tr></thead><tbody><tr><td>1</td><td>237AQ</td><td>157</td><td>7</td><td>2</td><td>3</td><td>7</td><td>A</td><td>Q</td></tr><tr><td>2</td><td>23K47</td><td>759</td><td>7</td><td>2</td><td>3</td><td>K</td><td>4</td><td>7</td></tr><tr><td>3</td><td>249K8</td><td>612</td><td>7</td><td>2</td><td>4</td><td>9</td><td>K</td><td>8</td></tr><tr><td>4</td><td>264A7</td><td>341</td><td>7</td><td>2</td><td>6</td><td>4</td><td>A</td><td>7</td></tr><tr><td>5</td><td>26578</td><td>10</td><td>7</td><td>2</td><td>6</td><td>5</td><td>7</td><td>8</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>996</td><td>TJTTJ</td><td>609</td><td>1</td><td>T</td><td>J</td><td>T</td><td>T</td><td>J</td></tr><tr><td>997</td><td>QQJQJ</td><td>131</td><td>1</td><td>Q</td><td>Q</td><td>J</td><td>Q</td><td>J</td></tr><tr><td>998</td><td>QQQJQ</td><td>831</td><td>1</td><td>Q</td><td>Q</td><td>Q</td><td>J</td><td>Q</td></tr><tr><td>999</td><td>KKKJK</td><td>183</td><td>1</td><td>K</td><td>K</td><td>K</td><td>J</td><td>K</td></tr><tr><td>1000</td><td>AAAAJ</td><td>594</td><td>1</td><td>A</td><td>A</td><td>A</td><td>A</td><td>J</td></tr></tbody></table><p>1000 rows × 8 columns</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Our new solution:  246894760
-</span></span></code></pre></div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=footer>Exported
-from <a href=https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/source.org><code>source.org</code></a>
-using
-<a href=https://www.gnu.org/software/emacs/>Emacs 29.4 </a>+
-<a href=https://orgmode.org/>Org mode 9.7.11 </a>+
-<a href=https://github.com/kaushalmodi/ox-hugo><code>ox-hugo</code></a>
-and published using
-<a href=https://gohugo.io/>Hugo 0.139.4</a>
-+ <a href=https://github.com/alex-shpak/hugo-book>Book</a></div></footer><div class=book-comments><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lexbn.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#part-1>Part 1</a></li><li><a href=#part-2>Part 2</a></li></ul></nav></div></aside></main></body></html>
->>>>>>> 99c0415 (add all files)

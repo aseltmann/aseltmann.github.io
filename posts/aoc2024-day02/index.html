@@ -1,4 +1,9 @@
-<!doctype html><html lang=en dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
 Table of Contents
 
 
@@ -20,34 +25,416 @@ Lets first read the task:
 
 The unusual data (your puzzle input) consists of many reports,
 one report per line. Each report is a list of numbers called levels that are
-separated by spaces. For example:"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/posts/aoc2024-day02/"><meta property="og:site_name" content="Blog & Notes"><meta property="og:title" content="Advent of code 2024 - Day 2: Red-Nosed Reports"><meta property="og:description" content="Table of Contents Part 1: Safe reports Part 2: Problem Dampener I try to solve this year’s Advent of Code 2024 riddles in R. This is Day 2 - see https:adventofcode.com/2024/day/2
-Part 1: Safe reports # Lets first read the task: The unusual data (your puzzle input) consists of many reports, one report per line. Each report is a list of numbers called levels that are separated by spaces. For example:"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-12-10T01:43:00+01:00"><meta property="article:modified_time" content="2024-12-22T01:46:31+01:00"><meta property="article:tag" content="R"><title>Advent of code 2024 - Day 2: Red-Nosed Reports | Blog & Notes</title>
-<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/posts/aoc2024-day02/><link rel=alternate hreflang=de href=http://localhost:1313/de/posts/aoc2024-day02/ title="Advent of code 2024 - Tag 2: Rotnasige Berichte"><link rel=stylesheet href=/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.6fec898e842115aadb23a2ea809d20ff7dc530c9a256a15bf8a53d76edb08c69.js integrity="sha256-b+yJjoQhFarbI6LqgJ0g/33FMMmiVqFb+KU9du2wjGk=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><img src=/book_logo.png alt=Logo class=book-icon><span>Blog & Notes</span></a></h2><a href=/><img src=/book_logo.png alt=Logo width=100%></a><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
-<label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
-English</a></label><ul><li><a href=/de/posts/aoc2024-day02/>Deutsch</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul><ul><li><span>Notes</span><ul><li><a href=/docs/notes/poetry/>Poetry</a></li></ul></li><li><a href=/docs/projects/>Projects</a><ul></ul></li></ul><ul><li><a href=https://github.com/aseltmann target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Advent of code 2024 - Day 2: Red-Nosed Reports</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#part-1-safe-reports>Part 1: Safe reports</a></li><li><a href=#part-2-problem-dampener>Part 2: Problem Dampener</a></li></ul></nav></aside></header><article class="markdown book-post"><h2>Advent of code 2024 - Day 2: Red-Nosed Reports</h2><div class="flex align-center text-small book-post-date"><img src=/svg/calendar.svg class=book-icon alt>
-<span>2024-12-10</span></div><div class=text-small><a href=/tags/R/>R</a></div><div class=book-post-content><div class="ox-hugo-toc toc"><div class=heading>Table of Contents</div><ul><li><a href=/#part-1-safe-reports>Part 1: Safe reports</a></li><li><a href=/#part-2-problem-dampener>Part 2: Problem Dampener</a></li></ul></div><p>I try to solve this year&rsquo;s <strong>Advent of Code 2024</strong> riddles in R. This is Day 2 - see
-<a href=https:adventofcode.com/2024/day/2>https:adventofcode.com/2024/day/2</a></p><h2 id=part-1-safe-reports>Part 1: Safe reports
-<a class=anchor href=#part-1-safe-reports>#</a></h2><details><summary>Lets first read the task:</summary><div class=details><blockquote><p>The unusual data (your puzzle input) consists of many <strong>reports</strong>,
+separated by spaces. For example:">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://aseltmann.github.io/posts/aoc2024-day02/">
+  <meta property="og:site_name" content="Blog & Notes">
+  <meta property="og:title" content="Advent of code 2024 - Day 2: Red-Nosed Reports">
+  <meta property="og:description" content="Table of Contents Part 1: Safe reports Part 2: Problem Dampener I try to solve this year’s Advent of Code 2024 riddles in R. This is Day 2 - see https:adventofcode.com/2024/day/2
+Part 1: Safe reports # Lets first read the task: The unusual data (your puzzle input) consists of many reports, one report per line. Each report is a list of numbers called levels that are separated by spaces. For example:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-10T01:43:00+01:00">
+    <meta property="article:modified_time" content="2024-12-22T03:12:06+01:00">
+    <meta property="article:tag" content="R">
+<title>Advent of code 2024 - Day 2: Red-Nosed Reports | Blog &amp; Notes</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://aseltmann.github.io/posts/aoc2024-day02/">
+  <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2024-day02/" title="Advent of code 2024 - Tag 2: Rotnasige Berichte">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.6fec898e842115aadb23a2ea809d20ff7dc530c9a256a15bf8a53d76edb08c69.js" integrity="sha256-b&#43;yJjoQhFarbI6LqgJ0g/33FMMmiVqFb&#43;KU9du2wjGk=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+  <h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/book_logo.png" alt="Logo" class="book-icon" /><span>Blog &amp; Notes</span>
+  </a>
+</h2>
+
+  <a href="/"><img src="/book_logo.png" alt="Logo" width="100%"/></a>
+
+  
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+  
+
+
+
+  
+    
+  
+
+
+  
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="/de/posts/aoc2024-day02/">
+          Deutsch
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+<ul>
+    <li>
+        <a href="/posts/">Blog</a>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/poetry/" class="">Poetry</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/projects/" class="">Projects</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/aseltmann"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Advent of code 2024 - Day 2: Red-Nosed Reports</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#part-1-safe-reports">Part 1: Safe reports</a></li>
+    <li><a href="#part-2-problem-dampener">Part 2: Problem Dampener</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h2>
+    Advent of code 2024 - Day 2: Red-Nosed Reports
+  </h2>
+  
+  <div class="flex align-center text-small book-post-date">
+    <img src="/svg/calendar.svg" class="book-icon " alt="" />
+    <span>2024-12-10</span>
+  </div>
+
+
+
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/tags/R/">R</a>
+  </div>
+  
+
+
+  <div class="book-post-content"><div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li>
+  <a href="/#part-1-safe-reports">Part 1: Safe reports</a></li>
+<li>
+  <a href="/#part-2-problem-dampener">Part 2: Problem Dampener</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<p>I try to solve this year&rsquo;s <strong>Advent of Code 2024</strong> riddles in R. This is Day 2 - see 
+  <a href="https:adventofcode.com/2024/day/2">https:adventofcode.com/2024/day/2</a></p>
+<h2 id="part-1-safe-reports">
+  Part 1: Safe reports
+  <a class="anchor" href="#part-1-safe-reports">#</a>
+</h2>
+<details>
+<summary>Lets first read the task:</summary>
+<div class="details">
+<blockquote>
+<p>The unusual data (your puzzle input) consists of many <strong>reports</strong>,
 one report per line. Each report is a list of numbers called <strong>levels</strong> that are
-separated by spaces. For example:</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>7 6 4 2 1
-</span></span><span style=display:flex><span>1 2 7 8 9
-</span></span><span style=display:flex><span>9 7 6 2 1
-</span></span><span style=display:flex><span>1 3 2 4 5
-</span></span><span style=display:flex><span>8 6 4 4 1
-</span></span><span style=display:flex><span>1 3 6 7 9
-</span></span></code></pre></div><blockquote><p>This example data contains six reports each containing five levels.</p><p>The engineers are trying to figure out which reports are <strong>safe</strong>. The Red-Nosed
+separated by spaces. For example:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>7 6 4 2 1
+</span></span><span style="display:flex;"><span>1 2 7 8 9
+</span></span><span style="display:flex;"><span>9 7 6 2 1
+</span></span><span style="display:flex;"><span>1 3 2 4 5
+</span></span><span style="display:flex;"><span>8 6 4 4 1
+</span></span><span style="display:flex;"><span>1 3 6 7 9
+</span></span></code></pre></div><blockquote>
+<p>This example data contains six reports each containing five levels.</p>
+<p>The engineers are trying to figure out which reports are <strong>safe</strong>. The Red-Nosed
 reactor safety systems can only tolerate levels that are either gradually
 increasing or gradually decreasing. So, a report only counts as safe if both of
-the following are true:</p><ul><li>The levels are either <strong>all increasing</strong> or <strong>all decreasing</strong>.</li><li>Any two adjacent levels differ by <strong>at least one</strong> and <strong>at most three</strong>.</li></ul><p>In the example above, the reports can be found safe or unsafe by checking those
-rules:</p><ul><li><code>7 6 4 2 1</code>: <strong>Safe</strong> because the levels are all decreasing by 1 or 2.</li><li><code>1 2 7 8 9</code>: <strong>Unsafe</strong> because <code>2 7</code> is an increase of 5.</li><li><code>9 7 6 2 1</code>: <strong>Unsafe</strong> because <code>6 2</code> is a decrease of 4.</li><li><code>1 3 2 4 5</code>: <strong>Unsafe</strong> because <code>1 3</code> is increasing but <code>3 2</code> is decreasing.</li><li><code>8 6 4 4 1</code>: <strong>Unsafe</strong> because <code>4 4</code> is neither an increase or a decrease.</li><li><code>1 3 6 7 9</code>: <strong>Safe</strong> because the levels are all increasing by 1, 2, or 3.</li></ul><p>So, in this example, <strong><code>2</code></strong> reports are <strong>safe</strong>.</p><p>Analyze the unusual data from the engineers. <strong>How many reports are safe?</strong></p></blockquote></div></details><p>My input file:
-<a href=https://github.com/aseltmann/aseltmann.github.io-org-src/blob/main/data/2024-12-02-1-aoc.txt>2024-12-02-1-aoc.txt</a></p><p>First, let&rsquo;s load the data and take a look:</p><pre tabindex=0><code class=language-jupyter-R data-lang=jupyter-R>data &lt;- data.table::fread(&#34;2024-12-02-1-aoc.txt&#34;, header = FALSE, fill = TRUE)
+the following are true:</p>
+<ul>
+<li>The levels are either <strong>all increasing</strong> or <strong>all decreasing</strong>.</li>
+<li>Any two adjacent levels differ by <strong>at least one</strong> and <strong>at most three</strong>.</li>
+</ul>
+<p>In the example above, the reports can be found safe or unsafe by checking those
+rules:</p>
+<ul>
+<li><code>7 6 4 2 1</code>: <strong>Safe</strong> because the levels are all decreasing by 1 or 2.</li>
+<li><code>1 2 7 8 9</code>: <strong>Unsafe</strong> because <code>2 7</code> is an increase of 5.</li>
+<li><code>9 7 6 2 1</code>: <strong>Unsafe</strong> because <code>6 2</code> is a decrease of 4.</li>
+<li><code>1 3 2 4 5</code>: <strong>Unsafe</strong> because <code>1 3</code> is increasing but <code>3 2</code> is decreasing.</li>
+<li><code>8 6 4 4 1</code>: <strong>Unsafe</strong> because <code>4 4</code> is neither an increase or a decrease.</li>
+<li><code>1 3 6 7 9</code>: <strong>Safe</strong> because the levels are all increasing by 1, 2, or 3.</li>
+</ul>
+<p>So, in this example, <strong><code>2</code></strong> reports are <strong>safe</strong>.</p>
+<p>Analyze the unusual data from the engineers. <strong>How many reports are safe?</strong></p>
+</blockquote>
+</div>
+</details>
+<p>My input file: 
+  <a href="https://github.com/aseltmann/aseltmann.github.io-org-src/blob/main/data/2024-12-02-1-aoc.txt">2024-12-02-1-aoc.txt</a></p>
+<p>First, let&rsquo;s load the data and take a look:</p>
+<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">data &lt;- data.table::fread(&#34;2024-12-02-1-aoc.txt&#34;, header = FALSE, fill = TRUE)
 head(data)
-</code></pre><table><thead><tr><th>V1</th><th>V2</th><th>V3</th><th>V4</th><th>V5</th><th>V6</th><th>V7</th><th>V8</th></tr></thead><tbody><tr><td>&lt;int></td><td>&lt;int></td><td>&lt;int></td><td>&lt;int></td><td>&lt;int></td><td>&lt;int></td><td>&lt;int></td><td>&lt;int></td></tr><tr><td>74</td><td>76</td><td>78</td><td>79</td><td>76</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>38</td><td>40</td><td>43</td><td>44</td><td>44</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>1</td><td>2</td><td>4</td><td>6</td><td>8</td><td>9</td><td>13</td><td>NA</td></tr><tr><td>65</td><td>68</td><td>70</td><td>72</td><td>75</td><td>76</td><td>81</td><td>NA</td></tr><tr><td>89</td><td>91</td><td>92</td><td>95</td><td>93</td><td>94</td><td>NA</td><td>NA</td></tr><tr><td>15</td><td>17</td><td>16</td><td>18</td><td>19</td><td>17</td><td>NA</td><td>NA</td></tr></tbody></table><p>My core idea here was to compute the differences between each element in a row -
+</code></pre><table>
+  <thead>
+      <tr>
+          <th>V1</th>
+          <th>V2</th>
+          <th>V3</th>
+          <th>V4</th>
+          <th>V5</th>
+          <th>V6</th>
+          <th>V7</th>
+          <th>V8</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>&lt;int&gt;</td>
+          <td>&lt;int&gt;</td>
+          <td>&lt;int&gt;</td>
+          <td>&lt;int&gt;</td>
+          <td>&lt;int&gt;</td>
+          <td>&lt;int&gt;</td>
+          <td>&lt;int&gt;</td>
+          <td>&lt;int&gt;</td>
+      </tr>
+      <tr>
+          <td>74</td>
+          <td>76</td>
+          <td>78</td>
+          <td>79</td>
+          <td>76</td>
+          <td>NA</td>
+          <td>NA</td>
+          <td>NA</td>
+      </tr>
+      <tr>
+          <td>38</td>
+          <td>40</td>
+          <td>43</td>
+          <td>44</td>
+          <td>44</td>
+          <td>NA</td>
+          <td>NA</td>
+          <td>NA</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>4</td>
+          <td>6</td>
+          <td>8</td>
+          <td>9</td>
+          <td>13</td>
+          <td>NA</td>
+      </tr>
+      <tr>
+          <td>65</td>
+          <td>68</td>
+          <td>70</td>
+          <td>72</td>
+          <td>75</td>
+          <td>76</td>
+          <td>81</td>
+          <td>NA</td>
+      </tr>
+      <tr>
+          <td>89</td>
+          <td>91</td>
+          <td>92</td>
+          <td>95</td>
+          <td>93</td>
+          <td>94</td>
+          <td>NA</td>
+          <td>NA</td>
+      </tr>
+      <tr>
+          <td>15</td>
+          <td>17</td>
+          <td>16</td>
+          <td>18</td>
+          <td>19</td>
+          <td>17</td>
+          <td>NA</td>
+          <td>NA</td>
+      </tr>
+  </tbody>
+</table>
+<p>My core idea here was to compute the differences between each element in a row -
 luckily, <code>R</code> provides an inbuilt <code>diff()</code> function that provides exactly what I
 need. Then, we check if all differences are either 1, 2, 3 or -1, -2, -3. Note
 that each row has a different number of elements, so we have to omit NA values
-via <code>na.omit</code> when applying the check.</p><pre tabindex=0><code class=language-jupyter-R data-lang=jupyter-R>isalltrue &lt;- function(rep) {
+via <code>na.omit</code> when applying the check.</p>
+<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">isalltrue &lt;- function(rep) {
     return(all(diff(rep) %in% c(1, 2, 3)) |
            all(diff(rep) %in% c(-1, -2, -3)))
 }
@@ -57,20 +444,47 @@ isreport &lt;- function(row) {
 }
 valid.reports &lt;- apply(data, 1, isreport)
 table(valid.reports)
-</code></pre><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>valid.reports
-</span></span><span style=display:flex><span>FALSE  TRUE
-</span></span><span style=display:flex><span>  743   257
-</span></span></code></pre></div><h2 id=part-2-problem-dampener>Part 2: Problem Dampener
-<a class=anchor href=#part-2-problem-dampener>#</a></h2><details><summary>Let&rsquo;s read the task for part 2!</summary><div class=details><blockquote><p>The engineers are surprised by the low number of safe reports until they realize
-they forgot to tell you about the Problem Dampener.</p><p>The Problem Dampener is a reactor-mounted module that lets the reactor safety
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>valid.reports
+</span></span><span style="display:flex;"><span>FALSE  TRUE
+</span></span><span style="display:flex;"><span>  743   257
+</span></span></code></pre></div><h2 id="part-2-problem-dampener">
+  Part 2: Problem Dampener
+  <a class="anchor" href="#part-2-problem-dampener">#</a>
+</h2>
+<details>
+<summary>Let&rsquo;s read the task for part 2!</summary>
+<div class="details">
+<blockquote>
+<p>The engineers are surprised by the low number of safe reports until they realize
+they forgot to tell you about the Problem Dampener.</p>
+<p>The Problem Dampener is a reactor-mounted module that lets the reactor safety
 systems <strong>tolerate a single bad level</strong> in what would otherwise be a safe report.
-It&rsquo;s like the bad level never happened!</p><p>Now, the same rules apply as before, except if removing a single level from an
-unsafe report would make it safe, the report instead counts as safe.</p><p>More of the above example&rsquo;s reports are now safe:</p><ul><li>-<code>7 6 4 2 1</code>: <strong>Safe</strong> without removing any level.</li><li>-<code>1 2 7 8 9</code>: <strong>Unsafe</strong> regardless of which level is removed.</li><li>-<code>9 7 6 2 1</code>: <strong>Unsafe</strong> regardless of which level is removed.</li><li>-<code>1 3 2 4 5</code>: <strong>Safe</strong> by removing the second level, <code>3</code>.</li><li>-<code>8 6 4 4 1</code>: <strong>Safe</strong> by removing the third level, <code>4</code>.</li><li>-<code>1 3 6 7 9</code>: <strong>Safe</strong> without removing any level.</li></ul><p>Thanks to the Problem Dampener, <strong><code>4</code></strong> reports are actually <strong>safe</strong>!</p><p>Update your analysis by handling situations where the Problem Dampener can
-remove a single level from unsafe reports. <strong>How many reports are now safe?</strong></p></blockquote></div></details><p>So, this task is a good example on how easy it is to get lost in a overly
+It&rsquo;s like the bad level never happened!</p>
+<p>Now, the same rules apply as before, except if removing a single level from an
+unsafe report would make it safe, the report instead counts as safe.</p>
+<p>More of the above example&rsquo;s reports are now safe:</p>
+<ul>
+<li>-<code>7 6 4 2 1</code>: <strong>Safe</strong> without removing any level.</li>
+<li>-<code>1 2 7 8 9</code>: <strong>Unsafe</strong> regardless of which level is removed.</li>
+<li>-<code>9 7 6 2 1</code>: <strong>Unsafe</strong> regardless of which level is removed.</li>
+<li>-<code>1 3 2 4 5</code>: <strong>Safe</strong> by removing the second level, <code>3</code>.</li>
+<li>-<code>8 6 4 4 1</code>: <strong>Safe</strong> by removing the third level, <code>4</code>.</li>
+<li>-<code>1 3 6 7 9</code>: <strong>Safe</strong> without removing any level.</li>
+</ul>
+<p>Thanks to the Problem Dampener, <strong><code>4</code></strong> reports are actually <strong>safe</strong>!</p>
+<p>Update your analysis by handling situations where the Problem Dampener can
+remove a single level from unsafe reports. <strong>How many reports are now safe?</strong></p>
+</blockquote>
+</div>
+</details>
+<p>So, this task is a good example on how easy it is to get lost in a overly
 complicated approach. My first approach was basically to somehow check if the
 general trend was descending or ascending and based on that to remove opposite
 differences. This was too complicated and in the end I found 4 less safe reports
-than were needed&mldr; (Also note the beautiful print debuggin&mldr;)</p><details><div class=details><pre tabindex=0><code class=language-jupyter-R data-lang=jupyter-R>
+than were needed&hellip; (Also note the beautiful print debuggin&hellip;)</p>
+<details>
+<div class="details">
+<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">
 isalltrue &lt;- function(reptrue1, reptrue2) {
     return((all(reptrue1) == TRUE) | (all(reptrue2) == TRUE))
 }
@@ -119,8 +533,11 @@ isreport2 &lt;- function(row) {
     }
     return(out)
 }
-</code></pre></div></details><p>My actual working approach was in the end <strong>brute force</strong>. I just threw out each
-element in a row and checked if the report became positive - much simpler and effective!</p><pre tabindex=0><code class=language-jupyter-R data-lang=jupyter-R>isreport2 &lt;- function(row) {
+</code></pre></div>
+</details>
+<p>My actual working approach was in the end <strong>brute force</strong>. I just threw out each
+element in a row and checked if the report became positive - much simpler and effective!</p>
+<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">isreport2 &lt;- function(row) {
     rep &lt;- na.omit(row)
     out &lt;- isalltrue(rep)
     if (out == FALSE) {
@@ -137,12 +554,117 @@ element in a row and checked if the report became positive - much simpler and ef
     return(out)
 }
 sum(apply(data, 1, isreport2))
-</code></pre><p>328</p></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=footer>Exported
-from <a href=https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/source.org><code>source.org</code></a>
-using
-<a href=https://www.gnu.org/software/emacs/>Emacs 29.4 </a>+
-<a href=https://orgmode.org/>Org mode 9.7.11 </a>+
-<a href=https://github.com/kaushalmodi/ox-hugo><code>ox-hugo</code></a>
-and published using
-<a href=https://gohugo.io/>Hugo 0.139.4</a>
-+ <a href=https://github.com/alex-shpak/hugo-book>Book</a></div></footer><div class=book-comments><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lexbn.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#part-1-safe-reports>Part 1: Safe reports</a></li><li><a href=#part-2-problem-dampener>Part 2: Problem Dampener</a></li></ul></nav></div></aside></main></body></html>
+</code></pre><p>328</p>
+</div>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/38fe0acc7f126a949284fa3a84cd91e52ee88a4e" title='Last modified by A Seltmann | 2024-12-22' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="" />
+      <span>2024-12-22</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        <div class="footer">
+    
+    
+    Exported
+    
+    from <a href="https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/source.org"> <code>source.org</code></a>
+    
+    using
+    
+    <a href="https://www.gnu.org/software/emacs/">Emacs 29.4 </a> &plus;
+    <a href="https://orgmode.org/">Org mode 9.7.11 </a> &plus;
+    
+    <a href="https://github.com/kaushalmodi/ox-hugo"><code>ox-hugo</code></a>
+    and published using
+    
+    <a href="https://gohugo.io/">Hugo 0.139.4</a>
+	  &plus; <a href="https://github.com/alex-shpak/hugo-book">Book</a>
+    
+</div>
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lexbn" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#part-1-safe-reports">Part 1: Safe reports</a></li>
+    <li><a href="#part-2-problem-dampener">Part 2: Problem Dampener</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

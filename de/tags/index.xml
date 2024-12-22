@@ -1,16 +1,22 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blog &amp; Notes</title>
     <link>https://aseltmann.github.io/de/tags/</link>
     <description>Recent content in Tags on Blog &amp; Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>de</language>
-    <lastBuildDate>Thu, 04 Jan 2024 16:33:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2024 03:12:06 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/de/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>python</title>
+      <title>R</title>
+      <link>https://aseltmann.github.io/de/tags/R/</link>
+      <pubDate>Tue, 10 Dec 2024 00:23:00 +0100</pubDate>
+      <guid>https://aseltmann.github.io/de/tags/R/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
       <link>https://aseltmann.github.io/de/tags/python/</link>
       <pubDate>Thu, 04 Jan 2024 16:33:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/de/tags/python/</guid>
@@ -18,6 +24,3 @@
     </item>
   </channel>
 </rss>
-=======
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Blog &amp; Notes</title><link>http://localhost:1313/de/tags/</link><description>Recent content in Tags on Blog &amp; Notes</description><generator>Hugo</generator><language>de</language><lastBuildDate>Sun, 22 Dec 2024 01:46:51 +0100</lastBuildDate><atom:link href="http://localhost:1313/de/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>R</title><link>http://localhost:1313/de/tags/R/</link><pubDate>Tue, 10 Dec 2024 00:23:00 +0100</pubDate><guid>http://localhost:1313/de/tags/R/</guid><description/></item><item><title>Python</title><link>http://localhost:1313/de/tags/python/</link><pubDate>Thu, 04 Jan 2024 16:33:00 +0100</pubDate><guid>http://localhost:1313/de/tags/python/</guid><description/></item></channel></rss>
->>>>>>> 99c0415 (add all files)
