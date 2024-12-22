@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R on Blog &amp; Notes</title><link>http://localhost:1313/tags/R/</link><description>Recent content in R on Blog &amp; Notes</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 22 Dec 2024 01:46:31 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/R/index.xml" rel="self" type="application/rss+xml"/><item><title>Advent of code 2024 - Day 2: Red-Nosed Reports</title><link>http://localhost:1313/posts/aoc2024-day02/</link><pubDate>Tue, 10 Dec 2024 01:43:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2024-day02/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1-safe-reports">Part 1: Safe reports&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2-problem-dampener">Part 2: Problem Dampener&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>I try to solve this year&amp;rsquo;s &lt;strong>Advent of Code 2024&lt;/strong> riddles in R. This is Day 2 - see 
+ &lt;a href="https:adventofcode.com/2024/day/2">https:adventofcode.com/2024/day/2&lt;/a>&lt;/p>
+&lt;h2 id="part-1-safe-reports">
+ Part 1: Safe reports
+ &lt;a class="anchor" href="#part-1-safe-reports">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>The unusual data (your puzzle input) consists of many &lt;strong>reports&lt;/strong>,
+one report per line. Each report is a list of numbers called &lt;strong>levels&lt;/strong> that are
+separated by spaces. For example:&lt;/p></description></item><item><title>Advent of code 2024 - Day 1: Historian Hysteria</title><link>http://localhost:1313/posts/aoc2024-day01/</link><pubDate>Sat, 07 Dec 2024 00:22:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2024-day01/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1-locations">Part 1: Locations&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2-similarities">Part 2: Similarities&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>I try to solve this year&amp;rsquo;s &lt;strong>Advent of Code 2024&lt;/strong> riddles in R. This is Day 1 - see 
+ &lt;a href="https:adventofcode.com/2024/day/1">https:adventofcode.com/2024/day/1&lt;/a>&lt;/p>
+&lt;h2 id="part-1-locations">
+ Part 1: Locations
+ &lt;a class="anchor" href="#part-1-locations">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>Throughout the Chief&amp;rsquo;s office, the historically significant locations are listed
+not by name but by a unique number called the &lt;strong>location ID&lt;/strong>. To make sure they
+don&amp;rsquo;t miss anything, The Historians split into two groups, each searching the
+office and trying to create their own complete list of location IDs.&lt;/p></description></item></channel></rss>

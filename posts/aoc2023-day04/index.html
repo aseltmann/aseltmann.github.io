@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -300,10 +301,108 @@ more scratchcards</strong> equal to the number of winning numbers you have.</p>
 the number of matches. So, if card 10 were to have 5 matching numbers, you would
 win one copy each of cards 11, 12, 13, 14, and 15.</p>
 <p>Copies of scratchcards are scored like normal scratchcards and have the <strong>same
+=======
+<!doctype html><html lang=en dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+Table of Contents
+
+
+  Part 1
+
+  Part 2
+
+
+
+This year I try to record my attempt at solving the Advent of Code 2023
+riddles. This is Day 4 - see 
+  https:adventofcode.com/2023/day/4
+
+  Part 1
+  #
+
+
+Lets first read the task:
+
+
+The Elf leads you over to the pile of colorful cards. There, you discover dozens
+of scratchcards, all with their opaque covering already scratched off. Picking
+one up, it looks like each card has two lists of numbers separated by a vertical
+bar (|): a list of winning numbers and then a list of numbers you have.
+You organize the information into a table (your puzzle input)."><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/posts/aoc2023-day04/"><meta property="og:site_name" content="Blog & Notes"><meta property="og:title" content="Advent of code 2023 - Day 4: Scratchcards"><meta property="og:description" content="Table of Contents Part 1 Part 2 This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 4 - see https:adventofcode.com/2023/day/4
+Part 1 # Lets first read the task: The Elf leads you over to the pile of colorful cards. There, you discover dozens of scratchcards, all with their opaque covering already scratched off. Picking one up, it looks like each card has two lists of numbers separated by a vertical bar (|): a list of winning numbers and then a list of numbers you have. You organize the information into a table (your puzzle input)."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-12-19T00:25:00+01:00"><meta property="article:modified_time" content="2024-12-22T01:44:39+01:00"><meta property="article:tag" content="Python"><title>Advent of code 2023 - Day 4: Scratchcards | Blog & Notes</title>
+<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/posts/aoc2023-day04/><link rel=alternate hreflang=de href=http://localhost:1313/de/posts/aoc2023-day04/ title="Advent of code 2023 - Tag 4: Rubbelkarten"><link rel=stylesheet href=/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.6fec898e842115aadb23a2ea809d20ff7dc530c9a256a15bf8a53d76edb08c69.js integrity="sha256-b+yJjoQhFarbI6LqgJ0g/33FMMmiVqFb+KU9du2wjGk=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><img src=/book_logo.png alt=Logo class=book-icon><span>Blog & Notes</span></a></h2><a href=/><img src=/book_logo.png alt=Logo width=100%></a><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
+<label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+English</a></label><ul><li><a href=/de/posts/aoc2023-day04/>Deutsch</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul><ul><li><span>Notes</span><ul><li><a href=/docs/notes/poetry/>Poetry</a></li></ul></li><li><a href=/docs/projects/>Projects</a><ul></ul></li></ul><ul><li><a href=https://github.com/aseltmann target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Advent of code 2023 - Day 4: Scratchcards</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#part-1>Part 1</a></li><li><a href=#part-2>Part 2</a></li></ul></nav></aside></header><article class="markdown book-post"><h2>Advent of code 2023 - Day 4: Scratchcards</h2><div class="flex align-center text-small book-post-date"><img src=/svg/calendar.svg class=book-icon alt>
+<span>2023-12-19</span></div><div class=text-small><a href=/tags/python/>Python</a></div><div class=book-post-content><div class="ox-hugo-toc toc"><div class=heading>Table of Contents</div><ul><li><a href=/#part-1>Part 1</a></li><li><a href=/#part-2>Part 2</a></li></ul></div><p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
+riddles. This is Day 4 - see
+<a href=https:adventofcode.com/2023/day/4>https:adventofcode.com/2023/day/4</a></p><h2 id=part-1>Part 1
+<a class=anchor href=#part-1>#</a></h2><details><summary>Lets first read the task:</summary><div class=details><blockquote><p>The Elf leads you over to the pile of colorful cards. There, you discover dozens
+of scratchcards, all with their opaque covering already scratched off. Picking
+one up, it looks like each card has two lists of numbers separated by a vertical
+bar (<code>|</code>): a list of <strong>winning numbers</strong> and then a list of <strong>numbers you have</strong>.
+You organize the information into a table (your puzzle input).</p><p>As far as the Elf has been able to figure out, you have to figure out which of
+the <strong>numbers you have</strong> appear in the list of <strong>winning numbers</strong>. The first match
+makes the card worth <strong>one point</strong> and each match after the first <strong>doubles</strong> the
+point value of that card.</p><p>For example:</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
+</span></span><span style=display:flex><span>Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
+</span></span><span style=display:flex><span>Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
+</span></span><span style=display:flex><span>Card 4: 41 92 73 84 69 | 59 84 76 51 58  5 54 83
+</span></span><span style=display:flex><span>Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
+</span></span><span style=display:flex><span>Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
+</span></span></code></pre></div><blockquote><p>In the above example, card 1 has five winning numbers (<code>41</code>, <code>48</code>, <code>83</code>, <code>86</code>,
+and <code>17</code>) and eight numbers you have (<code>83</code>, <code>86</code>, <code>6</code>, <code>31</code>, <code>17</code>, <code>9</code>, <code>48</code>,
+and <code>53</code>). Of the numbers you have, four of them (<code>48</code>, <code>83</code>, <code>17</code>, and <code>86</code>)
+are winning numbers! That means card 1 is worth <code>8</code> points (1 for the first
+match, then doubled three times for each of the three matches after the first).</p><ul><li>Card 2 has two winning numbers (<code>32</code> and <code>61</code>), so it is worth <code>2</code> points.</li><li>Card 3 has two winning numbers (<code>1</code> and <code>21</code>), so it is worth <code>2</code> points.</li><li>Card 4 has one winning number (<code>84</code>), so it is worth <code>1</code> point.</li><li>Card 5 has no winning numbers, so it is worth no points.</li><li>Card 6 has no winning numbers, so it is worth no points.</li></ul><p>So, in this example, the Elf&rsquo;s pile of scratchcards is worth <code>13</code> points.</p><p>Take a seat in the large pile of colorful cards. <strong>How many points are they worth
+in total?</strong></p></blockquote></div></details><p>My input file:
+<a href=https://github.com/aseltmann/aseltmann.github.io-org-src/blob/main/data/2023-12-04-1-aoc.txt>2023-12-04-1-aoc.txt</a></p><p>Loading this data is very similar to <strong>Day 2</strong> - so let&rsquo;s load the data as we did
+there. Our goal is to get <code>win</code> and <code>yours</code> columns holding the respective
+digits which we want to compare. We find the numbers with one or more digits
+using the regex <code>\d+</code>. And we want them to be in <strong>sets</strong> (not lists), as we can
+logically compare sets in Python.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> re
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>txt <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_table(<span style=color:#e6db74>&#39;data/2023-12-04-1-aoc.txt&#39;</span>, names<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;win&#39;</span>])
+</span></span><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;id&#39;</span>] <span style=color:#f92672>=</span> txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;win&#39;</span>]<span style=color:#f92672>.</span>str<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;:&#39;</span>)<span style=color:#f92672>.</span>apply(
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>lambda</span> x: int(x[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>strip(<span style=color:#e6db74>&#39;Card &#39;</span>)))
+</span></span><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;win&#39;</span>] <span style=color:#f92672>=</span> (txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;win&#39;</span>]
+</span></span><span style=display:flex><span>              <span style=color:#f92672>.</span>str<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;:&#39;</span>)<span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: x[<span style=color:#ae81ff>1</span>]))
+</span></span><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;yours&#39;</span>] <span style=color:#f92672>=</span> (txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;win&#39;</span>]
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span>str<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;|&#39;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: x[<span style=color:#ae81ff>1</span>])
+</span></span><span style=display:flex><span>                <span style=color:#75715e># get a list of only the numbers / digits</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: re<span style=color:#f92672>.</span>findall(<span style=color:#e6db74>r</span><span style=color:#e6db74>&#39;\d+&#39;</span>, x))
+</span></span><span style=display:flex><span>                <span style=color:#75715e># convert the list of strings to a set of integers</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: set([int(i) <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> x])))
+</span></span><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;win&#39;</span>] <span style=color:#f92672>=</span> (txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;win&#39;</span>]
+</span></span><span style=display:flex><span>              <span style=color:#f92672>.</span>str<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#39;|&#39;</span>)
+</span></span><span style=display:flex><span>              <span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: x[<span style=color:#ae81ff>0</span>])
+</span></span><span style=display:flex><span>              <span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: re<span style=color:#f92672>.</span>findall(<span style=color:#e6db74>r</span><span style=color:#e6db74>&#39;\d+&#39;</span>, x))
+</span></span><span style=display:flex><span>              <span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: set([int(i) <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> x])))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>txt
+</span></span></code></pre></div><table><thead><tr><th></th><th>win</th><th>id</th><th>yours</th></tr></thead><tbody><tr><td>0</td><td>{32, 36, 7, 9, 10, 12, 82, 85, 95, 31}</td><td>1</td><td>{2, 7, 9, 10, 12, 14, 21, 22, 23, 24, 31, 32, &mldr;</td></tr><tr><td>1</td><td>{35, 76, 16, 82, 19, 22, 88, 59, 60, 95}</td><td>2</td><td>{7, 8, 12, 16, 19, 22, 26, 28, 35, 38, 44, 51,&mldr;</td></tr><tr><td>2</td><td>{1, 70, 11, 78, 48, 19, 52, 88, 28, 94}</td><td>3</td><td>{3, 4, 8, 17, 18, 19, 24, 31, 34, 45, 52, 54, &mldr;</td></tr><tr><td>3</td><td>{65, 2, 72, 28, 14, 16, 55, 91, 92, 62}</td><td>4</td><td>{3, 4, 6, 7, 8, 9, 15, 30, 33, 35, 47, 49, 51,&mldr;</td></tr><tr><td>4</td><td>{38, 41, 75, 77, 50, 24, 94, 60, 61, 30}</td><td>5</td><td>{1, 2, 4, 5, 6, 7, 9, 10, 14, 17, 21, 29, 47, &mldr;</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>213</td><td>{97, 98, 39, 41, 43, 12, 13, 19, 93, 95}</td><td>214</td><td>{5, 10, 17, 20, 28, 29, 33, 34, 36, 50, 51, 52&mldr;</td></tr><tr><td>214</td><td>{97, 35, 69, 40, 74, 45, 20, 21, 62, 31}</td><td>215</td><td>{1, 8, 15, 17, 18, 25, 30, 33, 42, 44, 47, 52,&mldr;</td></tr><tr><td>215</td><td>{33, 70, 71, 12, 78, 17, 51, 86, 60, 94}</td><td>216</td><td>{7, 8, 9, 10, 22, 29, 37, 39, 41, 43, 46, 47, &mldr;</td></tr><tr><td>216</td><td>{98, 67, 68, 38, 70, 39, 72, 77, 45, 21}</td><td>217</td><td>{8, 21, 22, 25, 26, 31, 37, 41, 42, 48, 54, 57&mldr;</td></tr><tr><td>217</td><td>{34, 9, 44, 78, 79, 16, 17, 19, 55, 92}</td><td>218</td><td>{1, 4, 20, 21, 27, 38, 39, 40, 41, 45, 46, 52,&mldr;</td></tr></tbody></table><p>218 rows × 3 columns</p><p>Now, we get the
+<a href=https://en.wikipedia.org/wiki/Logical_conjunction>logical conjunction</a> of <code>win</code> and <code>yours</code>, these are our winning
+numbers. Then, the number of wins is converted to points - for all number of
+wins bigger than 1, we can get the points by <code>2**(n_wins-1)</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;n_wins&#39;</span>] <span style=color:#f92672>=</span> txt<span style=color:#f92672>.</span>apply(
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>lambda</span> row: len(row<span style=color:#f92672>.</span>loc[<span style=color:#e6db74>&#39;win&#39;</span>] <span style=color:#f92672>&amp;</span> row<span style=color:#f92672>.</span>loc[<span style=color:#e6db74>&#39;yours&#39;</span>]), axis<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;points&#39;</span>] <span style=color:#f92672>=</span> txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;n_wins&#39;</span>]<span style=color:#f92672>.</span>apply(
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>lambda</span> x: <span style=color:#ae81ff>2</span><span style=color:#f92672>**</span>(x<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>) <span style=color:#66d9ef>if</span> x <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>1</span> <span style=color:#66d9ef>else</span> x)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>txt<span style=color:#f92672>.</span>loc[:, [<span style=color:#e6db74>&#39;win&#39;</span>, <span style=color:#e6db74>&#39;n_wins&#39;</span>, <span style=color:#e6db74>&#39;points&#39;</span>]]
+</span></span></code></pre></div><table><thead><tr><th></th><th>win</th><th>n_wins</th><th>points</th></tr></thead><tbody><tr><td>0</td><td>{32, 36, 7, 9, 10, 12, 82, 85, 95, 31}</td><td>10</td><td>512</td></tr><tr><td>1</td><td>{35, 76, 16, 82, 19, 22, 88, 59, 60, 95}</td><td>10</td><td>512</td></tr><tr><td>2</td><td>{1, 70, 11, 78, 48, 19, 52, 88, 28, 94}</td><td>5</td><td>16</td></tr><tr><td>3</td><td>{65, 2, 72, 28, 14, 16, 55, 91, 92, 62}</td><td>0</td><td>0</td></tr><tr><td>4</td><td>{38, 41, 75, 77, 50, 24, 94, 60, 61, 30}</td><td>0</td><td>0</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>213</td><td>{97, 98, 39, 41, 43, 12, 13, 19, 93, 95}</td><td>0</td><td>0</td></tr><tr><td>214</td><td>{97, 35, 69, 40, 74, 45, 20, 21, 62, 31}</td><td>0</td><td>0</td></tr><tr><td>215</td><td>{33, 70, 71, 12, 78, 17, 51, 86, 60, 94}</td><td>2</td><td>2</td></tr><tr><td>216</td><td>{98, 67, 68, 38, 70, 39, 72, 77, 45, 21}</td><td>1</td><td>1</td></tr><tr><td>217</td><td>{34, 9, 44, 78, 79, 16, 17, 19, 55, 92}</td><td>0</td><td>0</td></tr></tbody></table><p>218 rows × 3 columns</p><p>Then, we just sum up:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>sum(txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;points&#39;</span>])
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>25004
+</span></span></code></pre></div><h2 id=part-2>Part 2
+<a class=anchor href=#part-2>#</a></h2><details><summary>Let&rsquo;s read the task of part 2!</summary><div class=details><blockquote><p>There&rsquo;s no such thing as &ldquo;points&rdquo;. Instead, scratchcards only cause you to <strong>win
+more scratchcards</strong> equal to the number of winning numbers you have.</p><p>Specifically, you win <strong>copies</strong> of the scratchcards below the winning card equal to
+the number of matches. So, if card 10 were to have 5 matching numbers, you would
+win one copy each of cards 11, 12, 13, 14, and 15.</p><p>Copies of scratchcards are scored like normal scratchcards and have the <strong>same
+>>>>>>> 99c0415 (add all files)
 card number</strong> as the card they copied. So, if you win a copy of card 10 and it
 has 5 matching numbers, it would then win a copy of the same cards that the
 original card 10 won: cards 11, 12, 13, 14, and 15. This process repeats until
 none of the copies cause you to win any more cards. (Cards will never make you
+<<<<<<< HEAD
 copy a card past the end of the table.)</p>
 <p>This time, the above example goes differently:</p>
 </blockquote>
@@ -514,3 +613,44 @@ card number of the <strong>current game</strong>.</p>
 
 
 
+=======
+copy a card past the end of the table.)</p><p>This time, the above example goes differently:</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
+</span></span><span style=display:flex><span>Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
+</span></span><span style=display:flex><span>Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
+</span></span><span style=display:flex><span>Card 4: 41 92 73 84 69 | 59 84 76 51 58  5 54 83
+</span></span><span style=display:flex><span>Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
+</span></span><span style=display:flex><span>Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
+</span></span></code></pre></div><blockquote><ul><li>Card 1 has four matching numbers, so you win one copy each of the next four
+cards: cards 2, 3, 4, and 5.</li><li>Your original card 2 has two matching numbers, so you win one copy each of
+cards 3 and 4.</li><li>Your copy of card 2 also wins one copy each of cards 3 and 4.</li><li>Your four instances of card 3 (one original and three copies) have two
+matching numbers, so you win <strong>four</strong> copies each of cards 4 and 5.</li><li>Your eight instances of card 4 (one original and seven copies) have one
+matching number, so you win <strong>eight</strong> copies of card 5.</li><li>Your fourteen instances of card 5 (one original and thirteen copies) have no
+matching numbers and win no more cards.</li></ul><p>Once all of the originals and copies have been processed, you end up with <code>1</code>
+instance of card 1, <code>2</code> instances of card 2, <code>4</code> instances of card 3, <code>8</code>
+instances of card 4, <code>14</code> instances of card 5, and <code>1</code> instance of card 6. In
+total, this example pile of scratchcards causes you to ultimately have <code>30</code>
+scratchcards!</p><p>Process all of the original and copied scratchcards until no more scratchcards
+are won. Including the original set of scratchcards, <strong>how many total scratchcards
+do you end up with?</strong></p></blockquote></div></details><p>We will use the <code>n_wins</code> column we created before and go from there. We step
+through each Game. Each <strong>current game</strong> gets +1 card. Then, we step through the
+number of <strong>next games</strong> depending on our <code>n_wins</code>. Each of these gets added the
+card number of the <strong>current game</strong>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;cards&#39;</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i, nwin <span style=color:#f92672>in</span> enumerate(txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;n_wins&#39;</span>]):
+</span></span><span style=display:flex><span>    txt<span style=color:#f92672>.</span>loc[i, <span style=color:#e6db74>&#39;cards&#39;</span>] <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> j <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>1</span>, nwin<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>):
+</span></span><span style=display:flex><span>        txt<span style=color:#f92672>.</span>loc[i<span style=color:#f92672>+</span>j, <span style=color:#e6db74>&#39;cards&#39;</span>] <span style=color:#f92672>+=</span> txt<span style=color:#f92672>.</span>loc[i, <span style=color:#e6db74>&#39;cards&#39;</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>txt<span style=color:#f92672>.</span>loc[:, [<span style=color:#e6db74>&#39;n_wins&#39;</span>, <span style=color:#e6db74>&#39;cards&#39;</span>]]
+</span></span></code></pre></div><table><thead><tr><th></th><th>n_wins</th><th>cards</th></tr></thead><tbody><tr><td>0</td><td>10</td><td>1</td></tr><tr><td>1</td><td>10</td><td>2</td></tr><tr><td>2</td><td>5</td><td>4</td></tr><tr><td>3</td><td>0</td><td>8</td></tr><tr><td>4</td><td>0</td><td>8</td></tr><tr><td>&mldr;</td><td>&mldr;</td><td>&mldr;</td></tr><tr><td>213</td><td>0</td><td>9608</td></tr><tr><td>214</td><td>0</td><td>8927</td></tr><tr><td>215</td><td>2</td><td>8927</td></tr><tr><td>216</td><td>1</td><td>12636</td></tr><tr><td>217</td><td>0</td><td>21564</td></tr></tbody></table><p>218 rows × 2 columns</p><p>Now, we just sum the output again:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>sum(txt[<span style=color:#e6db74>&#39;cards&#39;</span>])
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>14427616
+</span></span></code></pre></div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=footer>Exported
+from <a href=https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/source.org><code>source.org</code></a>
+using
+<a href=https://www.gnu.org/software/emacs/>Emacs 29.4 </a>+
+<a href=https://orgmode.org/>Org mode 9.7.11 </a>+
+<a href=https://github.com/kaushalmodi/ox-hugo><code>ox-hugo</code></a>
+and published using
+<a href=https://gohugo.io/>Hugo 0.139.4</a>
++ <a href=https://github.com/alex-shpak/hugo-book>Book</a></div></footer><div class=book-comments><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lexbn.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#part-1>Part 1</a></li><li><a href=#part-2>Part 2</a></li></ul></nav></div></aside></main></body></html>
+>>>>>>> 99c0415 (add all files)

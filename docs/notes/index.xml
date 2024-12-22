@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -17,3 +18,34 @@
     </item>
   </channel>
 </rss>
+=======
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on Blog &amp; Notes</title><link>http://localhost:1313/docs/notes/</link><description>Recent content in Notes on Blog &amp; Notes</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 22 Dec 2024 01:44:35 +0100</lastBuildDate><atom:link href="http://localhost:1313/docs/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Poetry</title><link>http://localhost:1313/docs/notes/poetry/</link><pubDate>Sun, 22 Dec 2024 01:44:35 +0100</pubDate><guid>http://localhost:1313/docs/notes/poetry/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#l%c7%8eoz%c7%90">Lǎozǐ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;h2 id="lǎozǐ">
+ Lǎozǐ
+ &lt;a class="anchor" href="#l%c7%8eoz%c7%90">#&lt;/a>
+&lt;/h2>
+&lt;p>I am partial to the 
+ &lt;a href="https://terebess.hu/english/tao/DerekLin.html#Kap20">translation of Derek Lin&lt;/a>&lt;/p>
+&lt;details>
+&lt;summary>Dàodéjīng - Chapter 11 (The use of what has no substantive existence)&lt;/summary>
+&lt;div class="details">
+&lt;div class="verse">
+&lt;p>[&amp;hellip;]&lt;br />
+&lt;br />
+Mix clay&lt;br />
+to create a container&lt;br />
+In its emptiness, there is&lt;br />
+the function of a container&lt;br />
+&lt;br />
+[&amp;hellip;]&lt;br />
+Therefore,&lt;br />
+that which exists is used to create benefit&lt;br />
+That which is empty is used to create functionality&lt;br />&lt;/p></description></item></channel></rss>
+>>>>>>> 99c0415 (add all files)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -565,3 +566,185 @@ ratios to a list.</p>
 
 
 
+=======
+<!doctype html><html lang=en dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+Table of Contents
+
+
+  Part 1
+
+  Part 2
+
+
+
+This year I try to record my attempt at solving the Advent of Code 2023
+riddles. This is Day 3 - see 
+  https:adventofcode.com/2023/day/3
+
+  Part 1
+  #
+
+
+Lets first read the task:
+
+
+The engine schematic (your puzzle input) consists of a visual representation of
+the engine. There are lots of numbers and symbols you don&rsquo;t really understand,
+but apparently any number adjacent to a symbol, even diagonally, is a &ldquo;part
+number&rdquo; and should be included in your sum. (Periods (.) do not count as a
+symbol.)"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/posts/aoc2023-day03/"><meta property="og:site_name" content="Blog & Notes"><meta property="og:title" content="Advent of code 2023 - Day 3: Gear Ratios"><meta property="og:description" content="Table of Contents Part 1 Part 2 This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 3 - see https:adventofcode.com/2023/day/3
+Part 1 # Lets first read the task: The engine schematic (your puzzle input) consists of a visual representation of the engine. There are lots of numbers and symbols you don’t really understand, but apparently any number adjacent to a symbol, even diagonally, is a “part number” and should be included in your sum. (Periods (.) do not count as a symbol.)"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-12-18T01:01:00+01:00"><meta property="article:modified_time" content="2024-12-22T01:44:38+01:00"><meta property="article:tag" content="Python"><title>Advent of code 2023 - Day 3: Gear Ratios | Blog & Notes</title>
+<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/posts/aoc2023-day03/><link rel=alternate hreflang=de href=http://localhost:1313/de/posts/aoc2023-day03/ title="Advent of code 2023 - Tag 3: Getriebeübersetzungen"><link rel=stylesheet href=/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.6fec898e842115aadb23a2ea809d20ff7dc530c9a256a15bf8a53d76edb08c69.js integrity="sha256-b+yJjoQhFarbI6LqgJ0g/33FMMmiVqFb+KU9du2wjGk=" crossorigin=anonymous></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><img src=/book_logo.png alt=Logo class=book-icon><span>Blog & Notes</span></a></h2><a href=/><img src=/book_logo.png alt=Logo width=100%></a><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul class=book-languages><li><input type=checkbox id=languages class=toggle>
+<label for=languages class="flex justify-between"><a role=button class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+English</a></label><ul><li><a href=/de/posts/aoc2023-day03/>Deutsch</a></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul><ul><li><span>Notes</span><ul><li><a href=/docs/notes/poetry/>Poetry</a></li></ul></li><li><a href=/docs/projects/>Projects</a><ul></ul></li></ul><ul><li><a href=https://github.com/aseltmann target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Advent of code 2023 - Day 3: Gear Ratios</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#part-1>Part 1</a></li><li><a href=#part-2>Part 2</a></li></ul></nav></aside></header><article class="markdown book-post"><h2>Advent of code 2023 - Day 3: Gear Ratios</h2><div class="flex align-center text-small book-post-date"><img src=/svg/calendar.svg class=book-icon alt>
+<span>2023-12-18</span></div><div class=text-small><a href=/tags/python/>Python</a></div><div class=book-post-content><div class="ox-hugo-toc toc"><div class=heading>Table of Contents</div><ul><li><a href=/#part-1>Part 1</a></li><li><a href=/#part-2>Part 2</a></li></ul></div><p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
+riddles. This is Day 3 - see
+<a href=https:adventofcode.com/2023/day/3>https:adventofcode.com/2023/day/3</a></p><h2 id=part-1>Part 1
+<a class=anchor href=#part-1>#</a></h2><details><summary>Lets first read the task:</summary><div class=details><blockquote><p>The engine schematic (your puzzle input) consists of a visual representation of
+the engine. There are lots of numbers and symbols you don&rsquo;t really understand,
+but apparently <strong>any number adjacent to a symbol</strong>, even diagonally, is a &ldquo;part
+number&rdquo; and should be included in your sum. (Periods (<code>.</code>) do not count as a
+symbol.)</p><p>Here is an example engine schematic:</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>467..114..
+</span></span><span style=display:flex><span>...*......
+</span></span><span style=display:flex><span>..35..633.
+</span></span><span style=display:flex><span>......#...
+</span></span><span style=display:flex><span>617*......
+</span></span><span style=display:flex><span>.....+.58.
+</span></span><span style=display:flex><span>..592.....
+</span></span><span style=display:flex><span>......755.
+</span></span><span style=display:flex><span>...$.*....
+</span></span><span style=display:flex><span>.664.598..
+</span></span></code></pre></div><blockquote><p>In this schematic, two numbers are not part numbers because they are not
+adjacent to a symbol: <code>114</code> (top right) and <code>58</code> (middle right). Every other
+number is adjacent to a symbol and so is a part number; their sum is <code>4361</code>.</p><p>Of course, the actual engine schematic is much larger. <strong>What is the sum of all of
+the part numbers in the engine schematic</strong>?</p></blockquote></div></details><p>My input file:
+<a href=https://github.com/aseltmann/aseltmann.github.io-org-src/blob/main/data/2023-12-03-1-aoc.txt>2023-12-03-1-aoc.txt</a></p><p>Okay, let&rsquo;s first get the input as a <code>numpy</code> character array</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> sys
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#66d9ef>as</span> plt
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> scipy <span style=color:#f92672>import</span> ndimage <span style=color:#66d9ef>as</span> ndi
+</span></span><span style=display:flex><span>np<span style=color:#f92672>.</span>set_printoptions(threshold<span style=color:#f92672>=</span>sys<span style=color:#f92672>.</span>maxsize)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>txt <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_table(<span style=color:#e6db74>&#39;data/2023-12-03-1-aoc.txt&#39;</span>, names<span style=color:#f92672>=</span>[<span style=color:#e6db74>&#39;code&#39;</span>])
+</span></span><span style=display:flex><span>arr <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>chararray((txt<span style=color:#f92672>.</span>size, txt<span style=color:#f92672>.</span>size), unicode<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>txt[<span style=color:#e6db74>&#39;code&#39;</span>] <span style=color:#f92672>=</span> txt<span style=color:#f92672>.</span>loc[:, <span style=color:#e6db74>&#39;code&#39;</span>]<span style=color:#f92672>.</span>apply(<span style=color:#66d9ef>lambda</span> x: [i <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> x])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i, code <span style=color:#f92672>in</span> enumerate(txt[<span style=color:#e6db74>&#39;code&#39;</span>]):
+</span></span><span style=display:flex><span>    arr[i, :] <span style=color:#f92672>=</span> code
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print((arr[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>]))
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>[[&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;5&#39; &#39;3&#39; &#39;.&#39; &#39;4&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;*&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;7&#39; &#39;2&#39; &#39;6&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;9&#39; &#39;5&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;7&#39; &#39;3&#39; &#39;8&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;*&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;7&#39; &#39;4&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;3&#39; &#39;6&#39; &#39;6&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;*&#39; &#39;1&#39; &#39;2&#39; &#39;6&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;3&#39; &#39;3&#39; &#39;1&#39; &#39;/&#39; &#39;.&#39; &#39;.&#39; &#39;9&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;/&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;*&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;9&#39; &#39;5&#39; &#39;3&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;3&#39; &#39;5&#39; &#39;5&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;6&#39; &#39;8&#39; &#39;5&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;*&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;7&#39; &#39;0&#39;]
+</span></span><span style=display:flex><span> [&#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;.&#39; &#39;9&#39; &#39;3&#39; &#39;8&#39; &#39;.&#39; &#39;.&#39; &#39;*&#39;]]
+</span></span><span style=display:flex><span>/tmp/ipykernel_18336/87086526.py:9: DeprecationWarning: `np.chararray` is deprecated and will be removed from the main namespace in the future. Use an array with a string or bytes dtype instead.
+</span></span><span style=display:flex><span>  arr = np.chararray((txt.size, txt.size), unicode=True)
+</span></span></code></pre></div><p>Now extract symbols, digits and the empty space. We use the <code>numpy</code> character
+methods for that. This way, we create a binary mask for all <strong>digits</strong> and a
+binary mask for all <strong>empty</strong> space (<code>.</code>). The <strong>symbols</strong> are then every character
+which is neither.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>digits <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>char<span style=color:#f92672>.</span>isdigit(arr)
+</span></span><span style=display:flex><span>empty <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>char<span style=color:#f92672>.</span>endswith(arr, <span style=color:#e6db74>&#39;.&#39;</span>)
+</span></span><span style=display:flex><span>symbols <span style=color:#f92672>=</span> <span style=color:#f92672>~</span>(digits <span style=color:#f92672>|</span> empty)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># just for visualization</span>
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>figure(figsize<span style=color:#f92672>=</span>(<span style=color:#ae81ff>16</span>, <span style=color:#ae81ff>5</span>))
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>131</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;symbols&#39;</span>)<span style=color:#f92672>.</span>matshow(symbols)
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>132</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;digits&#39;</span>)<span style=color:#f92672>.</span>matshow(digits)
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>133</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;empty&#39;</span>)<span style=color:#f92672>.</span>matshow(empty)
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>show()
+</span></span></code></pre></div><figure><img src=/ox-hugo/2023-12-03-2-aoc.png></figure><p>Now we use the image processing technique of dilation on the <code>symbols</code> mask. So
+that we get a new mask which covers the surroundings of all symbols. We use this
+afterwards to check if the digits are near a symbol.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>struct <span style=color:#f92672>=</span> ((<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>), (<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>), (<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>dilate <span style=color:#f92672>=</span> ndi<span style=color:#f92672>.</span>binary_dilation(symbols, structure<span style=color:#f92672>=</span>struct)
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>figure(figsize<span style=color:#f92672>=</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>6</span>))
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>121</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;symbols&#39;</span>)<span style=color:#f92672>.</span>matshow(symbols[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>])
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>122</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;symbols dilated&#39;</span>)<span style=color:#f92672>.</span>matshow(dilate[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>])
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>show()
+</span></span></code></pre></div><figure><img src=/ox-hugo/2023-12-03-3-aoc.png></figure><p>Creating this masks as before could be understood as a <strong>binary segmentation</strong>, as
+each element in our mask is either <code>True</code> or <code>False</code>. To extract the single
+digits, we&rsquo;ll convert the binary digits segmentation into a <strong>instance
+segmentation</strong>, where each connected segment has an own index.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>markers, num_features <span style=color:#f92672>=</span> ndi<span style=color:#f92672>.</span>label(digits)
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>figure(figsize<span style=color:#f92672>=</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>6</span>))
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>121</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;binary segmentation&#39;</span>)<span style=color:#f92672>.</span>matshow(
+</span></span><span style=display:flex><span>    digits[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>])
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>122</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;instance segmentation&#39;</span>)<span style=color:#f92672>.</span>matshow(
+</span></span><span style=display:flex><span>    markers[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>], cmap<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;gnuplot&#39;</span>)
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>show()
+</span></span></code></pre></div><figure><img src=/ox-hugo/2023-12-03-4-aoc.png></figure><p>Now, for each instance, we check if the dilated binary mask overlaps with the
+instance and if yes, we extract the number.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>numbers <span style=color:#f92672>=</span> [int(<span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(arr[markers <span style=color:#f92672>==</span> i]))
+</span></span><span style=display:flex><span>           <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>1</span>, num_features<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>           <span style=color:#66d9ef>if</span> np<span style=color:#f92672>.</span>any((markers <span style=color:#f92672>==</span> i) <span style=color:#f92672>&amp;</span> dilate)]
+</span></span></code></pre></div><p>Then, we just sum up:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>sum(numbers)
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>527364
+</span></span></code></pre></div><h2 id=part-2>Part 2
+<a class=anchor href=#part-2>#</a></h2><details><summary>Let&rsquo;s first read the second task!</summary><div class=details><blockquote><p>The missing part wasn&rsquo;t the only issue - one of the gears in the engine is
+wrong. A gear is any * symbol that is adjacent to exactly two part numbers. Its
+gear ratio is the result of multiplying those two numbers together.</p><p>This time, you need to find the gear ratio of every gear and add them all up so
+that the engineer can figure out which gear needs to be replaced.</p><p>Consider the same engine schematic again:The missing part wasn&rsquo;t the only
+issue - one of the gears in the engine is wrong. A gear is any * symbol that is
+adjacent to exactly two part numbers. Its gear ratio is the result of
+multiplying those two numbers together.</p><p>This time, you need to find the gear ratio of every gear and add them all up so
+that the engineer can figure out which gear needs to be replaced.</p><p>Consider the same engine schematic again:</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>467..114..
+</span></span><span style=display:flex><span>...*......
+</span></span><span style=display:flex><span>..35..633.
+</span></span><span style=display:flex><span>......#...
+</span></span><span style=display:flex><span>617*......
+</span></span><span style=display:flex><span>.....+.58.
+</span></span><span style=display:flex><span>..592.....
+</span></span><span style=display:flex><span>......755.
+</span></span><span style=display:flex><span>...$.*....
+</span></span><span style=display:flex><span>.664.598..
+</span></span></code></pre></div><blockquote><p>In this schematic, there are <strong>two</strong> gears. The first is in the top left; it has
+part numbers <code>467</code> and <code>35</code>, so its gear ratio is <code>16345</code>. The second gear is in
+the lower right; its gear ratio is <code>451490</code>. (The <code>*</code> adjacent to <code>617</code> is not a
+gear because it is only adjacent to one part number.) Adding up all of the gear
+ratios produces <code>467835</code>.</p><p><strong>What is the sum of all of the gear ratios in your engine schematic?</strong></p></blockquote></div></details><p>We&rsquo;ll use the same method as before, but this time only extract <code>*</code> and create
+the instance segmentation <strong>before</strong> the dilation. Why? Because when we dilate
+first, we could merge two independent gears into one instance.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>gear <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>char<span style=color:#f92672>.</span>endswith(arr, <span style=color:#e6db74>&#39;*&#39;</span>)
+</span></span><span style=display:flex><span>gear_markers, gear_num <span style=color:#f92672>=</span> ndi<span style=color:#f92672>.</span>label(gear)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>figure(figsize<span style=color:#f92672>=</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>6</span>))
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>131</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;all symbols dilated&#39;</span>)<span style=color:#f92672>.</span>matshow(
+</span></span><span style=display:flex><span>    symbols[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>])
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>132</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;gears&#39;</span>)<span style=color:#f92672>.</span>matshow(
+</span></span><span style=display:flex><span>    gear[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>])
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>subplot(<span style=color:#ae81ff>133</span>, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;gears instances&#39;</span>)<span style=color:#f92672>.</span>matshow(
+</span></span><span style=display:flex><span>    gear_markers[:<span style=color:#ae81ff>15</span>, :<span style=color:#ae81ff>15</span>], cmap<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;gnuplot&#39;</span>)
+</span></span><span style=display:flex><span>plt<span style=color:#f92672>.</span>show()
+</span></span></code></pre></div><figure><img src=/ox-hugo/2023-12-03-5-aoc.png></figure><p>Now, we step through each gear instance, create a mask for that gear, dilate it,
+and then step through all digits and check if they are in the gear mask. If we
+get two digits in the end, we multiply them to get the gear ratio and save the
+ratios to a list.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>gear_ratios <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>1</span>, gear_num<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>):
+</span></span><span style=display:flex><span>    gear_binary <span style=color:#f92672>=</span> gear_markers <span style=color:#f92672>==</span> i
+</span></span><span style=display:flex><span>    gear_dil <span style=color:#f92672>=</span> ndi<span style=color:#f92672>.</span>binary_dilation(gear_binary, structure<span style=color:#f92672>=</span>struct)
+</span></span><span style=display:flex><span>    part_numbers <span style=color:#f92672>=</span> [int(<span style=color:#e6db74>&#39;&#39;</span><span style=color:#f92672>.</span>join(arr[markers <span style=color:#f92672>==</span> j]))
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>for</span> j <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>1</span>, num_features<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> np<span style=color:#f92672>.</span>any((markers <span style=color:#f92672>==</span> j) <span style=color:#f92672>&amp;</span> gear_dil)]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> len(part_numbers) <span style=color:#f92672>==</span> <span style=color:#ae81ff>2</span>:
+</span></span><span style=display:flex><span>        gear_ratios<span style=color:#f92672>.</span>append(part_numbers[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>*</span> part_numbers[<span style=color:#ae81ff>1</span>])
+</span></span></code></pre></div><p>Now, we just sum the output again:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>sum(gear_ratios)
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>79026871
+</span></span></code></pre></div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=footer>Exported
+from <a href=https://github.com/aseltmann/aseltmann.github.io-org-src/raw/main/source.org><code>source.org</code></a>
+using
+<a href=https://www.gnu.org/software/emacs/>Emacs 29.4 </a>+
+<a href=https://orgmode.org/>Org mode 9.7.11 </a>+
+<a href=https://github.com/kaushalmodi/ox-hugo><code>ox-hugo</code></a>
+and published using
+<a href=https://gohugo.io/>Hugo 0.139.4</a>
++ <a href=https://github.com/alex-shpak/hugo-book>Book</a></div></footer><div class=book-comments><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lexbn.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#part-1>Part 1</a></li><li><a href=#part-2>Part 2</a></li></ul></nav></div></aside></main></body></html>
+>>>>>>> 99c0415 (add all files)

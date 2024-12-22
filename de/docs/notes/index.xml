@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -17,3 +18,46 @@
     </item>
   </channel>
 </rss>
+=======
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notizen on Blog &amp; Notes</title><link>http://localhost:1313/de/docs/notes/</link><description>Recent content in Notizen on Blog &amp; Notes</description><generator>Hugo</generator><language>de</language><lastBuildDate>Sun, 22 Dec 2024 01:44:37 +0100</lastBuildDate><atom:link href="http://localhost:1313/de/docs/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Gedichte</title><link>http://localhost:1313/de/docs/notes/poetry/</link><pubDate>Sun, 22 Dec 2024 01:44:37 +0100</pubDate><guid>http://localhost:1313/de/docs/notes/poetry/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/de/#erich-fried">Erich Fried&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/de/#l%c7%8eoz%c7%90">Lǎozǐ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;h2 id="erich-fried">
+ Erich Fried
+ &lt;a class="anchor" href="#erich-fried">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Kleines Beispiel (1982)&lt;/summary>
+&lt;div class="details">
+&lt;div class="verse">
+&lt;p>Auch ungelebtes Leben&lt;br />
+geht zu Ende&lt;br />
+zwar vielleicht langsamer&lt;br />
+wie eine Batterie&lt;br />
+in einer Taschenlampe&lt;br />
+die keiner benutzt&lt;br />
+&lt;br />
+Aber das hilft nicht viel:&lt;br />
+Wenn man&lt;br />
+(sagen wir einmal)&lt;br />
+diese Taschenlampe&lt;br />
+nach so- und sovielen Jahren&lt;br />
+anknipsen will&lt;br />
+kommt kein Atemzug Licht mehr heraus&lt;br />
+und wenn du sie aufmachst&lt;br />
+findest du nur deine Knochen&lt;br />
+und falls du Pech hast&lt;br />
+auch diese&lt;br />
+schon ganz zerfressen&lt;br />
+&lt;br />
+Da hättest du&lt;br />
+genau so gut&lt;br />
+leuchten können&lt;br />&lt;/p></description></item></channel></rss>
+>>>>>>> 99c0415 (add all files)

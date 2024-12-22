@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -66,3 +67,258 @@
     </item>
   </channel>
 </rss>
+=======
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homepage on Blog &amp; Notes</title><link>http://localhost:1313/</link><description>Recent content in Homepage on Blog &amp; Notes</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 22 Dec 2024 01:46:31 +0100</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>Poetry</title><link>http://localhost:1313/docs/notes/poetry/</link><pubDate>Sun, 22 Dec 2024 01:44:35 +0100</pubDate><guid>http://localhost:1313/docs/notes/poetry/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#l%c7%8eoz%c7%90">Lǎozǐ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;h2 id="lǎozǐ">
+ Lǎozǐ
+ &lt;a class="anchor" href="#l%c7%8eoz%c7%90">#&lt;/a>
+&lt;/h2>
+&lt;p>I am partial to the 
+ &lt;a href="https://terebess.hu/english/tao/DerekLin.html#Kap20">translation of Derek Lin&lt;/a>&lt;/p>
+&lt;details>
+&lt;summary>Dàodéjīng - Chapter 11 (The use of what has no substantive existence)&lt;/summary>
+&lt;div class="details">
+&lt;div class="verse">
+&lt;p>[&amp;hellip;]&lt;br />
+&lt;br />
+Mix clay&lt;br />
+to create a container&lt;br />
+In its emptiness, there is&lt;br />
+the function of a container&lt;br />
+&lt;br />
+[&amp;hellip;]&lt;br />
+Therefore,&lt;br />
+that which exists is used to create benefit&lt;br />
+That which is empty is used to create functionality&lt;br />&lt;/p></description></item><item><title>Advent of code 2024 - Day 2: Red-Nosed Reports</title><link>http://localhost:1313/posts/aoc2024-day02/</link><pubDate>Tue, 10 Dec 2024 01:43:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2024-day02/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1-safe-reports">Part 1: Safe reports&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2-problem-dampener">Part 2: Problem Dampener&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>I try to solve this year&amp;rsquo;s &lt;strong>Advent of Code 2024&lt;/strong> riddles in R. This is Day 2 - see 
+ &lt;a href="https:adventofcode.com/2024/day/2">https:adventofcode.com/2024/day/2&lt;/a>&lt;/p>
+&lt;h2 id="part-1-safe-reports">
+ Part 1: Safe reports
+ &lt;a class="anchor" href="#part-1-safe-reports">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>The unusual data (your puzzle input) consists of many &lt;strong>reports&lt;/strong>,
+one report per line. Each report is a list of numbers called &lt;strong>levels&lt;/strong> that are
+separated by spaces. For example:&lt;/p></description></item><item><title>Advent of code 2024 - Day 1: Historian Hysteria</title><link>http://localhost:1313/posts/aoc2024-day01/</link><pubDate>Sat, 07 Dec 2024 00:22:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2024-day01/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1-locations">Part 1: Locations&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2-similarities">Part 2: Similarities&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>I try to solve this year&amp;rsquo;s &lt;strong>Advent of Code 2024&lt;/strong> riddles in R. This is Day 1 - see 
+ &lt;a href="https:adventofcode.com/2024/day/1">https:adventofcode.com/2024/day/1&lt;/a>&lt;/p>
+&lt;h2 id="part-1-locations">
+ Part 1: Locations
+ &lt;a class="anchor" href="#part-1-locations">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>Throughout the Chief&amp;rsquo;s office, the historically significant locations are listed
+not by name but by a unique number called the &lt;strong>location ID&lt;/strong>. To make sure they
+don&amp;rsquo;t miss anything, The Historians split into two groups, each searching the
+office and trying to create their own complete list of location IDs.&lt;/p></description></item><item><title>Advent of code 2023 - Day 7: Camel Cards</title><link>http://localhost:1313/posts/aoc2023-day07/</link><pubDate>Thu, 04 Jan 2024 16:32:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2023-day07/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1">Part 1&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2">Part 2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>This year I try to record my attempt at solving the &lt;strong>Advent of Code 2023&lt;/strong>
+riddles. This is Day 7 - see 
+ &lt;a href="https:adventofcode.com/2023/day/7">https:adventofcode.com/2023/day/7&lt;/a>&lt;/p>
+&lt;h2 id="part-1">
+ Part 1
+ &lt;a class="anchor" href="#part-1">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>In Camel Cards, you get a list of &lt;strong>hands&lt;/strong>, and your goal is to order them based
+on the &lt;strong>strength&lt;/strong> of each hand. A hand consists of &lt;strong>five cards&lt;/strong> labeled one of
+&lt;code>A&lt;/code>, &lt;code>K&lt;/code>, &lt;code>Q&lt;/code>, &lt;code>J&lt;/code>, &lt;code>T&lt;/code>, &lt;code>9&lt;/code>, &lt;code>8&lt;/code>, &lt;code>7&lt;/code>, &lt;code>6&lt;/code>, &lt;code>5&lt;/code>, &lt;code>4&lt;/code>, &lt;code>3&lt;/code>, or &lt;code>2&lt;/code>. The relative
+strength of each card follows this order, where &lt;code>A&lt;/code> is the highest and &lt;code>2&lt;/code> is
+the lowest.&lt;/p></description></item><item><title>Advent of code 2023 - Day 6: Wait For It</title><link>http://localhost:1313/posts/aoc2023-day06/</link><pubDate>Thu, 04 Jan 2024 00:44:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2023-day06/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1">Part 1&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2">Part 2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>This year I try to record my attempt at solving the &lt;strong>Advent of Code 2023&lt;/strong>
+riddles. This is Day 6 - see 
+ &lt;a href="https:adventofcode.com/2023/day/6">https:adventofcode.com/2023/day/6&lt;/a>&lt;/p>
+&lt;h2 id="part-1">
+ Part 1
+ &lt;a class="anchor" href="#part-1">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>You manage to sign up as a competitor in the boat races just in time. The
+organizer explains that it&amp;rsquo;s not really a traditional race - instead, you will
+get a fixed amount of time during which your boat has to travel as far as it
+can, and you win if your boat goes the farthest.&lt;/p></description></item><item><title>Advent of code 2023 - Day 5: If You Give A Seed A Fertilizer</title><link>http://localhost:1313/posts/aoc2023-day05/</link><pubDate>Sat, 30 Dec 2023 01:10:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2023-day05/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1">Part 1&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2">Part 2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>This year I try to record my attempt at solving the &lt;strong>Advent of Code 2023&lt;/strong>
+riddles. This is Day 5 - see 
+ &lt;a href="https:adventofcode.com/2023/day/5">https:adventofcode.com/2023/day/5&lt;/a>&lt;/p>
+&lt;p>Update &lt;span class="timestamp-wrapper">&lt;span class="timestamp">[2023-12-31 So]&lt;/span>&lt;/span>:&lt;/p>
+&lt;ul>
+&lt;li>substitute &lt;code>get_generator()&lt;/code> (own implementation) with &lt;code>range()&lt;/code> (Python inbuilt)&lt;/li>
+&lt;li>improve grid search so that it goes through all location ranges, still
+starting with the lowest range&lt;/li>
+&lt;/ul>
+&lt;h2 id="part-1">
+ Part 1
+ &lt;a class="anchor" href="#part-1">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>The almanac (your puzzle input) lists all of the seeds that need to be planted.
+It also lists what type of soil to use with each kind of seed, what type of
+fertilizer to use with each kind of soil, what type of water to use with each
+kind of fertilizer, and so on. Every type of seed, soil, fertilizer and so on is
+identified with a number, but numbers are reused by each category - that is,
+soil &lt;code>123&lt;/code> and fertilizer &lt;code>123&lt;/code> aren&amp;rsquo;t necessarily related to each other.&lt;/p></description></item><item><title>Advent of code 2023 - Day 4: Scratchcards</title><link>http://localhost:1313/posts/aoc2023-day04/</link><pubDate>Tue, 19 Dec 2023 00:25:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2023-day04/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1">Part 1&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2">Part 2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>This year I try to record my attempt at solving the &lt;strong>Advent of Code 2023&lt;/strong>
+riddles. This is Day 4 - see 
+ &lt;a href="https:adventofcode.com/2023/day/4">https:adventofcode.com/2023/day/4&lt;/a>&lt;/p>
+&lt;h2 id="part-1">
+ Part 1
+ &lt;a class="anchor" href="#part-1">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>The Elf leads you over to the pile of colorful cards. There, you discover dozens
+of scratchcards, all with their opaque covering already scratched off. Picking
+one up, it looks like each card has two lists of numbers separated by a vertical
+bar (&lt;code>|&lt;/code>): a list of &lt;strong>winning numbers&lt;/strong> and then a list of &lt;strong>numbers you have&lt;/strong>.
+You organize the information into a table (your puzzle input).&lt;/p></description></item><item><title>Advent of code 2023 - Day 3: Gear Ratios</title><link>http://localhost:1313/posts/aoc2023-day03/</link><pubDate>Mon, 18 Dec 2023 01:01:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2023-day03/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1">Part 1&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2">Part 2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>This year I try to record my attempt at solving the &lt;strong>Advent of Code 2023&lt;/strong>
+riddles. This is Day 3 - see 
+ &lt;a href="https:adventofcode.com/2023/day/3">https:adventofcode.com/2023/day/3&lt;/a>&lt;/p>
+&lt;h2 id="part-1">
+ Part 1
+ &lt;a class="anchor" href="#part-1">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>The engine schematic (your puzzle input) consists of a visual representation of
+the engine. There are lots of numbers and symbols you don&amp;rsquo;t really understand,
+but apparently &lt;strong>any number adjacent to a symbol&lt;/strong>, even diagonally, is a &amp;ldquo;part
+number&amp;rdquo; and should be included in your sum. (Periods (&lt;code>.&lt;/code>) do not count as a
+symbol.)&lt;/p></description></item><item><title>Advent of code 2023 - Day 2: Cube Conundrum</title><link>http://localhost:1313/posts/aoc2023-day02/</link><pubDate>Mon, 11 Dec 2023 23:38:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2023-day02/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1">Part 1&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2">Part 2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>This year I try to record my attempt at solving the &lt;strong>Advent of Code 2023&lt;/strong>
+riddles. This is Day 2 - see 
+ &lt;a href="https:adventofcode.com/2023/day/2">https:adventofcode.com/2023/day/2&lt;/a>&lt;/p>
+&lt;h2 id="part-1">
+ Part 1
+ &lt;a class="anchor" href="#part-1">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Lets first read the task:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>As you walk, the Elf shows you a small bag and some cubes which are either red,
+green, or blue. Each time you play this game, he will hide a secret number of
+cubes of each color in the bag, and your goal is to figure out information about
+the number of cubes.&lt;/p></description></item><item><title>Advent of code 2023 - Day 1: Trebuchet?!</title><link>http://localhost:1313/posts/aoc2023-day01/</link><pubDate>Sun, 10 Dec 2023 03:05:00 +0100</pubDate><guid>http://localhost:1313/posts/aoc2023-day01/</guid><description>&lt;div class="ox-hugo-toc toc">
+&lt;div class="heading">Table of Contents&lt;/div>
+&lt;ul>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-1">Part 1&lt;/a>&lt;/li>
+&lt;li>
+ &lt;a href="http://localhost:1313/#part-2">Part 2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;!--endtoc-->
+&lt;p>This year I try to record my attempt at solving the &lt;strong>Advent of Code 2023&lt;/strong>
+riddles. This is Day 1 - see 
+ &lt;a href="https:adventofcode.com/2023/day/1">https:adventofcode.com/2023/day/1&lt;/a>&lt;/p>
+&lt;h2 id="part-1">
+ Part 1
+ &lt;a class="anchor" href="#part-1">#&lt;/a>
+&lt;/h2>
+&lt;details>
+&lt;summary>Our first task is the following:&lt;/summary>
+&lt;div class="details">
+&lt;blockquote>
+&lt;p>The newly-improved calibration document consists of lines of text; each line
+originally contained a specific calibration value that the Elves now need to
+recover. On each line, the calibration value can be found by combining the first
+digit and the last digit (in that order) to form a single two-digit number.&lt;/p></description></item></channel></rss>
+>>>>>>> 99c0415 (add all files)
