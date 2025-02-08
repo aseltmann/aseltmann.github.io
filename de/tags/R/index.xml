@@ -9,13 +9,6 @@
     <lastBuildDate>Sun, 22 Dec 2024 03:12:06 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/de/tags/R/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Advent of code 2024 - Tag 2: Rotnasige Berichte</title>
-      <link>https://aseltmann.github.io/de/posts/aoc2024-day02/</link>
-      <pubDate>Tue, 10 Dec 2024 00:23:00 +0100</pubDate>
-      <guid>https://aseltmann.github.io/de/posts/aoc2024-day02/</guid>
-      <description>&lt;p&gt;Dieses Jahr versuche ich mich an den Herausforderungen des &lt;strong&gt;Advent of Code 2024&lt;/strong&gt;&#xA;in der auf Statistik fokussierten Programmiersprache &lt;strong&gt;R&lt;/strong&gt;. Dies ist Tag 2 - siehe&#xA;&#xA;  &lt;a href=&#34;https:adventofcode.com/2024/day/2&#34;&gt;https:adventofcode.com/2024/day/2&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Für die Lösungen siehe die englische Version dieses Blogbeitrages.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Advent of code 2024 - Tag 1: Hysterie der Historiker:innen</title>
       <link>https://aseltmann.github.io/de/posts/aoc2024-day01/</link>
       <pubDate>Sat, 07 Dec 2024 00:23:00 +0100</pubDate>
