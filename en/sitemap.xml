@@ -2,21 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://aseltmann.github.io/posts/</loc>
-    <lastmod>2024-12-22T03:12:06+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://aseltmann.github.io/de/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://aseltmann.github.io/posts/"
-                />
-  </url><url>
     <loc>https://aseltmann.github.io/docs/</loc>
-    <lastmod>2024-12-22T03:12:06+01:00</lastmod>
+    <lastmod>2025-02-08T19:23:09+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -26,6 +13,32 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://aseltmann.github.io/docs/"
+                />
+  </url><url>
+    <loc>https://aseltmann.github.io/docs/publications/</loc>
+    <lastmod>2025-02-08T19:23:09+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://aseltmann.github.io/de/docs/publications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aseltmann.github.io/docs/publications/"
+                />
+  </url><url>
+    <loc>https://aseltmann.github.io/docs/notes/poetry/</loc>
+    <lastmod>2024-12-22T03:12:06+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://aseltmann.github.io/de/docs/notes/poetry/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://aseltmann.github.io/docs/notes/poetry/"
                 />
   </url><url>
     <loc>https://aseltmann.github.io/</loc>
@@ -54,17 +67,17 @@
                 href="https://aseltmann.github.io/docs/notes/"
                 />
   </url><url>
-    <loc>https://aseltmann.github.io/docs/notes/poetry/</loc>
+    <loc>https://aseltmann.github.io/posts/</loc>
     <lastmod>2024-12-22T03:12:06+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://aseltmann.github.io/de/docs/notes/poetry/"
+                href="https://aseltmann.github.io/de/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://aseltmann.github.io/docs/notes/poetry/"
+                href="https://aseltmann.github.io/posts/"
                 />
   </url><url>
     <loc>https://aseltmann.github.io/posts/aoc2024-day02/</loc>
@@ -146,19 +159,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://aseltmann.github.io/posts/aoc2023-day06/"
-                />
-  </url><url>
-    <loc>https://aseltmann.github.io/docs/projects/</loc>
-    <lastmod>2023-12-31T01:20:57+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://aseltmann.github.io/de/docs/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://aseltmann.github.io/docs/projects/"
                 />
   </url><url>
     <loc>https://aseltmann.github.io/posts/aoc2023-day05/</loc>
