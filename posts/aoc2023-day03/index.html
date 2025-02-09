@@ -3,60 +3,39 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="
-Table of Contents
-
-
-  Part 1
-
-  Part 2
-
-
-
-This year I try to record my attempt at solving the Advent of Code 2023
+<meta name="description" content="This year I try to record my attempt at solving the Advent of Code 2023
 riddles. This is Day 3 - see 
-  https:adventofcode.com/2023/day/3
-
-  Part 1
-  #
-
-
-Lets first read the task:
-
-
-The engine schematic (your puzzle input) consists of a visual representation of
-the engine. There are lots of numbers and symbols you don&rsquo;t really understand,
-but apparently any number adjacent to a symbol, even diagonally, is a &ldquo;part
-number&rdquo; and should be included in your sum. (Periods (.) do not count as a
-symbol.)">
+  https:adventofcode.com/2023/day/3">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://aseltmann.github.io/posts/aoc2023-day03/">
   <meta property="og:site_name" content="Blog & Notes">
   <meta property="og:title" content="Advent of code 2023 - Day 3: Gear Ratios">
-  <meta property="og:description" content="Table of Contents Part 1 Part 2 This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 3 - see https:adventofcode.com/2023/day/3
-Part 1 # Lets first read the task: The engine schematic (your puzzle input) consists of a visual representation of the engine. There are lots of numbers and symbols you don’t really understand, but apparently any number adjacent to a symbol, even diagonally, is a “part number” and should be included in your sum. (Periods (.) do not count as a symbol.)">
+  <meta property="og:description" content="This year I try to record my attempt at solving the Advent of Code 2023 riddles. This is Day 3 - see https:adventofcode.com/2023/day/3">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2023-12-18T01:01:00+01:00">
-    <meta property="article:modified_time" content="2024-12-22T03:12:06+01:00">
+    <meta property="article:modified_time" content="2025-02-09T22:08:16+01:00">
     <meta property="article:tag" content="Python">
 <title>Advent of code 2023 - Day 3: Gear Ratios | Blog &amp; Notes</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://aseltmann.github.io/posts/aoc2023-day03/">
   <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2023-day03/" title="Advent of code 2023 - Tag 3: Getriebeübersetzungen">
-<link rel="stylesheet" href="/book.min.56691afae45cb2163a009d3865c4b9b69d380cf16d1bd3321c034824b744ac91.css" integrity="sha256-Vmka&#43;uRcshY6AJ04ZcS5tp04DPFtG9MyHANIJLdErJE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.bc1a270977e15d5235c81216520f51ab601e4222c8838e0410b5243899aa63b3.css" integrity="sha256-vBonCXfhXVI1yBIWUg9Rq2AeQiLIg44EELUkOJmqY7M=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.5029dfac47e69129740e75985bedccd48f7b89741e258a6ff923f25dd0ef70aa.js" integrity="sha256-UCnfrEfmkSl0DnWYW&#43;3M1I97iXQeJYpv&#43;SPyXdDvcKo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.ffd551fc8c0676af2a3b765761f1e319c1a88e04460b4dcf06389eedaf032022.js" integrity="sha256-/9VR/IwGdq8qO3ZXYfHjGcGojgRGC03PBjie7a8DICI=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
-  
+  <link href="/font-awesome/css/fontawesome.css" rel="stylesheet">
+<link href="/font-awesome/css/brands.css" rel="stylesheet">
+<link href="/font-awesome/css/solid.css" rel="stylesheet">
+
 </head>
 <body dir="ltr">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -202,8 +181,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
   
   <li>
-    <a href="https://github.com/aseltmann"  target="_blank" rel="noopener">
-        Github
+    <a href=""  target="_blank" rel="noopener">
+        
       </a>
   </li>
   
@@ -212,6 +191,21 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+  <a class="button-square button-social hint--top" rel="me" data-hint="Github" title="Github" href="https://github.com/aseltmann">
+  <i class="fa-brands fa-github"></i>
+  </a>
+
+
+  <a class="button-square button-social hint--top" rel="me" data-hint="Mastodon" title="Mastodon" href="https://chaos.social/@aseltmann">
+  | <i class="fa-brands fa-mastodon"></i>
+  </a>
+
+
+  <a class="button-square button-social hint--top" rel="me" data-hint="Bluesky" title="Bluesky" href="https://aseltmann.bsky.social">
+  | <i class="fa-brands fa-bluesky"></i>
+  </a>
 
 
 </nav>
@@ -286,17 +280,7 @@ https://github.com/alex-shpak/hugo-book
   
 
 
-  <div class="book-post-content"><div class="ox-hugo-toc toc">
-<div class="heading">Table of Contents</div>
-<ul>
-<li>
-  <a href="/#part-1">Part 1</a></li>
-<li>
-  <a href="/#part-2">Part 2</a></li>
-</ul>
-</div>
-<!--endtoc-->
-<p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
+  <div class="book-post-content"><p>This year I try to record my attempt at solving the <strong>Advent of Code 2023</strong>
 riddles. This is Day 3 - see 
   <a href="https:adventofcode.com/2023/day/3">https:adventofcode.com/2023/day/3</a></p>
 <h2 id="part-1">
@@ -499,18 +483,41 @@ ratios to a list.</p>
  
       
 
+      
+  
+  <div class="book-comments">
+
+<script src="https://utteranc.es/client.js"
+        repo="aseltmann/aseltmann.github.io"
+        issue-term="pathname"
+        label="comment"
+        theme="photon-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+  
+ 
+
       <footer class="book-footer">
         
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/38fe0acc7f126a949284fa3a84cd91e52ee88a4e" title='Last modified by A Seltmann | 2024-12-22' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/66e7caf24e427ddc82fd4ce93f208a6020554325" title='Last modified by A Seltmann | 2025-02-09' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="" />
-      <span>2024-12-22</span>
+      <span>2025-02-09</span>
     </a>
   </div>
 
 
+
+  <div>
+    <a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/edit/main/aseltmann.github.io-hugo/content/posts/aoc2023-day03.en.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span>Edit this page</span>
+    </a>
+  </div>
 
 
 </div>
@@ -521,7 +528,8 @@ ratios to a list.</p>
 
 
  
-        <div class="footer">
+        <p>
+<div class="footer">
     
     
     Exported
@@ -542,22 +550,6 @@ ratios to a list.</p>
 </div>
 
       </footer>
-
-      
-  
-  <div class="book-comments">
-
-<script src="https://utteranc.es/client.js"
-        repo="aseltmann/aseltmann.github.io"
-        issue-term="pathname"
-        label="comment"
-        theme="photon-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-</div>
-  
- 
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>

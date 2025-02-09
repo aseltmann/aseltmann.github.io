@@ -6,21 +6,21 @@
     <description>Recent content in R on Blog &amp; Notes</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Dec 2024 03:12:06 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 22:08:16 +0100</lastBuildDate>
     <atom:link href="https://aseltmann.github.io/tags/R/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advent of code 2024 - Day 2: Red-Nosed Reports</title>
       <link>https://aseltmann.github.io/posts/aoc2024-day02/</link>
       <pubDate>Tue, 10 Dec 2024 01:43:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2024-day02/</guid>
-      <description>&lt;div class=&#34;ox-hugo-toc toc&#34;&gt;&#xA;&lt;div class=&#34;heading&#34;&gt;Table of Contents&lt;/div&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;  &lt;a href=&#34;https://aseltmann.github.io/#part-1-safe-reports&#34;&gt;Part 1: Safe reports&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;  &lt;a href=&#34;https://aseltmann.github.io/#part-2-problem-dampener&#34;&gt;Part 2: Problem Dampener&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;!--endtoc--&gt;&#xA;&lt;p&gt;I try to solve this year&amp;rsquo;s &lt;strong&gt;Advent of Code 2024&lt;/strong&gt; riddles in R. This is Day 2 - see &#xA;  &lt;a href=&#34;https:adventofcode.com/2024/day/2&#34;&gt;https:adventofcode.com/2024/day/2&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;part-1-safe-reports&#34;&gt;&#xA;  Part 1: Safe reports&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#part-1-safe-reports&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;details&gt;&#xA;&lt;summary&gt;Lets first read the task:&lt;/summary&gt;&#xA;&lt;div class=&#34;details&#34;&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The unusual data (your puzzle input) consists of many &lt;strong&gt;reports&lt;/strong&gt;,&#xA;one report per line. Each report is a list of numbers called &lt;strong&gt;levels&lt;/strong&gt; that are&#xA;separated by spaces. For example:&lt;/p&gt;</description>
+      <description>&lt;p&gt;I try to solve this year&amp;rsquo;s &lt;strong&gt;Advent of Code 2024&lt;/strong&gt; riddles in R. This is Day 2 -&#xA;see &#xA;  &lt;a href=&#34;https:adventofcode.com/2024/day/2&#34;&gt;https:adventofcode.com/2024/day/2&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advent of code 2024 - Day 1: Historian Hysteria</title>
       <link>https://aseltmann.github.io/posts/aoc2024-day01/</link>
       <pubDate>Sat, 07 Dec 2024 00:22:00 +0100</pubDate>
       <guid>https://aseltmann.github.io/posts/aoc2024-day01/</guid>
-      <description>&lt;div class=&#34;ox-hugo-toc toc&#34;&gt;&#xA;&lt;div class=&#34;heading&#34;&gt;Table of Contents&lt;/div&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;  &lt;a href=&#34;https://aseltmann.github.io/#part-1-locations&#34;&gt;Part 1: Locations&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;  &lt;a href=&#34;https://aseltmann.github.io/#part-2-similarities&#34;&gt;Part 2: Similarities&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xA;&lt;!--endtoc--&gt;&#xA;&lt;p&gt;I try to solve this year&amp;rsquo;s &lt;strong&gt;Advent of Code 2024&lt;/strong&gt; riddles in R. This is Day 1 - see &#xA;  &lt;a href=&#34;https:adventofcode.com/2024/day/1&#34;&gt;https:adventofcode.com/2024/day/1&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;part-1-locations&#34;&gt;&#xA;  Part 1: Locations&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#part-1-locations&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;details&gt;&#xA;&lt;summary&gt;Lets first read the task:&lt;/summary&gt;&#xA;&lt;div class=&#34;details&#34;&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Throughout the Chief&amp;rsquo;s office, the historically significant locations are listed&#xA;not by name but by a unique number called the &lt;strong&gt;location ID&lt;/strong&gt;. To make sure they&#xA;don&amp;rsquo;t miss anything, The Historians split into two groups, each searching the&#xA;office and trying to create their own complete list of location IDs.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I try to solve this year&amp;rsquo;s &lt;strong&gt;Advent of Code 2024&lt;/strong&gt; riddles in R. This is Day 1 -&#xA;see &#xA;  &lt;a href=&#34;https:adventofcode.com/2024/day/1&#34;&gt;https:adventofcode.com/2024/day/1&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

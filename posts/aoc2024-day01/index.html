@@ -3,58 +3,39 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="
-Table of Contents
-
-
-  Part 1: Locations
-
-  Part 2: Similarities
-
-
-
-I try to solve this year&rsquo;s Advent of Code 2024 riddles in R. This is Day 1 - see 
-  https:adventofcode.com/2024/day/1
-
-  Part 1: Locations
-  #
-
-
-Lets first read the task:
-
-
-Throughout the Chief&rsquo;s office, the historically significant locations are listed
-not by name but by a unique number called the location ID. To make sure they
-don&rsquo;t miss anything, The Historians split into two groups, each searching the
-office and trying to create their own complete list of location IDs.">
+<meta name="description" content="I try to solve this year&rsquo;s Advent of Code 2024 riddles in R. This is Day 1 -
+see 
+  https:adventofcode.com/2024/day/1">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:url" content="https://aseltmann.github.io/posts/aoc2024-day01/">
   <meta property="og:site_name" content="Blog & Notes">
   <meta property="og:title" content="Advent of code 2024 - Day 1: Historian Hysteria">
-  <meta property="og:description" content="Table of Contents Part 1: Locations Part 2: Similarities I try to solve this year’s Advent of Code 2024 riddles in R. This is Day 1 - see https:adventofcode.com/2024/day/1
-Part 1: Locations # Lets first read the task: Throughout the Chief’s office, the historically significant locations are listed not by name but by a unique number called the location ID. To make sure they don’t miss anything, The Historians split into two groups, each searching the office and trying to create their own complete list of location IDs.">
+  <meta property="og:description" content="I try to solve this year’s Advent of Code 2024 riddles in R. This is Day 1 - see https:adventofcode.com/2024/day/1">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-12-07T00:22:00+01:00">
-    <meta property="article:modified_time" content="2024-12-22T03:12:06+01:00">
+    <meta property="article:modified_time" content="2025-02-09T22:08:16+01:00">
     <meta property="article:tag" content="R">
 <title>Advent of code 2024 - Day 1: Historian Hysteria | Blog &amp; Notes</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://aseltmann.github.io/posts/aoc2024-day01/">
   <link rel="alternate" hreflang="de" href="https://aseltmann.github.io/de/posts/aoc2024-day01/" title="Advent of code 2024 - Tag 1: Hysterie der Historiker:innen">
-<link rel="stylesheet" href="/book.min.56691afae45cb2163a009d3865c4b9b69d380cf16d1bd3321c034824b744ac91.css" integrity="sha256-Vmka&#43;uRcshY6AJ04ZcS5tp04DPFtG9MyHANIJLdErJE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.bc1a270977e15d5235c81216520f51ab601e4222c8838e0410b5243899aa63b3.css" integrity="sha256-vBonCXfhXVI1yBIWUg9Rq2AeQiLIg44EELUkOJmqY7M=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.5029dfac47e69129740e75985bedccd48f7b89741e258a6ff923f25dd0ef70aa.js" integrity="sha256-UCnfrEfmkSl0DnWYW&#43;3M1I97iXQeJYpv&#43;SPyXdDvcKo=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.ffd551fc8c0676af2a3b765761f1e319c1a88e04460b4dcf06389eedaf032022.js" integrity="sha256-/9VR/IwGdq8qO3ZXYfHjGcGojgRGC03PBjie7a8DICI=" crossorigin="anonymous"></script>
 
   <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
-  
+  <link href="/font-awesome/css/fontawesome.css" rel="stylesheet">
+<link href="/font-awesome/css/brands.css" rel="stylesheet">
+<link href="/font-awesome/css/solid.css" rel="stylesheet">
+
 </head>
 <body dir="ltr">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
@@ -200,8 +181,8 @@ https://github.com/alex-shpak/hugo-book
 <ul>
   
   <li>
-    <a href="https://github.com/aseltmann"  target="_blank" rel="noopener">
-        Github
+    <a href=""  target="_blank" rel="noopener">
+        
       </a>
   </li>
   
@@ -210,6 +191,21 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+
+
+  <a class="button-square button-social hint--top" rel="me" data-hint="Github" title="Github" href="https://github.com/aseltmann">
+  <i class="fa-brands fa-github"></i>
+  </a>
+
+
+  <a class="button-square button-social hint--top" rel="me" data-hint="Mastodon" title="Mastodon" href="https://chaos.social/@aseltmann">
+  | <i class="fa-brands fa-mastodon"></i>
+  </a>
+
+
+  <a class="button-square button-social hint--top" rel="me" data-hint="Bluesky" title="Bluesky" href="https://aseltmann.bsky.social">
+  | <i class="fa-brands fa-bluesky"></i>
+  </a>
 
 
 </nav>
@@ -284,17 +280,8 @@ https://github.com/alex-shpak/hugo-book
   
 
 
-  <div class="book-post-content"><div class="ox-hugo-toc toc">
-<div class="heading">Table of Contents</div>
-<ul>
-<li>
-  <a href="/#part-1-locations">Part 1: Locations</a></li>
-<li>
-  <a href="/#part-2-similarities">Part 2: Similarities</a></li>
-</ul>
-</div>
-<!--endtoc-->
-<p>I try to solve this year&rsquo;s <strong>Advent of Code 2024</strong> riddles in R. This is Day 1 - see 
+  <div class="book-post-content"><p>I try to solve this year&rsquo;s <strong>Advent of Code 2024</strong> riddles in R. This is Day 1 -
+see 
   <a href="https:adventofcode.com/2024/day/1">https:adventofcode.com/2024/day/1</a></p>
 <h2 id="part-1-locations">
   Part 1: Locations
@@ -354,9 +341,9 @@ the distances between all of the pairs you found. In the example above, this is
 more versatile than <code>read.delim</code> from <code>base</code> and directly reads the data as a
 <code>data.table</code>, which has 
   <a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">some benefits</a>.</p>
-<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">data &lt;- data.table::fread(&#34;2024-12-01-1-aoc.txt&#34;, header = FALSE)
-head(data)
-</code></pre><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> data.table<span style="color:#f92672">::</span><span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;2024-12-01-1-aoc.txt&#34;</span>, header <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(data)
+</span></span></code></pre></div><table>
   <thead>
       <tr>
           <th>V1</th>
@@ -395,10 +382,10 @@ head(data)
   </tbody>
 </table>
 <p>Now, the idea is to get the ordered versions of <code>V1</code> and <code>V2</code>.</p>
-<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">v1 &lt;- data[order(V1)]$V1
-v2 &lt;- data[order(V2)]$V2
-head(v1)
-</code></pre><ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>v1 <span style="color:#f92672">&lt;-</span> data<span style="color:#a6e22e">[order</span>(V1)]<span style="color:#f92672">$</span>V1
+</span></span><span style="display:flex;"><span>v2 <span style="color:#f92672">&lt;-</span> data<span style="color:#a6e22e">[order</span>(V2)]<span style="color:#f92672">$</span>V2
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(v1)
+</span></span></code></pre></div><ol>
 <li>10188</li>
 <li>10314</li>
 <li>10319</li>
@@ -415,8 +402,8 @@ head(v1)
 </span></span></code></pre></div><p>So, <code>data[order(V1)]</code> is actually short for <code>data.table::setorder(data, V1)</code>.
 Then, we extract the vector by name using the <code>$</code> operator, which allows to
 extract elements by name.</p>
-<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">head(data.table::setorder(data, V1)$V1)
-</code></pre><ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(data.table<span style="color:#f92672">::</span><span style="color:#a6e22e">setorder</span>(data, V1)<span style="color:#f92672">$</span>V1)
+</span></span></code></pre></div><ol>
 <li>10188</li>
 <li>10314</li>
 <li>10319</li>
@@ -425,8 +412,8 @@ extract elements by name.</p>
 <li>10668</li>
 </ol>
 <p>The actual computation is just the sum of the absolute difference:</p>
-<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">sum(abs(v1 - v2))
-</code></pre><p>3574690</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">abs</span>(v1 <span style="color:#f92672">-</span> v2))
+</span></span></code></pre></div><p>3574690</p>
 <h2 id="part-2-similarities">
   Part 2: Similarities
   <a class="anchor" href="#part-2-similarities">#</a>
@@ -473,11 +460,11 @@ check <code>V1</code> against them. Here, applying the <code>table</code> comman
 <code>pandas.value_counts()</code> and achieves this. We convert the output to a
 <code>data.frame</code> and assign the <code>V1</code> values as row names. Note: <code>table</code> converts the
 values which are counted to string, e.g. <code>&quot;10019&quot;</code> instead of <code>10019</code>.</p>
-<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">tab &lt;- table(v2)
-v2series &lt;- data.frame(c(tab), row.names = names(tab))
-head(v2series)
-v2series[&#34;10019&#34;, ]
-</code></pre><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>tab <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">table</span>(v2)
+</span></span><span style="display:flex;"><span>v2series <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#a6e22e">c</span>(tab), row.names <span style="color:#f92672">=</span> <span style="color:#a6e22e">names</span>(tab))
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(v2series)
+</span></span><span style="display:flex;"><span>v2series[<span style="color:#e6db74">&#34;10019&#34;</span>, ]
+</span></span></code></pre></div><table>
   <thead>
       <tr>
           <th></th>
@@ -521,34 +508,56 @@ to string first, via <code>as.character</code>). If nothing is found in <code>V2
 is returned. For everything that is not NA, we compute the similarity score,
 append it to a list, and sum in the end. Note: a list in R can not directly be
 summed (I don&rsquo;t know why that is) - so we have to <code>unlist</code> first.</p>
-<pre tabindex="0"><code class="language-jupyter-R" data-lang="jupyter-R">sim &lt;- list()
-for (num in v1) {
-    myfreq &lt;- v2series[as.character(num), ]
-    if (!is.na(myfreq)) {
-        score &lt;- myfreq * num
-        sim &lt;- append(sim, score)
-    }
-
-}
-sum(unlist(sim))
-</code></pre><p>22565391</p>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>sim <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">list</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (num <span style="color:#66d9ef">in</span> v1) {
+</span></span><span style="display:flex;"><span>    myfreq <span style="color:#f92672">&lt;-</span> v2series<span style="color:#a6e22e">[as.character</span>(num), ]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">is.na</span>(myfreq)) {
+</span></span><span style="display:flex;"><span>        score <span style="color:#f92672">&lt;-</span> myfreq <span style="color:#f92672">*</span> num
+</span></span><span style="display:flex;"><span>        sim <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">append</span>(sim, score)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">unlist</span>(sim))
+</span></span></code></pre></div><p>22565391</p></div>
 </article>
  
       
+
+      
+  
+  <div class="book-comments">
+
+<script src="https://utteranc.es/client.js"
+        repo="aseltmann/aseltmann.github.io"
+        issue-term="pathname"
+        label="comment"
+        theme="photon-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+  
+ 
 
       <footer class="book-footer">
         
   <div class="flex flex-wrap justify-between">
 
 
-  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/38fe0acc7f126a949284fa3a84cd91e52ee88a4e" title='Last modified by A Seltmann | 2024-12-22' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/commit/66e7caf24e427ddc82fd4ce93f208a6020554325" title='Last modified by A Seltmann | 2025-02-09' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="" />
-      <span>2024-12-22</span>
+      <span>2025-02-09</span>
     </a>
   </div>
 
 
+
+  <div>
+    <a class="flex align-center" href="https://github.com/aseltmann/aseltmann.github.io-org-src/edit/main/aseltmann.github.io-hugo/content/posts/aoc2024-day01.en.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span>Edit this page</span>
+    </a>
+  </div>
 
 
 </div>
@@ -559,7 +568,8 @@ sum(unlist(sim))
 
 
  
-        <div class="footer">
+        <p>
+<div class="footer">
     
     
     Exported
@@ -580,22 +590,6 @@ sum(unlist(sim))
 </div>
 
       </footer>
-
-      
-  
-  <div class="book-comments">
-
-<script src="https://utteranc.es/client.js"
-        repo="aseltmann/aseltmann.github.io"
-        issue-term="pathname"
-        label="comment"
-        theme="photon-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-</div>
-  
- 
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
